@@ -1,5 +1,5 @@
 ---
-author: 'Your R. Name'
+author: 'Benjamin Feder'
 date: 'May 20xx'
 institution: 'Duke University'
 division: 'Trinity College of Arts and Sciences'

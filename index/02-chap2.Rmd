@@ -1,68 +1,77 @@
-# Math typesetting {#math}
-
-<!-- Required to number equations in HTML files -->
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
-</script>
-
-## Math
-
-\TeX\ is the best way to typeset mathematics. Donald Knuth designed \TeX\ when he got frustrated at how long it was taking the typesetters to finish his book, which contained a lot of mathematics.  One nice feature of _R Markdown_ is its ability to read LaTeX code directly.
-
-If you are doing a thesis that will involve lots of math, you will want to read the following section.
-
-$$\sum_{j=1}^n (\delta\theta_j)^2 \leq {{\beta_i^2}\over{\delta_i^2 + \rho_i^2}}
-\left[ 2\rho_i^2 + {\delta_i^2\beta_i^2\over{\delta_i^2 + \rho_i^2}} \right] \equiv \omega_i^2
-$$
-
-From Informational Dynamics, we have the following (Dave Braden):
-
-After _n_ such encounters the posterior density for $\theta$ is
-
-$$
-\pi(\theta|X_1< y_1,\dots,X_n<y_n) \varpropto \pi(\theta) \prod_{i=1}^n\int_{-\infty}^{y_i}
-   \exp\left(-{(x-\theta)^2\over{2\sigma^2}}\right)\ dx
-$$
-
-Another equation:
-
-$$\det\left|\,\begin{matrix}%
-c_0&c_1\hfill&c_2\hfill&\ldots&c_n\hfill\cr
-c_1&c_2\hfill&c_3\hfill&\ldots&c_{n+1}\hfill\cr
-c_2&c_3\hfill&c_4\hfill&\ldots&c_{n+2}\hfill\cr
-\,\vdots\hfill&\,\vdots\hfill&
-  \,\vdots\hfill&&\,\vdots\hfill\cr
-c_n&c_{n+1}\hfill&c_{n+2}\hfill&\ldots&c_{2n}\hfill\cr
-\end{matrix}\right|>0$$
+#Literature Review Notes:
 
 
-Lapidus and Pindar, Numerical Solution of Partial Differential Equations in Science and
-Engineering.  Page 54
+Source: http://varianceexplained.org/r/teach-tidyverse/
 
-$$
-\int_t\left\{\sum_{j=1}^3 T_j \left({d\phi_j\over dt}+k\phi_j\right)-kT_e\right\}w_i(t)\ dt=0,
-   \qquad\quad i=1,2,3.
-$$
+-Tidyverse allows students to make visualizations and do stuff with data from the get go (high-level analysis), rather than focusing on learning R syntax from the start
 
-L\&P  Galerkin method weighting functions.  Page 55
+-Have been able to teach pretty basic code using ~facet_wrap in 2-3 hours to people who have never used coding before
 
-$$
-\sum_{j=1}^3 T_j\int_0^1\left\{{d\phi_j\over dt} + k\phi_j\right\} \phi_i\ dt
-   = \int_{0}^1k\,T_e\phi_idt, \qquad i=1,2,3 $$
+-Syntax is flexible for other work in the future from the start
 
-Another L\&P (p145)
+-However, doesn’t teach conditionals and loops from the start
+	-Loops are extremely inefficient for the most part and are advanced generally to make them more efficient
 
-$$
-\int_{-1}^1\!\int_{-1}^1\!\int_{-1}^1 f\big(\xi,\eta,\zeta\big)
-   = \sum_{k=1}^n\sum_{j=1}^n\sum_{i=1}^n w_i w_j w_k f\big( \xi,\eta,\zeta\big).
-$$
+-There’s only one way to do most tidyverse commands, like manipulating data frames, which makes this consistent
 
-Another L\&P (p126)
+-Will eventually have to learn important base R stuff, but can use them in combination with tidyverse tools, so you can sprinkle them in
+	-ex. lm(), mean()—allows you to apply these functions immediately once they understand tidyverse syntax
 
-$$
-\int_{A_e} (\,\cdot\,) dx dy = \int_{-1}^1\!\int_{-1}^1 (\,\cdot\,) \det[J] d\xi d\eta.
-$$
+-Goal of introductory stats course coding: R is worth learning, can bolster statistical analysis
 
+-Want to get people started doing stuff in R from the start to draw them in and also as supplementary material for intro stats
 
+From comments: One issue—not as much help online for Tidyverse, students end up with a mix sometimes when looking up issues they run into
+
+---------------------------------
+
+Source: http://varianceexplained.org/r/teach_ggplot2_to_beginners/
+-ggplot2 should be taught first before base R, despite being a third-party package
+-To make the same equivalent plots in base R that you can with ggplot(), you need to know how to generally run for() loops and add more lines such as legend() to make the plots readable
+-ggplot2 plots are also better looking
+-The goal with coding in introductory statistics courses is to convince students that they want to learn coding, and giving them the tools to make cool plots from the start will help them get excited
+-”ggplot2 aims for abstraction, where the choices the you make are the ones that matter for your visualization of the data”
+-tidy data is required, but it’s good practice since other general functions such as lm() require tidy data anyways
+
+-------------------------------------------------
+
+Source: The mosiac package: Helping Students to ‘Think with Data’ Using R
+-Goal: The mosiac package should be easy to implement for beginning coders, allowing them to make insights without an extensive coding background
+-”Less volume, more creativity”
+-mosaic seeks to support the belief of the importance of learning how to work in a multivariate environment
+-uses the same template for numerical, categorical and graphical summaries
+-recommends plotting in two variable settings first, because you might not be able to do in base R + more interesting with two variables as opposed to just one
+-mplot() incorporates an argument to use ggplot2 graphics instead of Base R, also can create interactive plots in ggplot2
+-mosaic also has specific functions geared toward introductory students, such as rflip(), helping explain binomial situations without for() loops
+-mosaic depends on ggplot2 and dplyr, dplyr is encouraged to use alongside mosaic since it also emphasizes the “less volume, more creativity” approach
+-”One of the keys to successfully empowering students to think with data is providing them both a conceptual framework that allows them to know what to look for and how to interpret what they find, and a computational toolbox that allows them to do the looking”
+-allows students to use programming as an asset from the start of their statistical learning 
+-students should also learn the errors that R gives out early on so they can diagnose their own code issues, decrease anxiety and frustration and lower expectations for perfect code
+
+-------------------
+Source: infrastructure and tools for teaching statistical computing throughout the statistical curriculum
+-Goal: To provide guidelines for statistical programming tools for introductory statistics classes since as time progresses, programming has emerged as a requirement for statistics, especially when dealing with the practical and relevant datasets of today.
+-Programming is necessary for people pursuing stats, so it’s a matter of how and when to teach these skills
+-Students need to be exposed early on, but in a supplemental fashion so they can still grasp the already dense concepts already regularly covered in the classrooms
+-In the author’s computation classes, there’s a goal to computationally visualize something within the first 10 minutes of the first day
+-Rstudio is best because it is most practical if students choose to advance, and also isn’t intimidating to write a line or two of code as opposed to screencast instructions of point-and-click software
+-R enhances problem solving skills in relation to statistics early on
+-Rstudio as opposed to R may help ease the learning curve by being an IDE
+-Emphasis on reproducibility in code
+-Make computing a central part of the statistics course and not just an auxillary one
+-Doing so makes it easier to not waste time in advanced stats courses explaining how to do preliminary coding because that’s the students’ introduction to it
+------------------------------
+Source: Tidy Data by Hadley Wickham
+Goal: Will talk about how to best work with tidy data, where each row is an observation, each column is a variable and each observational unit is a table. There are a few techniques that apply to a variety of messy datasets to make them tidy, and a lot of functions that rely on tidy data inputs and outputs to work, so it’s a good practice to use.
+-not a lot of research on data preparation although it’s the most time-consuming part of the process
+-data tidying: structuring datasets to facilitate analysis
+-data structure is always set with tidy data, don’t need to work out kinks of other issues in manual-induced ones
+-tidy datasets work symmetrically with tidy tools
+-don’t need to work on data logistics, but can go right to the problem
+-tidy data framework based on Hadley’s experience with real-world problems and datasets and then teaching students those skills
+-generally, measured variables are listed after fixed ones, and related ones are next to each other by column
+-rows are ordered by the first variable
+-tidy tools: “tools that take tidy datasets as input and return tidy datasets as output. Tidy tools are useful because the output of one tool can be used as the input to another.”
+-most data transformation operations are made easier by having each variable as a column
+
+-----------------------------------------
