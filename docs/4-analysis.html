@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Chapter 4 Analysis | My Final College Paper</title>
+  <meta name="description" content="Chapter 4 Analysis | My Final College Paper">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Chapter 4 Analysis | My Final College Paper" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Analysis | My Final College Paper" />
+  
+  
+  
+
+<meta name="author" content="Benjamin Feder">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="3-data-background.html">
+<link rel="next" href="conclusion.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"></a></li>
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="1" data-path="1-introduction-1.html"><a href="1-introduction-1.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="2-literature-review-notes.html"><a href="2-literature-review-notes.html"><i class="fa fa-check"></i><b>2</b> Literature Review Notes:</a></li>
+<li class="chapter" data-level="3" data-path="3-data-background.html"><a href="3-data-background.html"><i class="fa fa-check"></i><b>3</b> Data Background</a></li>
+<li class="chapter" data-level="4" data-path="4-analysis.html"><a href="4-analysis.html"><i class="fa fa-check"></i><b>4</b> Analysis</a><ul>
+<li class="chapter" data-level="4.1" data-path="4-analysis.html"><a href="4-analysis.html#exploratory-data-analysis"><i class="fa fa-check"></i><b>4.1</b> Exploratory Data Analysis</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="4-analysis.html"><a href="4-analysis.html#creativity"><i class="fa fa-check"></i><b>4.1.1</b> Creativity</a></li>
+<li class="chapter" data-level="4.1.2" data-path="4-analysis.html"><a href="4-analysis.html#subgroup-analysis"><i class="fa fa-check"></i><b>4.1.2</b> Subgroup Analysis</a></li>
+<li class="chapter" data-level="4.1.3" data-path="4-analysis.html"><a href="4-analysis.html#subsetting-dataset"><i class="fa fa-check"></i><b>4.1.3</b> Subsetting dataset</a></li>
+<li class="chapter" data-level="4.1.4" data-path="4-analysis.html"><a href="4-analysis.html#overall-theme"><i class="fa fa-check"></i><b>4.1.4</b> Overall theme</a></li>
+<li class="chapter" data-level="4.1.5" data-path="4-analysis.html"><a href="4-analysis.html#grades-not-important-right-now"><i class="fa fa-check"></i><b>4.1.5</b> Grades NOT IMPORTANT RIGHT NOW</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i>Conclusion</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="A-the-first-appendix.html"><a href="A-the-first-appendix.html"><i class="fa fa-check"></i><b>A</b> The First Appendix</a></li>
+<li class="chapter" data-level="B" data-path="B-the-second-appendix-for-fun.html"><a href="B-the-second-appendix-for-fun.html"><i class="fa fa-check"></i><b>B</b> The Second Appendix, for Fun</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">My Final College Paper</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="analysis" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Analysis</h1>
+<div id="exploratory-data-analysis" class="section level2">
+<h2><span class="header-section-number">4.1</span> Exploratory Data Analysis</h2>
+<p>As of now, the groups have an unequal amount of observations because I have gone through more Base R projects. Just to note, the following data conclusions may change with time.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">tidyverse</th>
+<th align="right">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">base R</td>
+<td align="right">42</td>
+</tr>
+<tr class="even">
+<td align="left">tidyverse</td>
+<td align="right">30</td>
+</tr>
+</tbody>
+</table>
+<p>Note: Currently, the creativity variable is a sum of the four different components: creating new variables, mutating existing ones, performing a subgroup analysis and subsetting the data set.</p>
+<div id="creativity" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> Creativity</h3>
+<p>The creativity score is simply a sum of four different components of projects: creating new variables, mutating existing ones, performing a subgroup analysis, and subsetting the data set.</p>
+<p>In terms of total creativity, there is generally a higher proportion of more creativity points for Tidyverse projects.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">tidyverse</th>
+<th align="right">creative</th>
+<th align="right">n</th>
+<th align="left">prop</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">base R</td>
+<td align="right">0</td>
+<td align="right">13</td>
+<td align="left">31.0%</td>
+</tr>
+<tr class="even">
+<td align="left">base R</td>
+<td align="right">1</td>
+<td align="right">17</td>
+<td align="left">40.5%</td>
+</tr>
+<tr class="odd">
+<td align="left">base R</td>
+<td align="right">2</td>
+<td align="right">10</td>
+<td align="left">23.8%</td>
+</tr>
+<tr class="even">
+<td align="left">base R</td>
+<td align="right">3</td>
+<td align="right">1</td>
+<td align="left">2.4%</td>
+</tr>
+<tr class="odd">
+<td align="left">base R</td>
+<td align="right">NA</td>
+<td align="right">1</td>
+<td align="left">2.4%</td>
+</tr>
+<tr class="even">
+<td align="left">tidyverse</td>
+<td align="right">0</td>
+<td align="right">7</td>
+<td align="left">23.3%</td>
+</tr>
+<tr class="odd">
+<td align="left">tidyverse</td>
+<td align="right">1</td>
+<td align="right">13</td>
+<td align="left">43.3%</td>
+</tr>
+<tr class="even">
+<td align="left">tidyverse</td>
+<td align="right">2</td>
+<td align="right">10</td>
+<td align="left">33.3%</td>
+</tr>
+</tbody>
+</table>
+<p>The differences in creativity scores can be elucidated through analyses into each of the four separate variables combining to form the creativity metrics. Perhaps the most distinct difference occurs in the creation of new variables, which is defined as any data manipulation throughout the EDA process where a previously non-existing variable is formed. As an example, one project created a new variable tracking if a movie had won any of the following awards: best picture, best actor, bestactress, or best director, and that project had this variable coded as “yes.”</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">tidyverse</th>
+<th align="left">create_new_var</th>
+<th align="right">n</th>
+<th align="left">proportion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">base R</td>
+<td align="left">yes</td>
+<td align="right">9</td>
+<td align="left">21.4%</td>
+</tr>
+<tr class="even">
+<td align="left">tidyverse</td>
+<td align="left">yes</td>
+<td align="right">8</td>
+<td align="left">26.7%</td>
+</tr>
+</tbody>
+</table>
+<p>As shown above, it is clear that the proportion of projects with the creation of new variables is higher in Tidyverse ones. This may be because it is very easy to create new variables using <code>mutate()</code> in the Tidyverse.</p>
+<p>However, one covariate in particular, mutating existing variables, did not seem to vary frequency-wise across different syntax users. Within the movies dataset, an example from some projects was to ignore G-rated movies from the dataset.</p>
+<p>In fact, it seems as though slightly more base R studies changed pre-existing variables.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">tidyverse</th>
+<th align="left">change_var</th>
+<th align="right">n</th>
+<th align="left">prop</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">base R</td>
+<td align="left">yes</td>
+<td align="right">6</td>
+<td align="left">14.3%</td>
+</tr>
+<tr class="even">
+<td align="left">tidyverse</td>
+<td align="left">yes</td>
+<td align="right">4</td>
+<td align="left">13.3%</td>
+</tr>
+</tbody>
+</table>
+<p>The mechanisms for doing so are not much more complicated in base R. An example of changing an existing studio variable to “Warner Bros. Studios” or “Other” is listed below in both Base R and the Tidyverse for comparison:</p>
+<p>Tidyverse: <code>movies &lt;- movies %&gt;% mutate(studio = (if_else(studio == &quot;Warner Bros. Pictures&quot;, &quot;Warner Bros.  Pictures&quot;, &quot;Other&quot;))</code></p>
+<p>Base R: <code>movies$studio &lt;- if_else(movies$studio == &quot;Warner Bros. Pictures&quot;, &quot;Warner  Bros. Pictures&quot;, &quot;Other&quot;)</code></p>
+<p>The other two variables need to be re-inputted and updated, so the language and subsections remain below to avoid confusion.</p>
+</div>
+<div id="subgroup-analysis" class="section level3">
+<h3><span class="header-section-number">4.1.2</span> Subgroup Analysis</h3>
+<p>The presence of a form of a subgroup analysis was measured in regards to creativity. To score a 1 for this variable, projects analyzed a portion of the data for parts of their EDA. As an example, a project receiving a “yes” for this category may have analyzed how the audience ratings for R rated movies compared to that of PG-13 movies in their bivariate analysis.</p>
+<p>This variable has not been recoded yet.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">tidyverse</th>
+<th align="left">sub_analysis</th>
+<th align="right">n</th>
+<th align="left">prop</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">base R</td>
+<td align="left">yes</td>
+<td align="right">1</td>
+<td align="left">2.4%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="subsetting-dataset" class="section level3">
+<h3><span class="header-section-number">4.1.3</span> Subsetting dataset</h3>
+<p>The final variable included in the creativity metric was the usage of a subset of the data for the entire analysis, such as analyzing solely PG movies for the scope of the analysis.</p>
+<p>This variable has also not been recoded yet fully, but it appears as though Tidyverse projects have a signficantly higher proportion.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">tidyverse</th>
+<th align="left">sub_data</th>
+<th align="right">n</th>
+<th align="left">prop</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">base R</td>
+<td align="left">yes</td>
+<td align="right">24</td>
+<td align="left">57.1%</td>
+</tr>
+<tr class="even">
+<td align="left">tidyverse</td>
+<td align="left">yes</td>
+<td align="right">21</td>
+<td align="left">70.0%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="overall-theme" class="section level3">
+<h3><span class="header-section-number">4.1.4</span> Overall theme</h3>
+<p>As for a rough comparison of project quality, a new variable devised of a summation of a theme throughout the exploratory data analysis and the use of relevant and sufficient supporting data. (Could be facilitated by the tidyverse?)</p>
+<p>By the use of relevant and sufficient supporting data, the covariate seeks to address the issue that projects may have interesting themes but lack the analysis and coding quality to supplement their project. Thus, a category tracking relevant data, such as finding the correlation in a linear regression instead of merely plotting the two variables together, was created.</p>
+<p>Thus far, it appears as though a higher proportion of Tidyverse projects reach a certain quality. This may be due to the ease in using the Tidyverse suit of commands in a fashion that make the project easier to code as beginners in R.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">tidyverse</th>
+<th align="right">theme</th>
+<th align="right">n</th>
+<th align="left">prop</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">base R</td>
+<td align="right">0</td>
+<td align="right">6</td>
+<td align="left">14.3%</td>
+</tr>
+<tr class="even">
+<td align="left">base R</td>
+<td align="right">1</td>
+<td align="right">20</td>
+<td align="left">47.6%</td>
+</tr>
+<tr class="odd">
+<td align="left">base R</td>
+<td align="right">2</td>
+<td align="right">15</td>
+<td align="left">35.7%</td>
+</tr>
+<tr class="even">
+<td align="left">base R</td>
+<td align="right">NA</td>
+<td align="right">1</td>
+<td align="left">2.4%</td>
+</tr>
+<tr class="odd">
+<td align="left">tidyverse</td>
+<td align="right">0</td>
+<td align="right">5</td>
+<td align="left">16.7%</td>
+</tr>
+<tr class="even">
+<td align="left">tidyverse</td>
+<td align="right">1</td>
+<td align="right">9</td>
+<td align="left">30.0%</td>
+</tr>
+<tr class="odd">
+<td align="left">tidyverse</td>
+<td align="right">2</td>
+<td align="right">16</td>
+<td align="left">53.3%</td>
+</tr>
+</tbody>
+</table>
+<p>Both variables within theme reflect this trend. A present theme throughout EDA is present in a greater proportion of Tidyverse projects. As an example, analyzing the impact of movie ratings on audience scores would be a sufficient theme, but referencing an assortment of different predictors would not register as one.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">tidyverse</th>
+<th align="left">eda_theme</th>
+<th align="right">n</th>
+<th align="left">prop</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">base R</td>
+<td align="left">yes</td>
+<td align="right">25</td>
+<td align="left">59.5%</td>
+</tr>
+<tr class="even">
+<td align="left">tidyverse</td>
+<td align="left">yes</td>
+<td align="right">21</td>
+<td align="left">70.0%</td>
+</tr>
+</tbody>
+</table>
+<p>The significant difference in couhts could be attributed to the <code>select()</code> function in the Tidyverse.</p>
+<p>Tidyverse projects also had a substantially higher margin of projects with relevant supplmenetary data analyses.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">tidyverse</th>
+<th align="left">rel_data</th>
+<th align="right">n</th>
+<th align="left">prop</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">base R</td>
+<td align="left">yes</td>
+<td align="right">25</td>
+<td align="left">59.5%</td>
+</tr>
+<tr class="even">
+<td align="left">tidyverse</td>
+<td align="left">yes</td>
+<td align="right">20</td>
+<td align="left">66.7%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="grades-not-important-right-now" class="section level3">
+<h3><span class="header-section-number">4.1.5</span> Grades NOT IMPORTANT RIGHT NOW</h3>
+<p>Not important:</p>
+<p>When analyzing the difference in grade distributions between Tidyverse and Base R courses, the Base R ones are not significantly higher. Upon a closer look at individual semesters, though, it is clear that the Fall 2013 grade distribution is significantly higher than any of the others, and thus, it makes sense to scale the grade variable by semester.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">tidyverse</th>
+<th align="right">mean(grade, na.rm = TRUE)</th>
+<th align="right">sd(grade, na.rm = TRUE)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">base R</td>
+<td align="right">86.88780</td>
+<td align="right">4.241473</td>
+</tr>
+<tr class="even">
+<td align="left">tidyverse</td>
+<td align="right">86.06667</td>
+<td align="right">4.425111</td>
+</tr>
+</tbody>
+</table>
+<pre><code>Warning: Removed 1 rows containing non-finite values (stat_boxplot).</code></pre>
+<p><img src="thesis_files/figure-html/looking%20at%20grades-1.png" width="672" style="display: block; margin: auto;" /></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">sem</th>
+<th align="right">mean(grade, na.rm = TRUE)</th>
+<th align="right">sd(grade, na.rm = TRUE)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Fall 2013</td>
+<td align="right">89.95833</td>
+<td align="right">1.997480</td>
+</tr>
+<tr class="even">
+<td align="left">Fall 2014</td>
+<td align="right">85.61724</td>
+<td align="right">4.291859</td>
+</tr>
+<tr class="odd">
+<td align="left">Fall 2015- Section 06</td>
+<td align="right">86.06667</td>
+<td align="right">4.425111</td>
+</tr>
+</tbody>
+</table>
+<pre><code>Warning: Removed 1 rows containing non-finite values (stat_boxplot).</code></pre>
+<p><img src="thesis_files/figure-html/looking%20at%20grades-2.png" width="672" style="display: block; margin: auto;" /></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="3-data-background.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="conclusion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": [["thesis.pdf", "PDF"], ["thesis.epub", "EPUB"], ["thesis.docx", "Word"]],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

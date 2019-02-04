@@ -1,0 +1,257 @@
+# Analysis
+
+```{r load-data, include=FALSE}
+library(scales)
+library(tidyverse)
+library(knitr)
+project <- read_csv("Tidylearn Thesis Data - Sheet1.csv", na = c("", "?", "NA"))
+```
+
+
+```{r, data-manipulation, include=FALSE}
+project <- project %>%
+  mutate(tidyverse = ifelse(tidyverse == 0, "base R", "tidyverse"))
+
+
+project$sub_analysis[is.na(project$sub_analysis)] <- 0
+```
+
+## Exploratory Data Analysis
+
+```{r, renaming variables, echo=FALSE}
+project <- project %>% 
+  mutate(
+    creative = create_new_var + change_var + sub_analysis + sub_data, 
+    theme = eda_theme + rel_data
+    )
+
+#make rest of relevant variables to yes and no, can't figure out how to do it in
+#one line
+project <- project %>%
+  mutate(create_new_var = ifelse(create_new_var == 0, "no", "yes")) %>%
+  mutate(change_var = ifelse(change_var == 0, "no", "yes")) %>%
+  mutate(sub_analysis = ifelse(sub_analysis == 0, "no", "yes")) %>%
+  mutate(sub_data = ifelse(sub_data == 0, "no", "yes")) %>%
+  mutate(viz_mult_mak = ifelse(viz_mult_mak == 0, "no", "yes")) %>%
+  mutate(viz_mult_interpret = ifelse(viz_mult_interpret == 0, "no", "yes")) %>%
+  mutate(eda_theme = ifelse(eda_theme == 0, "no", "yes")) %>%
+  mutate(rel_data = ifelse(rel_data == 0, "no", "yes")) %>%
+  mutate(slr_fit = ifelse(slr_fit == 0, "no", "yes")) %>%
+  mutate(mlr_fit = ifelse(mlr_fit == 0, "no", "yes")) %>%
+  mutate(mlr_check_cond = ifelse(mlr_check_cond == 0, "no", "yes")) %>%
+  mutate(prediction = ifelse(prediction == 0, "no", "yes")) %>%
+  mutate(ht = ifelse(ht == 0, "no", "yes")) %>%
+  mutate(ht_check_cond = ifelse(ht_check_cond == 0, "no", "yes"))
+```
+
+As of now, the groups have an unequal amount of observations because I have gone
+through more Base R projects. Just to note, the following data conclusions may 
+change with time.
+
+```{r, difference in project counts, echo=FALSE}
+project %>%
+  count(tidyverse) %>%
+  kable()
+```
+
+Note: Currently, the creativity variable is a sum of the four different components: 
+creating new variables, mutating existing ones, performing a subgroup analysis 
+and subsetting the data set.
+
+### Creativity
+The creativity score is simply a sum of four different components of projects:
+creating new variables, mutating existing ones, performing a subgroup analysis, 
+and subsetting the data set.
+
+In terms of total creativity, there is generally a higher proportion of more 
+creativity points for Tidyverse projects.
+
+```{r, looking at creative stat, echo=FALSE}
+project %>%
+  group_by(tidyverse, creative) %>%
+  summarise(n = n()) %>%
+  mutate(prop = percent(n / sum(n))) %>%
+  kable(knitr.kable.NA = TRUE)
+```
+
+The differences in creativity scores can be elucidated through analyses into each
+of the four separate variables combining to form the creativity metrics. Perhaps
+the most distinct difference occurs in the creation of new variables, which is 
+defined as any data manipulation throughout the EDA process where a previously 
+non-existing variable is formed. As an example, one project created a new 
+variable tracking if a movie had won any of the following awards: best picture,
+best actor, bestactress, or best director, and that project had this variable 
+coded as "yes."
+
+```{r, looking at creating new variable, echo=FALSE}
+project %>%
+  group_by(tidyverse, create_new_var) %>%
+  summarise(n = n()) %>%
+  mutate(proportion = percent(n / sum(n))) %>%
+  filter(create_new_var == "yes") %>%
+  kable()
+```
+
+As shown above, it is clear that the proportion of projects with the creation of
+new variables is higher in Tidyverse ones. This may be because it is very easy
+to create new variables using `mutate()` in the Tidyverse.
+
+However, one covariate in particular, mutating existing variables, did not seem 
+to vary frequency-wise across different syntax users. Within the movies dataset, 
+an example from some projects was to ignore G-rated movies from the dataset.
+
+In fact, it seems as though slightly more base R studies changed pre-existing 
+variables. 
+
+```{r, looking at changing variable, echo=FALSE}
+project %>%
+  group_by(tidyverse, change_var) %>%
+  summarise(n = n()) %>%
+  mutate(prop = percent(n / sum(n))) %>%
+  filter(change_var == "yes") %>%
+  kable()
+```
+
+The mechanisms for doing so are not much more complicated in base R. An example
+of changing an existing studio variable to "Warner Bros. Studios" or "Other" is
+listed below in both Base R and the Tidyverse for comparison:
+
+Tidyverse:
+`movies <- movies %>%
+mutate(studio = (if_else(studio == "Warner Bros. Pictures", "Warner Bros. 
+Pictures", "Other"))`
+
+Base R:
+`movies$studio <- if_else(movies$studio == "Warner Bros. Pictures", "Warner 
+Bros. Pictures", "Other")`
+
+The other two variables need to be re-inputted and updated, so the language and 
+subsections remain below to avoid confusion.
+
+### Subgroup Analysis
+
+The presence of a form of a subgroup analysis was measured in regards to 
+creativity. To score a 1 for this variable, projects analyzed a portion of the 
+data for parts of their EDA. As an example, a project receiving a "yes" for this
+category may have analyzed how the audience ratings for R rated movies compared 
+to that of PG-13 movies in their bivariate analysis.
+
+This variable has not been recoded yet.
+
+```{r, looking at subgroup analysis variable, echo=FALSE}
+project %>%
+  group_by(tidyverse, sub_analysis) %>%
+  summarise(n = n()) %>%
+  mutate(prop = percent(n / sum(n))) %>%
+  filter(sub_analysis == "yes") %>%
+  kable()
+
+```
+
+### Subsetting dataset
+
+The final variable included in the creativity metric was the usage of a subset 
+of the data for the entire analysis, such as analyzing solely PG movies for the 
+scope of the analysis. 
+
+This variable has also not been recoded yet fully, but it appears as though 
+Tidyverse projects have a signficantly higher proportion.
+
+```{r, looking at subsetting dataset, echo=FALSE}
+project %>%
+  group_by(tidyverse, sub_data) %>%
+  summarise(n = n()) %>%
+  mutate(prop = percent(n / sum(n))) %>%
+  filter(sub_data == "yes") %>%
+  kable()
+
+```
+
+
+### Overall theme
+As for a rough comparison of project quality, a new variable devised of a 
+summation of a theme throughout the exploratory data analysis and the use of 
+relevant and sufficient supporting data. (Could be facilitated by the 
+tidyverse?)
+
+By the use of relevant and sufficient supporting data, the covariate seeks to 
+address the issue that projects may have interesting themes but lack the 
+analysis and coding quality to supplement their project. Thus, a category tracking
+relevant data, such as finding the correlation in a linear regression instead of
+merely plotting the two variables together, was created. 
+
+Thus far, it appears as though a higher proportion of Tidyverse 
+projects reach a certain quality. This may be due to the ease in using the 
+Tidyverse suit of commands in a fashion that make the project easier to code
+as beginners in R.
+
+```{r, total theme, echo=FALSE}
+project %>%
+  group_by(tidyverse, theme) %>%
+  summarise(n = n()) %>%
+  mutate(prop = percent(n / sum(n))) %>%
+  kable(knitr.kable.NA = TRUE)
+
+```
+
+Both variables within theme reflect this trend. A present theme throughout EDA 
+is present in a greater proportion of Tidyverse projects. As an example, 
+analyzing the impact of movie ratings on audience scores would be a sufficient 
+theme, but referencing an assortment of different predictors would not register
+as one.
+
+```{r, evaulating theme during eda, echo=FALSE}
+project %>%
+  group_by(tidyverse, eda_theme) %>%
+  summarise(n = n()) %>%
+  mutate(prop = percent(n / sum(n))) %>%
+  filter(eda_theme == "yes") %>%
+  kable()
+```
+
+The significant difference in couhts could be attributed to the `select()` 
+function in the Tidyverse.
+
+Tidyverse projects also had a substantially higher margin of projects with 
+relevant supplmenetary data analyses.
+
+```{r, relevant data, echo=FALSE}
+project %>%
+  group_by(tidyverse, rel_data) %>%
+  summarise(n = n()) %>%
+  mutate(prop = percent(n / sum(n))) %>%
+  filter(rel_data == "yes") %>%
+  kable()
+```
+
+
+
+### Grades NOT IMPORTANT RIGHT NOW
+
+Not important:
+
+When analyzing the difference in grade distributions between Tidyverse and Base 
+R courses, the Base R ones are not significantly higher. Upon a closer look at 
+individual semesters, though, it is clear that the Fall 2013 grade distribution 
+is significantly higher than any of the others, and thus, it makes sense to 
+scale the grade variable by semester. 
+
+```{r, looking at grades, echo=FALSE}
+project %>%
+  group_by(tidyverse) %>%
+  summarise(mean(grade, na.rm = TRUE), sd(grade, na.rm = TRUE)) %>%
+  kable(knitr.kable.NA = TRUE)
+
+ggplot(project, aes(x = tidyverse, y = grade)) +
+  geom_boxplot() + 
+  ggtitle("Tidyverse vs. Base R grade breakdown")
+
+project %>%
+  group_by(sem) %>% 
+  summarise(mean(grade, na.rm = TRUE), sd(grade, na.rm = TRUE)) %>%
+  kable(knitr.kable.NA = TRUE)
+
+ggplot(project, aes(x = sem, y = grade)) + 
+  geom_boxplot() +
+  ggtitle("Grade breakdown by semeseter")
+```

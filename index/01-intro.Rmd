@@ -1,4 +1,5 @@
-## Introduction
+# Introduction
+
 At Duke University, STA 101 is the primary introductory statistics course, 
 where students are assumed to have entered the class without any statistical 
 knowledge. The majority of the students enrolled in the course do not plan to 
@@ -47,6 +48,9 @@ Tidyverse methods.
 Creativity can be measured by marking certain aspects of the exploratory data 
 analysis process, such as tracking the mutation and creation of new variables, 
 subsetting the dataset, and analyzing specific groups within the data. 
+
+
+-----------------------------
 
 We begin by checking to ensure that needed packages are installed and then we load them into our current working environment:
 
