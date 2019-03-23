@@ -4,6 +4,7 @@
 library(scales)
 library(tidyverse)
 library(knitr)
+library(reshape2)
 project <- read_csv("Tidylearn Thesis Data - Sheet1.csv", na = c("", "?", "NA"))
 ```
 
@@ -72,6 +73,15 @@ project %>%
   summarise(n = n()) %>%
   mutate(prop = percent(n / sum(n))) %>%
   kable(knitr.kable.NA = TRUE)
+
+
+creative_counts <- project %>%
+  group_by(tidyverse, creative) %>%
+  summarise(n = n()) %>%
+  mutate(prop = percent(n / sum(n)))
+
+ggplot(data = creative_counts, aes(x = creative, y = prop, fill = tidyverse)) +
+  geom_bar(stat = "identity", position = position_dodge())
 ```
 
 The differences in creativity scores can be elucidated through analyses into each
