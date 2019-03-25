@@ -6,3 +6,31 @@ If we don't want Conclusion to have a chapter number next to it, we can add the 
 
 And here's some other random info: the first paragraph after a chapter title or section head _shouldn't be_ indented, because indents are to tell the reader that you're starting a new paragraph. Since that's obvious after a chapter or section title, proper typesetting doesn't add an indent there.
 
+
+**This is for lab part**
+
+Previous Dataset  | New Dataset
+-------------     | -------------
+Body Dimensions   | Fast Food Nutritional Facts 
+Atheism and Religion (Unverified) | YRBSS 
+Baseball           | Human Freedom Index (lab 9)
+North Carolina Births | YRBSS (lab 7)
+
+
+reprex::reprex(input = c("inference(y = weight, x = habit, data = nc, statistic = 'mean', type = 'ht', null = 0, 
+          alternative = 'twosided', method = 'theoretical')"), venue = "rtf")
+          
+          
+obs_diff <- yrbss %>%
+  specify(weight ~ physical_3plus) %>%
+  calculate(stat = "diff in means", order = c("yes", "no"))
+  
+  
+null <- yrbss %>%
+  specify(weight ~ physical_3plus) %>%
+  hypothesize(null = "independence") %>%
+  generate(reps = 1000, type = "permute") %>%
+  calculate(stat = "diff in means", order = c("yes", "no"))
+  
+null %>%
+  get_p_value(obs_stat = obs_diff, direction = "two_sided")

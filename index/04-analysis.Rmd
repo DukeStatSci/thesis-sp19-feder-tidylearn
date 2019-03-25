@@ -202,6 +202,13 @@ project %>%
   mutate(prop = percent(n / sum(n))) %>%
   kable(knitr.kable.NA = TRUE)
 
+project_counts <- project %>%
+  group_by(tidyverse, theme) %>%
+  summarise(n = n()) %>%
+  mutate(prop = percent(n / sum(n)))
+
+ggplot(data = project_counts, aes(x = theme, y = prop, fill = tidyverse)) +
+  geom_bar(stat = "identity", position = position_dodge())
 ```
 
 Both variables within theme reflect this trend. A present theme throughout EDA 
