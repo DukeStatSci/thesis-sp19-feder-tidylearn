@@ -5,6 +5,7 @@ library(scales)
 library(tidyverse)
 library(knitr)
 library(reshape2)
+library(viridis)
 project <- read_csv("Tidylearn Thesis Data - Sheet1.csv", na = c("", "?", "NA"))
 ```
 
@@ -81,7 +82,9 @@ creative_counts <- project %>%
   mutate(prop = percent(n / sum(n)))
 
 ggplot(data = creative_counts, aes(x = creative, y = prop, fill = tidyverse)) +
-  geom_bar(stat = "identity", position = position_dodge())
+  geom_bar(stat = "identity", position = position_dodge()) +
+  scale_fill_viridis_d(name = "Syntax", labels = c("Base R", "Tidyverse")) +
+  labs(x = "Creativity Score", y = "Proportion of Projects", title = "Tidyverse Projects Tend to be More Creative")
 ```
 
 The differences in creativity scores can be elucidated through analyses into each
@@ -208,7 +211,9 @@ project_counts <- project %>%
   mutate(prop = percent(n / sum(n)))
 
 ggplot(data = project_counts, aes(x = theme, y = prop, fill = tidyverse)) +
-  geom_bar(stat = "identity", position = position_dodge())
+  geom_bar(stat = "identity", position = position_dodge()) +
+  scale_fill_viridis_d(name = "Syntax", labels = c("Base R", "Tidyverse")) +
+  labs(x = "Project Quality", y = "Proportion of Projects", title = "Tidyverse Projects Are Usually of a Higher Quality")
 ```
 
 Both variables within theme reflect this trend. A present theme throughout EDA 
