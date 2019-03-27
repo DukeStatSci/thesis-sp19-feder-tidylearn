@@ -81,10 +81,24 @@ creative_counts <- project %>%
   summarise(n = n()) %>%
   mutate(prop = percent(n / sum(n)))
 
-ggplot(data = creative_counts, aes(x = creative, y = prop, fill = tidyverse)) +
-  geom_bar(stat = "identity", position = position_dodge()) +
+creative_counts <- creative_counts %>%
+  filter(creative == 0 | creative == 1 | creative == 2 | creative == 3) %>%
+  mutate(creative = as.factor(creative))
+
+tidy_fake_data <- data.frame(tidyverse = "tidyverse", creative = "3", n = 0, prop = "0.0%")
+tidy_fake_data <- tidy_fake_data %>% mutate(tidyverse = as.character(tidyverse),
+                creative = as.character(creative),
+                prop = as.character(prop))
+
+creative_counts <- data.frame(rbind(as.matrix(creative_counts),
+                         as.matrix(tidy_fake_data)))
+
+ggplot(data = creative_counts, aes(x = creative, y = prop, fill = tidyverse, 
+                                   group = tidyverse)) +
+  geom_bar(stat = "identity", position = position_dodge(), width = .8) +
   scale_fill_viridis_d(name = "Syntax", labels = c("Base R", "Tidyverse")) +
-  labs(x = "Creativity Score", y = "Proportion of Projects", title = "Tidyverse Projects Tend to be More Creative")
+  labs(x = "Creativity Score", y = "Proportion of Projects", title = "Tidyverse 
+       Projects Tend to be More Creative")
 ```
 
 The differences in creativity scores can be elucidated through analyses into each
@@ -210,10 +224,15 @@ project_counts <- project %>%
   summarise(n = n()) %>%
   mutate(prop = percent(n / sum(n)))
 
-ggplot(data = project_counts, aes(x = theme, y = prop, fill = tidyverse)) +
-  geom_bar(stat = "identity", position = position_dodge()) +
+project_counts <- project_counts %>% 
+  filter(theme == 0 | theme == 1 | theme == 2) %>%
+  mutate(theme = as.factor(theme))
+
+ggplot(data = project_counts, aes(x = theme, y = prop, fill = tidyverse, group = tidyverse)) +
+  geom_bar(stat = "identity", position = "dodge", width = .8) +
   scale_fill_viridis_d(name = "Syntax", labels = c("Base R", "Tidyverse")) +
-  labs(x = "Project Quality", y = "Proportion of Projects", title = "Tidyverse Projects Are Usually of a Higher Quality")
+  labs(x = "Project Quality", y = "Proportion of Projects", title = "Tidyverse 
+       Projects Are Usually of a Higher Quality")
 ```
 
 Both variables within theme reflect this trend. A present theme throughout EDA 
