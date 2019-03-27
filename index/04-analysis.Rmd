@@ -96,9 +96,8 @@ creative_counts <- data.frame(rbind(as.matrix(creative_counts),
 ggplot(data = creative_counts, aes(x = creative, y = prop, fill = tidyverse, 
                                    group = tidyverse)) +
   geom_bar(stat = "identity", position = position_dodge(), width = .8) +
-  scale_fill_viridis_d(name = "Syntax", labels = c("Base R", "Tidyverse")) +
-  labs(x = "Creativity Score", y = "Proportion of Projects", title = "Tidyverse 
-       Projects Tend to be More Creative")
+  scale_fill_viridis_d(name = "Syntax", labels = c("Base R", "Tidyverse"), begin = .37, end = .75) +
+  labs(x = "Creativity Score", y = "Proportion of Projects", title = "Tidyverse Projects Tend to be More Creative")
 ```
 
 The differences in creativity scores can be elucidated through analyses into each
@@ -230,9 +229,8 @@ project_counts <- project_counts %>%
 
 ggplot(data = project_counts, aes(x = theme, y = prop, fill = tidyverse, group = tidyverse)) +
   geom_bar(stat = "identity", position = "dodge", width = .8) +
-  scale_fill_viridis_d(name = "Syntax", labels = c("Base R", "Tidyverse")) +
-  labs(x = "Project Quality", y = "Proportion of Projects", title = "Tidyverse 
-       Projects Are Usually of a Higher Quality")
+  scale_fill_viridis_d(name = "Syntax", labels = c("Base R", "Tidyverse"), begin = .37, end = .75) +
+  labs(x = "Project Quality", y = "Proportion of Projects", title = "Tidyverse Projects Are Usually of a Higher Quality")
 ```
 
 Both variables within theme reflect this trend. A present theme throughout EDA 
