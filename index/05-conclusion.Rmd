@@ -11,10 +11,10 @@ And here's some other random info: the first paragraph after a chapter title or 
 
 Previous Dataset  | New Dataset
 -------------     | -------------
-Body Dimensions   | Fast Food Nutritional Facts 
+Body Dimensions (Binary Gender + Mundane)   | Fast Food Nutritional Facts 
 Atheism and Religion (Unverified) | YRBSS 
-Baseball           | Human Freedom Index
-North Carolina Births | YRBSS 
+Baseball (Required further dataset explanation)           | Human Freedom Index
+North Carolina Births (Dated + Mundane) | YRBSS 
 
 
 reprex::reprex(input = c("inference(y = weight, x = habit, data = nc, statistic = 'mean', type = 'ht', null = 0, 
