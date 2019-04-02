@@ -28,3 +28,11 @@ subsetting the data. That column has been changed to one tracking a subgroup
 analysis, and the other as using a subset of the data for the entire project. 
 In the meantime, I have set the NAs for the subgroup analysis to 0 for the 
 purpose of analyzing the creative variable.
+
+
+HERE'S THE DEPTH TABLE:
+
+Syntax    | Mean  | Standard Deviation
+--------- | ----- -------------
+Base R    | 1.2   | .7
+Tidyverse | 1.4   | .8

@@ -6,7 +6,7 @@ library(tidyverse)
 library(knitr)
 library(reshape2)
 library(viridis)
-project <- read_csv("Tidylearn Thesis Data - Sheet1.csv", na = c("", "?", "NA"))
+project <- read_csv("Tidylearn Thesis Data - Sheet1 (2).csv", na = c("", "?", "NA"))
 ```
 
 
@@ -27,6 +27,18 @@ project <- project %>%
     theme = eda_theme + rel_data
     )
 
+project %>%
+  group_by(tidyverse) %>%
+  summarize(mean_create = mean(create_new_var, na.rm = TRUE), sd_create = sd(create_new_var, na.rm = TRUE),
+            mean_change = mean(change_var, na.rm = TRUE), sd_change = sd(change_var, na.rm = TRUE),
+            mean_analy = mean(sub_analysis, na.rm = TRUE), sd_analy = sd(sub_analysis, na.rm = TRUE),
+            mean_data = mean(sub_data, na.rm = TRUE), sd_data = sd(sub_data, na.rm = TRUE),
+            mean_theme = mean(eda_theme, na.rm = TRUE), sd_theme = sd(eda_theme, na.rm = TRUE),
+            mean_rel = mean(rel_data, na.rm = TRUE), sd_rel = sd(rel_data, na.rm = TRUE),
+            mean_creative = mean(creative, na.rm = TRUE), sd_creative = sd(creative, na.rm = TRUE),
+            mean_depth = mean(theme, na.rm = TRUE), sd_depth = sd(theme, na.rm = TRUE)
+            )
+
 #make rest of relevant variables to yes and no, can't figure out how to do it in
 #one line
 project <- project %>%
@@ -45,6 +57,13 @@ project <- project %>%
   mutate(ht = ifelse(ht == 0, "no", "yes")) %>%
   mutate(ht_check_cond = ifelse(ht_check_cond == 0, "no", "yes"))
 ```
+
+
+Syntax | Mean | Standard Deviation
+------- | ------| --------
+Base R    | 1.0   | .8
+Tidyverse | 1.1   | .8
+
 
 As of now, the groups have an unequal amount of observations because I have gone
 through more Base R projects. Just to note, the following data conclusions may 
@@ -82,7 +101,7 @@ creative_counts <- project %>%
   mutate(prop = percent(n / sum(n)))
 
 creative_counts <- creative_counts %>%
-  filter(creative == 0 | creative == 1 | creative == 2 | creative == 3) %>%
+  filter(creative == 0 | creative == 1 | creative == 2 | creative == 3 | creative == 4) %>%
   mutate(creative = as.factor(creative))
 
 tidy_fake_data <- data.frame(tidyverse = "tidyverse", creative = "3", n = 0, prop = "0.0%")
@@ -93,11 +112,15 @@ tidy_fake_data <- tidy_fake_data %>% mutate(tidyverse = as.character(tidyverse),
 creative_counts <- data.frame(rbind(as.matrix(creative_counts),
                          as.matrix(tidy_fake_data)))
 
+creative_counts$prop <- as.numeric(str_remove(as.character(creative_counts$prop), "%"))
+
 ggplot(data = creative_counts, aes(x = creative, y = prop, fill = tidyverse, 
                                    group = tidyverse)) +
   geom_bar(stat = "identity", position = position_dodge(), width = .8) +
   scale_fill_viridis_d(name = "Syntax", labels = c("Base R", "Tidyverse"), begin = .37, end = .75) +
-  labs(x = "Creativity Score", y = "Proportion of Projects", title = "Tidyverse Projects Tend to be More Creative")
+  labs(x = "Creativity Score", y = "Proportion of Projects", title = "Tidyverse Syntax Projects Score Higher on the Creativity Metric on Average")
+
+ggsave("Creativity.png")
 ```
 
 The differences in creativity scores can be elucidated through analyses into each
@@ -191,6 +214,9 @@ project %>%
   filter(sub_data == "yes") %>%
   kable()
 
+project %>% 
+  group_by(tidyverse) %>%
+  summarise(mean = mean(sub_data), sd = sd(sub_data))
 ```
 
 
@@ -227,10 +253,13 @@ project_counts <- project_counts %>%
   filter(theme == 0 | theme == 1 | theme == 2) %>%
   mutate(theme = as.factor(theme))
 
+project_counts$prop <- as.numeric(str_remove(as.character(project_counts$prop), "%"))
+
 ggplot(data = project_counts, aes(x = theme, y = prop, fill = tidyverse, group = tidyverse)) +
   geom_bar(stat = "identity", position = "dodge", width = .8) +
   scale_fill_viridis_d(name = "Syntax", labels = c("Base R", "Tidyverse"), begin = .37, end = .75) +
-  labs(x = "Project Quality", y = "Proportion of Projects", title = "Tidyverse Projects Are Usually of a Higher Quality")
+  labs(x = "Depth Metric", y = "Proportion of Projects", title = "Tidyverse Syntax Projects Score Higher on the Depth Metric on Average")
+ggsave("Depth.png")
 ```
 
 Both variables within theme reflect this trend. A present theme throughout EDA 
@@ -290,7 +319,7 @@ project %>%
   summarise(mean(grade, na.rm = TRUE), sd(grade, na.rm = TRUE)) %>%
   kable(knitr.kable.NA = TRUE)
 
-ggplot(project, aes(x = sem, y = grade)) + 
+ggplot(project, aes(x = sem, y = grade, color = tidyverse)) + 
   geom_boxplot() +
   ggtitle("Grade breakdown by semeseter")
 ```
