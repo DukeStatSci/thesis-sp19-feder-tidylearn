@@ -4,6 +4,18 @@
 2013 project assignment:
 https://www2.stat.duke.edu/courses/Fall13/sta101/projects/project2.pdf
 
+2014 project assignment:
+https://stat.duke.edu/courses/Fall14/sta101.001/project/project2.html
+
+2015 spring:
+https://github.com/mine-cetinkaya-rundel/sta101_sp15/blob/master/Projects/Project%202/project2.Rmd
+
+2015 fall:
+https://github.com/mine-cetinkaya-rundel/sta101_f15/blob/master/Projects/Project%202/project2.Rmd
+
+2016 spring:
+https://github.com/mine-cetinkaya-rundel/sta101-s16/blob/master/Project/project.Rmd
+
 Source: http://varianceexplained.org/r/teach-tidyverse/
 
 -Tidyverse allows students to make visualizations and do stuff with data from the get go (high-level analysis), rather than focusing on learning R syntax from the start
