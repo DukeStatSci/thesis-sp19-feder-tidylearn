@@ -1,6 +1,9 @@
 #Literature Review Notes:
 
 
+2013 project assignment:
+https://www2.stat.duke.edu/courses/Fall13/sta101/projects/project2.pdf
+
 Source: http://varianceexplained.org/r/teach-tidyverse/
 
 -Tidyverse allows students to make visualizations and do stuff with data from the get go (high-level analysis), rather than focusing on learning R syntax from the start

@@ -1,33 +1,6 @@
 # Data Background
 
-The dataset is manually compiled from STA 101 final projects since 2013. The 
-provided data for the projects has been constant throughout this analysis, and 
-it tracks a random sample of American movies released since 1970. The provided 
-datset contains variables regarding the movie's general characteristics, such as 
-runtime, genre, and production studio, award trackers, as well as audience and
-critic ratings from Rotten Tomatoes and statistics from its IMDB page.
 
-These projects have five components—an introduction, univariate analysis, 
-bivariate analysis, multiple regression in predicting audience scores, and a 
-conclusion. The regression section is relatively constant amongst groups in
-determining an optimal regression. However, in the univariate and bivariate 
-analyses, student groups can explore a variety of different options, often
-differentiating between the relative strengths of the projects.
-
-An example of a complete project assignment is available in the Appendix.
-
-The dataset utilized in this paper primarily focuses on actions taken by groups 
-within the univariate and bivariate portions of the projects. In doing so, the
-dataset contains variables aimed at summarizing relative creativity measures, 
-as well as grade performance and completeness of the assignments.
-
-Explanations of specific variables will be available in the following section.
-
-Note: I have not gone back through and separated the column that used to be 
-subsetting the data. That column has been changed to one tracking a subgroup 
-analysis, and the other as using a subset of the data for the entire project. 
-In the meantime, I have set the NAs for the subgroup analysis to 0 for the 
-purpose of analyzing the creative variable.
 
 
 HERE'S THE DEPTH TABLE:
