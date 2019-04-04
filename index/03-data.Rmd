@@ -1,1 +1,58 @@
-# Data
+# Final Project
+
+The final project simulates a complete data analysis using relevant techniques 
+covered throughout the STA 101 curriculum. It is the second of two projects 
+groups completed, but differs drastically from the frst. Whereas the first project
+focuses on statistical inference and the dataset description, the second one is 
+more comprehensive in its requirements, requiring EDA and regression sections, as
+well as more creativity to address the final project's directives. In the final
+project, student groups simulate a task at a new music studio where their boss 
+hypothetically assigns two goals: they want to learn about the attributes that 
+make a movie popular and also something new about movies. 
+
+The final project contains five components—an introduction, a univariate analysis, 
+a bivariate analysis, a multiple regression for predicting audience scores, and a 
+conclusion. The regression section is relatively constant amongst groups in
+determining an optimal regression. However, in the univariate and bivariate 
+analyses, student groups can explore a variety of different options, often
+differentiating between the relative strengths of the projects. Should I include
+an example in the appendix?
+
+The student project dataset has been nearly constant throughout this analysis, 
+and it tracks a random sample of American movies released since 1970. The student
+project dataset contains between 25 and 32 variables summmarizing the movie's 
+general characteristics, such as runtime, genre, and production studio, award 
+trackers, such as best picture, best actor, best actress and best director
+indicator variables, as well as data from an online film review website (Rotten 
+Tomatoes) and an online movie database (IMDB). Although variables such as the 
+producing studio, the month and day of the week of both the theatre and DVD releases, 
+IMDB rating (out of 10) and audience rating on Rotten Tomatoes are not included 
+in the original 2013 dataset, student groups were provided with a sufficient 
+amount of potential variables to analyze. The student project dataset's most recent 
+codebook, directly copied from the Spring 2016 project assignment, is available 
+in the appendix.
+
+# Student Groups
+
+Students reamined in the same groups they were assigned at the beginning of 
+the semester since the groups were crafted based on the results of both a pre-test
+and a survey. Both the pre-test and the survey were geared toward understanding 
+each individual's statistical background and literacy upon entering the course. 
+Students worked through each lab assignment together, which consisted of exercises
+in R, and were encouraged to study together for exams as well.
+
+INSERT REASON FOR HAVING STUDENT GROUPS
+
+# Dataset Background
+
+The dataset has been manually compiled from 205 STA 101 final group projects 
+spanning the 2013-2016 academic years. The projects' contents are located on Duke's
+Sakai sites of seven different classes, six of which were taught by Dr. 
+Cetinkaya-Rundel. The submitted file(s) for the project consisted of either R 
+Markdown or scripts of their project code.
+
+The dataset utilized in this paper primarily focuses on actions taken by groups 
+within the univariate and bivariate portions of the projects. In doing so, the
+the dataset contains variables summarizing relative creativity measures, as well
+as the projects' depth. Explanations of each variable will be available in the 
+following chapter.
