@@ -54,9 +54,9 @@ which are led by teaching assistants. Although there may be some slight instruct
 effects on coding abilities, the teaching assistants are the primary educators of 
 R, and they generally change each semester. Therefore, some sections may have stronger
 grasps of coding for the final project, but it is likely to be minimal since
-teaching assistants cannot significantly deviate from the standard guidelines for
-the labs. In the case of the final project, the submitted file(s) were in
-either R Markdown or an R script.
+teaching assistants are apprised of the upcoming week's content via weekly meetings
+with the professor. In the case of the final project, the submitted file(s) were
+in either R Markdown or an R script.
 
 The dataset utilized in this paper primarily focuses on actions taken by groups 
 within the univariate and bivariate portions of the projects. In doing so, the
