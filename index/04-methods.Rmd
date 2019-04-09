@@ -22,7 +22,7 @@ library(tidyverse)
 library(knitr)
 library(reshape2)
 library(viridis)
-project <- read_csv("Tidylearn Thesis Data.csv", na = c("", "?", "NA"))
+project <- read_csv("data/tidylearn.csv", na = c("", "?", "NA"))
 ```
 
 

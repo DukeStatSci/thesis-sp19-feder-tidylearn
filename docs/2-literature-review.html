@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>A The First Appendix | INSERT TITLE HERE</title>
-  <meta name="description" content="A The First Appendix | INSERT TITLE HERE">
+  <title>Chapter 2 Literature Review | INSERT TITLE HERE</title>
+  <meta name="description" content="Chapter 2 Literature Review | INSERT TITLE HERE">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="A The First Appendix | INSERT TITLE HERE" />
+  <meta property="og:title" content="Chapter 2 Literature Review | INSERT TITLE HERE" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="A The First Appendix | INSERT TITLE HERE" />
+  <meta name="twitter:title" content="Chapter 2 Literature Review | INSERT TITLE HERE" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="conclusion.html">
-<link rel="next" href="B-the-second-appendix-for-fun.html">
+<link rel="prev" href="1-introduction.html">
+<link rel="next" href="3-final-project.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -184,20 +184,97 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="the-first-appendix" class="section level1">
-<h1><span class="header-section-number">A</span> The First Appendix</h1>
-<p>This first appendix includes all of the R chunks of code that were hidden throughout the document (using the <code>include = FALSE</code> chunk tag) to help with readibility and/or setup.</p>
-<p><strong>In the main Rmd file</strong></p>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(thesisdowndss)</code></pre>
-<p><strong>In Chapter <a href="#ref-labels"><strong>??</strong></a>:</strong></p>
+<div id="literature-review" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Literature Review</h1>
+<p>[TO DO FROM MINE:] Still need to write the lit review.</p>
+<p>2013 project assignment:
+<a href="https://www2.stat.duke.edu/courses/Fall13/sta101/projects/project2.pdf" class="uri">https://www2.stat.duke.edu/courses/Fall13/sta101/projects/project2.pdf</a></p>
+<p>2014 project assignment:
+<a href="https://stat.duke.edu/courses/Fall14/sta101.001/project/project2.html" class="uri">https://stat.duke.edu/courses/Fall14/sta101.001/project/project2.html</a></p>
+<p>2015 spring:
+<a href="https://github.com/mine-cetinkaya-rundel/sta101_sp15/blob/master/Projects/Project%202/project2.Rmd" class="uri">https://github.com/mine-cetinkaya-rundel/sta101_sp15/blob/master/Projects/Project%202/project2.Rmd</a></p>
+<p>2015 fall:
+<a href="https://github.com/mine-cetinkaya-rundel/sta101_f15/blob/master/Projects/Project%202/project2.Rmd" class="uri">https://github.com/mine-cetinkaya-rundel/sta101_f15/blob/master/Projects/Project%202/project2.Rmd</a></p>
+<p>2016 spring:
+<a href="https://github.com/mine-cetinkaya-rundel/sta101-s16/blob/master/Project/project.Rmd" class="uri">https://github.com/mine-cetinkaya-rundel/sta101-s16/blob/master/Project/project.Rmd</a></p>
+<p>Source: <a href="http://varianceexplained.org/r/teach-tidyverse/" class="uri">http://varianceexplained.org/r/teach-tidyverse/</a></p>
+<p>-Tidyverse allows students to make visualizations and do stuff with data from the get go (high-level analysis), rather than focusing on learning R syntax from the start</p>
+<p>-Have been able to teach pretty basic code using ~facet_wrap in 2-3 hours to people who have never used coding before</p>
+<p>-Syntax is flexible for other work in the future from the start</p>
+<p>-However, doesn’t teach conditionals and loops from the start
+-Loops are extremely inefficient for the most part and are advanced generally to make them more efficient</p>
+<p>-There’s only one way to do most tidyverse commands, like manipulating data frames, which makes this consistent</p>
+<p>-Will eventually have to learn important base R stuff, but can use them in combination with tidyverse tools, so you can sprinkle them in
+-ex. lm(), mean()—allows you to apply these functions immediately once they understand tidyverse syntax</p>
+<p>-Goal of introductory stats course coding: R is worth learning, can bolster statistical analysis</p>
+<p>-Want to get people started doing stuff in R from the start to draw them in and also as supplementary material for intro stats</p>
+<p>From comments: One issue—not as much help online for Tidyverse, students end up with a mix sometimes when looking up issues they run into</p>
+<hr />
+<p>Source: <a href="http://varianceexplained.org/r/teach_ggplot2_to_beginners/" class="uri">http://varianceexplained.org/r/teach_ggplot2_to_beginners/</a>
+-ggplot2 should be taught first before base R, despite being a third-party package
+-To make the same equivalent plots in base R that you can with ggplot(), you need to know how to generally run for() loops and add more lines such as legend() to make the plots readable
+-ggplot2 plots are also better looking
+-The goal with coding in introductory statistics courses is to convince students that they want to learn coding, and giving them the tools to make cool plots from the start will help them get excited
+-”ggplot2 aims for abstraction, where the choices the you make are the ones that matter for your visualization of the data”
+-tidy data is required, but it’s good practice since other general functions such as lm() require tidy data anyways</p>
+<hr />
+<p>Source: The mosiac package: Helping Students to ‘Think with Data’ Using R
+-Goal: The mosiac package should be easy to implement for beginning coders, allowing them to make insights without an extensive coding background
+-”Less volume, more creativity”
+-mosaic seeks to support the belief of the importance of learning how to work in a multivariate environment
+-uses the same template for numerical, categorical and graphical summaries
+-recommends plotting in two variable settings first, because you might not be able to do in base R + more interesting with two variables as opposed to just one
+-mplot() incorporates an argument to use ggplot2 graphics instead of Base R, also can create interactive plots in ggplot2
+-mosaic also has specific functions geared toward introductory students, such as rflip(), helping explain binomial situations without for() loops
+-mosaic depends on ggplot2 and dplyr, dplyr is encouraged to use alongside mosaic since it also emphasizes the “less volume, more creativity” approach
+-”One of the keys to successfully empowering students to think with data is providing them both a conceptual framework that allows them to know what to look for and how to interpret what they find, and a computational toolbox that allows them to do the looking”
+-allows students to use programming as an asset from the start of their statistical learning
+-students should also learn the errors that R gives out early on so they can diagnose their own code issues, decrease anxiety and frustration and lower expectations for perfect code</p>
+<table style="width:43%;">
+<colgroup>
+<col width="43%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Source: infrastructure and tools for teaching statistical computing throughout the statistical curriculum
+-Goal: To provide guidelines for statistical programming tools for introductory statistics classes since as time progresses, programming has emerged as a requirement for statistics, especially when dealing with the practical and relevant datasets of today.
+-Programming is necessary for people pursuing stats, so it’s a matter of how and when to teach these skills
+-Students need to be exposed early on, but in a supplemental fashion so they can still grasp the already dense concepts already regularly covered in the classrooms
+-In the author’s computation classes, there’s a goal to computationally visualize something within the first 10 minutes of the first day
+-Rstudio is best because it is most practical if students choose to advance, and also isn’t intimidating to write a line or two of code as opposed to screencast instructions of point-and-click software
+-R enhances problem solving skills in relation to statistics early on
+-Rstudio as opposed to R may help ease the learning curve by being an IDE
+-Emphasis on reproducibility in code
+-Make computing a central part of the statistics course and not just an auxillary one
+-Doing so makes it easier to not waste time in advanced stats courses explaining how to do preliminary coding because that’s the students’ introduction to it</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Source: Tidy Data by Hadley Wickham
+Goal: Will talk about how to best work with tidy data, where each row is an observation, each column is a variable and each observational unit is a table. There are a few techniques that apply to a variety of messy datasets to make them tidy, and a lot of functions that rely on tidy data inputs and outputs to work, so it’s a good practice to use.
+-not a lot of research on data preparation although it’s the most time-consuming part of the process
+-data tidying: structuring datasets to facilitate analysis
+-data structure is always set with tidy data, don’t need to work out kinks of other issues in manual-induced ones
+-tidy datasets work symmetrically with tidy tools
+-don’t need to work on data logistics, but can go right to the problem
+-tidy data framework based on Hadley’s experience with real-world problems and datasets and then teaching students those skills
+-generally, measured variables are listed after fixed ones, and related ones are next to each other by column
+-rows are ordered by the first variable
+-tidy tools: “tools that take tidy datasets as input and return tidy datasets as output. Tidy tools are useful because the output of one tool can be used as the input to another.”
+-most data transformation operations are made easier by having each variable as a column</td>
+</tr>
+</tbody>
+</table>
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="conclusion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="B-the-second-appendix-for-fun.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="1-introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="3-final-project.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
