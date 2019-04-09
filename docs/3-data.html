@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Conclusion | INSERT TITLE HERE</title>
-  <meta name="description" content="Conclusion | INSERT TITLE HERE">
+  <title>Chapter 3 Data | INSERT TITLE HERE</title>
+  <meta name="description" content="Chapter 3 Data | INSERT TITLE HERE">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Conclusion | INSERT TITLE HERE" />
+  <meta property="og:title" content="Chapter 3 Data | INSERT TITLE HERE" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Conclusion | INSERT TITLE HERE" />
+  <meta name="twitter:title" content="Chapter 3 Data | INSERT TITLE HERE" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="6-educational-resources.html">
-<link rel="next" href="A-the-first-appendix.html">
+<link rel="prev" href="2-literature-review.html">
+<link rel="next" href="4-methods.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -185,75 +185,79 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="conclusion" class="section level1 unnumbered">
-<h1>Conclusion</h1>
-<p>If we don’t want Conclusion to have a chapter number next to it, we can add the <code>{-}</code> attribute.</p>
-<p><strong>More info</strong></p>
-<p>And here’s some other random info: the first paragraph after a chapter title or section head <em>shouldn’t be</em> indented, because indents are to tell the reader that you’re starting a new paragraph. Since that’s obvious after a chapter or section title, proper typesetting doesn’t add an indent there.</p>
-<p><strong>This is for lab part</strong></p>
-<table>
-<colgroup>
-<col width="36%" />
-<col width="38%" />
-<col width="26%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Previous Dataset</th>
-<th>Reason for Change</th>
-<th>New Dataset</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Body Dimensions</td>
-<td>Focuses on weight comparison across binary genders</td>
-<td>Fast Food Nutritional Facts</td>
-</tr>
-<tr class="even">
-<td>Atheism and Religion</td>
-<td>Unverified Dataset</td>
-<td>Youth Risk Behavior Surveillance System</td>
-</tr>
-<tr class="odd">
-<td>Baseball</td>
-<td>Required further dataset explanation</td>
-<td>Human Freedom Index</td>
-</tr>
-<tr class="even">
-<td>North Carolina Births</td>
-<td>Dated + Not relevant for most undergrads</td>
-<td>Youth Risk Behavior Surveillance System</td>
-</tr>
-</tbody>
-</table>
-<p>reprex::reprex(input = c(“inference(y = weight, x = habit, data = nc, statistic = ‘mean’, type = ‘ht’, null = 0,
-alternative = ‘twosided’, method = ‘theoretical’)”), venue = “rtf”)</p>
-<p>obs_diff &lt;- yrbss %&gt;%
-specify(weight ~ physical_3plus) %&gt;%
-calculate(stat = “diff in means”, order = c(“yes”, “no”))</p>
-<p>null &lt;- yrbss %&gt;%
-specify(weight ~ physical_3plus) %&gt;%
-hypothesize(null = “independence”) %&gt;%
-generate(reps = 1000, type = “permute”) %&gt;%
-calculate(stat = “diff in means”, order = c(“yes”, “no”))</p>
-<p>null %&gt;%
-get_p_value(obs_stat = obs_diff, direction = “two_sided”)</p>
+<div id="data" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Data</h1>
+<div id="final-project" class="section level2">
+<h2><span class="header-section-number">3.1</span> Final Project</h2>
+<p>The final project simulates a complete data analysis using relevant techniques
+covered throughout the STA 101 curriculum. The final project is the second of two
+that groups complete, but it differs drastically from the frst. Whereas the first project
+focuses on statistical inference and the dataset description, the second one is
+more comprehensive in its requirements, with specifications for EDA and regression
+sections, as well as more creativity to address the final project’s directives.
+In the final project, student groups simulate a task at a new music studio where
+their boss hypothetically assigns two goals: the boss wants to learn about the
+attributes that make a movie popular and also something new about movies.</p>
+<p>The final project contains five components—an introduction, a univariate analysis,
+a bivariate analysis, a multiple regression for predicting audience scores, and a
+conclusion. The regression section is relatively constant amongst groups in
+determining an optimal regression. However, in the univariate and bivariate
+analyses, student groups can explore a variety of different options, often
+differentiating between the relative strengths of the projects. FOR MINE: Should I include
+an example in the appendix?</p>
+<p>The student project dataset has been nearly constant throughout this analysis,
+and it tracks a random sample of American movies released since 1970. The student
+project dataset contains between 25 and 32 variables summmarizing the movie’s
+general characteristics, such as runtime, genre, and production studio, award
+trackers, such as best picture, best actor, best actress and best director
+indicator variables, as well as data from an online film review website (Rotten
+Tomatoes) and an online movie database (IMDB). Although variables such as the
+producing studio, the month and day of the week of both the theatre and DVD releases,
+IMDB rating (out of 10) and audience rating on Rotten Tomatoes are not included
+in the original 2013 dataset, student groups were provided with a sufficient
+amount of potential variables to analyze. The student project dataset’s most recent
+codebook, directly copied from the Spring 2016 project assignment, is available
+in the appendix.</p>
+</div>
+<div id="student-groups" class="section level2">
+<h2><span class="header-section-number">3.2</span> Student Groups</h2>
+<p>Students reamined in the same groups they were assigned at the beginning of
+the semester since the groups were crafted based on the results of both a pre-test
+and a survey. Both the pre-test and the survey were geared toward understanding
+each individual’s statistical background and literacy upon entering the course.
+Students worked through each lab assignment together, which consisted of exercises
+in R, and were encouraged to study together for exams as well.</p>
+<p>FOR MINE: INSERT REASON FOR HAVING STUDENT GROUPS</p>
+</div>
+<div id="dataset-background" class="section level2">
+<h2><span class="header-section-number">3.3</span> Dataset Background</h2>
+<p>The dataset has been manually compiled from 205 STA 101 final group projects
+spanning the 2013-2016 academic years. The projects’ contents are located on Duke’s
+Sakai sites of seven different classes, six of which were taught by Dr.
+Cetinkaya-Rundel. However, the professor themself does not affect much of the R
+learning over the course of the semester, since it occurs within student’s labs,
+which are led by teaching assistants. Although there may be some slight instructor
+effects on coding abilities, the teaching assistants are the primary educators of
+R, and they generally change each semester. Therefore, some sections may have stronger
+grasps of coding for the final project, but it is likely to be minimal since
+teaching assistants are apprised of the upcoming week’s content via weekly meetings
+with the professor. In the case of the final project, the submitted file(s) were
+in either R Markdown or an R script.</p>
+<p>The dataset utilized in this paper primarily focuses on actions taken by groups
+within the univariate and bivariate portions of the projects. In doing so, the
+the dataset contains variables summarizing relative creativity measures, as well
+as the projects’ depth. Explanations of each variable will be available in the
+following chapter.</p>
 
 </div>
-
-
-
-If you feel it necessary to include an appendix, it goes here.
--->
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="6-educational-resources.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="A-the-first-appendix.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="2-literature-review.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="4-methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
