@@ -183,7 +183,6 @@ from 0-2 and is scored with 1 point for each of the following:
 1. Presence of consistent theme throughout the project
 2. Use of relevant data
 
-
 The depth metric was created to qualify findings from the creativity score, to 
 confirm that the syntax producing the more creative student projects also were of
 the same (or better) quality. Although creativity is imperative in these final
