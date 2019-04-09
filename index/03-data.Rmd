@@ -1,4 +1,6 @@
-# Final Project
+# Data
+
+## Final Project
 
 The final project simulates a complete data analysis using relevant techniques 
 covered throughout the STA 101 curriculum. The final project is the second of two
@@ -32,7 +34,7 @@ amount of potential variables to analyze. The student project dataset's most rec
 codebook, directly copied from the Spring 2016 project assignment, is available 
 in the appendix.
 
-# Student Groups
+## Student Groups
 
 Students reamined in the same groups they were assigned at the beginning of 
 the semester since the groups were crafted based on the results of both a pre-test
@@ -43,7 +45,7 @@ in R, and were encouraged to study together for exams as well.
 
 FOR MINE: INSERT REASON FOR HAVING STUDENT GROUPS
 
-# Dataset Background
+## Dataset Background
 
 The dataset has been manually compiled from 205 STA 101 final group projects 
 spanning the 2013-2016 academic years. The projects' contents are located on Duke's

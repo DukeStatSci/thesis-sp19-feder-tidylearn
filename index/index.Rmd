@@ -51,6 +51,7 @@ If you receive a duplicate label error after knitting, make sure to delete the i
 
 ```{r include_packages, include = FALSE}
 library(thesisdowndss)
+library(servr)
 ```
 
 <!-- You'll need to include the order that you'd like Rmd files to appear in the _bookdown.yml file for
