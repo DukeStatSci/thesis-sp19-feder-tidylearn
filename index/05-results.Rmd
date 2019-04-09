@@ -1,91 +1,41 @@
-# Analysis
+# Results
 
-```{r load-data, include=FALSE}
-library(scales)
-library(tidyverse)
-library(knitr)
-library(reshape2)
-library(viridis)
-project <- read_csv("Tidylearn Thesis Data - Sheet1 (2).csv", na = c("", "?", "NA"))
-```
+Both numerically and graphically, the student projects using the tidyverse syntax
+in this setting score higher on the creativity and depth metrics. Tidyverse projects
+overwhelmingly score higher in the upper levels of the two variables, and their
+mean and standard deviations are significantly different:
 
+Creativity:
 
-```{r, data-manipulation, include=FALSE}
-project <- project %>%
-  mutate(tidyverse = ifelse(tidyverse == 0, "base R", "tidyverse"))
+Syntax    | Mean  | Standard Deviation
+--------- | ----- -------------
+Base R    | 1.1   | .6
+Tidyverse | 1.7   | .8
 
+Depth:
 
-project$sub_analysis[is.na(project$sub_analysis)] <- 0
-```
+Syntax    | Mean  | Standard Deviation
+--------- | ----- -------------
+Base R    | 1.2   | .7
+Tidyverse | 1.4   | .7
 
-## Exploratory Data Analysis
+## Creativity Metric
 
-```{r, renaming variables, echo=FALSE}
-project <- project %>% 
-  mutate(
-    creative = create_new_var + change_var + sub_analysis + sub_data, 
-    theme = eda_theme + rel_data
-    )
-
-project %>%
-  group_by(tidyverse) %>%
-  summarize(mean_create = mean(create_new_var, na.rm = TRUE), sd_create = sd(create_new_var, na.rm = TRUE),
-            mean_change = mean(change_var, na.rm = TRUE), sd_change = sd(change_var, na.rm = TRUE),
-            mean_analy = mean(sub_analysis, na.rm = TRUE), sd_analy = sd(sub_analysis, na.rm = TRUE),
-            mean_data = mean(sub_data, na.rm = TRUE), sd_data = sd(sub_data, na.rm = TRUE),
-            mean_theme = mean(eda_theme, na.rm = TRUE), sd_theme = sd(eda_theme, na.rm = TRUE),
-            mean_rel = mean(rel_data, na.rm = TRUE), sd_rel = sd(rel_data, na.rm = TRUE),
-            mean_creative = mean(creative, na.rm = TRUE), sd_creative = sd(creative, na.rm = TRUE),
-            mean_depth = mean(theme, na.rm = TRUE), sd_depth = sd(theme, na.rm = TRUE)
-            )
-
-#make rest of relevant variables to yes and no, can't figure out how to do it in
-#one line
-project <- project %>%
-  mutate(create_new_var = ifelse(create_new_var == 0, "no", "yes")) %>%
-  mutate(change_var = ifelse(change_var == 0, "no", "yes")) %>%
-  mutate(sub_analysis = ifelse(sub_analysis == 0, "no", "yes")) %>%
-  mutate(sub_data = ifelse(sub_data == 0, "no", "yes")) %>%
-  mutate(viz_mult_mak = ifelse(viz_mult_mak == 0, "no", "yes")) %>%
-  mutate(viz_mult_interpret = ifelse(viz_mult_interpret == 0, "no", "yes")) %>%
-  mutate(eda_theme = ifelse(eda_theme == 0, "no", "yes")) %>%
-  mutate(rel_data = ifelse(rel_data == 0, "no", "yes")) %>%
-  mutate(slr_fit = ifelse(slr_fit == 0, "no", "yes")) %>%
-  mutate(mlr_fit = ifelse(mlr_fit == 0, "no", "yes")) %>%
-  mutate(mlr_check_cond = ifelse(mlr_check_cond == 0, "no", "yes")) %>%
-  mutate(prediction = ifelse(prediction == 0, "no", "yes")) %>%
-  mutate(ht = ifelse(ht == 0, "no", "yes")) %>%
-  mutate(ht_check_cond = ifelse(ht_check_cond == 0, "no", "yes"))
-```
-
-
-Syntax | Mean | Standard Deviation
-------- | ------| --------
-Base R    | 1.0   | .8
-Tidyverse | 1.1   | .8
-
-
-As of now, the groups have an unequal amount of observations because I have gone
-through more Base R projects. Just to note, the following data conclusions may 
-change with time.
-
-```{r, difference in project counts, echo=FALSE}
+```{r, difference in project counts, include=FALSE}
 project %>%
   count(tidyverse) %>%
   kable()
 ```
 
-Note: Currently, the creativity variable is a sum of the four different components: 
-creating new variables, mutating existing ones, performing a subgroup analysis 
-and subsetting the data set.
+Despite there being only 82 base R projects recorded to the 123 Tidyverse projects,
+there still were more base R projects scoring a 0 or 1 on the creativity metric
+than those within the Tidyverse. Overall, there was a single project that scored
+a perfect four, and the majority of the total projects scored a one or two.
 
-### Creativity
-The creativity score is simply a sum of four different components of projects:
-creating new variables, mutating existing ones, performing a subgroup analysis, 
-and subsetting the data set.
+Yet within the Tidyverse projects, more than half (56.1 percent) registered at
+least a two on creativity, compared to just 20.7 percent of base R final projects.
 
-In terms of total creativity, there is generally a higher proportion of more 
-creativity points for Tidyverse projects.
+The complete distribution is listed below:
 
 ```{r, looking at creative stat, echo=FALSE}
 project %>%
@@ -104,7 +54,7 @@ creative_counts <- creative_counts %>%
   filter(creative == 0 | creative == 1 | creative == 2 | creative == 3 | creative == 4) %>%
   mutate(creative = as.factor(creative))
 
-tidy_fake_data <- data.frame(tidyverse = "tidyverse", creative = "3", n = 0, prop = "0.0%")
+tidy_fake_data <- data.frame(tidyverse = "tidyverse", creative = "4", n = 0, prop = "0.0%")
 tidy_fake_data <- tidy_fake_data %>% mutate(tidyverse = as.character(tidyverse),
                 creative = as.character(creative),
                 prop = as.character(prop))
@@ -123,14 +73,17 @@ ggplot(data = creative_counts, aes(x = creative, y = prop, fill = tidyverse,
 ggsave("Creativity.png")
 ```
 
-The differences in creativity scores can be elucidated through analyses into each
-of the four separate variables combining to form the creativity metrics. Perhaps
-the most distinct difference occurs in the creation of new variables, which is 
-defined as any data manipulation throughout the EDA process where a previously 
-non-existing variable is formed. As an example, one project created a new 
-variable tracking if a movie had won any of the following awards: best picture,
-best actor, bestactress, or best director, and that project had this variable 
-coded as "yes."
+The following subsections will dissect the similarities and differences between
+base R and tidyverse student projects for the four variables combined to form the
+creativity metric, as well as postulate reasons for the distributions.
+
+
+### Creation of New Variable(s)
+
+The largest difference in proportions for the four variables that make up the creativity
+metric is within the creation of new variable category. Nearly half of all final 
+projects using the Tidyverse syntax featured a creation of a new variable, whereas
+less than a quarter of base R projects did.
 
 ```{r, looking at creating new variable, echo=FALSE}
 project %>%
@@ -141,13 +94,12 @@ project %>%
   kable()
 ```
 
-As shown above, it is clear that the proportion of projects with the creation of
-new variables is higher in Tidyverse ones. This may be because it is very easy
-to create new variables using `mutate()` in the Tidyverse.
+This difference may be due to the easability in utilizing the Tidyverse's `mutate()`
+function, which allows users to create new variables using just one command. In
+Base R, students are instructed to use `$` notation, which may be construed as harder
+to grasp due to issues with variable selection with `$` and its usage in other
+base R tasks than just creating new variables.
 
-However, one covariate in particular, mutating existing variables, did not seem 
-to vary frequency-wise across different syntax users. Within the movies dataset, 
-an example from some projects was to ignore G-rated movies from the dataset.
 
 In fact, it seems as though slightly more base R studies changed pre-existing 
 variables. 
@@ -261,6 +213,14 @@ ggplot(data = project_counts, aes(x = theme, y = prop, fill = tidyverse, group =
   labs(x = "Depth Metric", y = "Proportion of Projects", title = "Tidyverse Syntax Projects Score Higher on the Depth Metric on Average")
 ggsave("Depth.png")
 ```
+
+HERE'S THE DEPTH TABLE:
+
+Syntax    | Mean  | Standard Deviation
+--------- | ----- -------------
+Base R    | 1.2   | .7
+Tidyverse | 1.4   | .8
+
 
 Both variables within theme reflect this trend. A present theme throughout EDA 
 is present in a greater proportion of Tidyverse projects. As an example, 
