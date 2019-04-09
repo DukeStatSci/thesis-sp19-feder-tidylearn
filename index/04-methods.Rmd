@@ -22,7 +22,7 @@ library(tidyverse)
 library(knitr)
 library(reshape2)
 library(viridis)
-project <- read_csv("Tidylearn Thesis Data.csv", na = c("", "?", "NA"))
+project <- read_csv("data/tidylearn.csv", na = c("", "?", "NA"))
 ```
 
 
@@ -47,35 +47,38 @@ project <- project %>%
 ```{r, find summary stats for results, include = FALSE}
 project %>%
   group_by(tidyverse) %>%
-  summarize(mean_create = mean(create_new_var, na.rm = TRUE), sd_create = sd(create_new_var, na.rm = TRUE),
-            mean_change = mean(change_var, na.rm = TRUE), sd_change = sd(change_var, na.rm = TRUE),
-            mean_analy = mean(sub_analysis, na.rm = TRUE), sd_analy = sd(sub_analysis, na.rm = TRUE),
-            mean_data = mean(sub_data, na.rm = TRUE), sd_data = sd(sub_data, na.rm = TRUE),
-            mean_theme = mean(eda_theme, na.rm = TRUE), sd_theme = sd(eda_theme, na.rm = TRUE),
-            mean_rel = mean(rel_data, na.rm = TRUE), sd_rel = sd(rel_data, na.rm = TRUE),
-            mean_creative = mean(creative, na.rm = TRUE), sd_creative = sd(creative, na.rm = TRUE),
-            mean_depth = mean(theme, na.rm = TRUE), sd_depth = sd(theme, na.rm = TRUE)
-            )
+  summarize(
+    mean_create = mean(create_new_var, na.rm = TRUE), sd_create = sd(create_new_var, na.rm = TRUE),
+    mean_change = mean(change_var, na.rm = TRUE), sd_change = sd(change_var, na.rm = TRUE),
+    mean_analy = mean(sub_analysis, na.rm = TRUE), sd_analy = sd(sub_analysis, na.rm = TRUE),
+    mean_data = mean(sub_data, na.rm = TRUE), sd_data = sd(sub_data, na.rm = TRUE),
+    mean_theme = mean(eda_theme, na.rm = TRUE), sd_theme = sd(eda_theme, na.rm = TRUE),
+    mean_rel = mean(rel_data, na.rm = TRUE), sd_rel = sd(rel_data, na.rm = TRUE),
+    mean_creative = mean(creative, na.rm = TRUE), sd_creative = sd(creative, na.rm = TRUE),
+    mean_depth = mean(theme, na.rm = TRUE), sd_depth = sd(theme, na.rm = TRUE)
+  )
 ```
 
 ```{r, mutate vars, echo=FALSE}
 #make rest of relevant variables to yes and no, can't figure out how to do it in
 #one line
 project <- project %>%
-  mutate(create_new_var = ifelse(create_new_var == 0, "no", "yes")) %>%
-  mutate(change_var = ifelse(change_var == 0, "no", "yes")) %>%
-  mutate(sub_analysis = ifelse(sub_analysis == 0, "no", "yes")) %>%
-  mutate(sub_data = ifelse(sub_data == 0, "no", "yes")) %>%
-  mutate(viz_mult_mak = ifelse(viz_mult_mak == 0, "no", "yes")) %>%
-  mutate(viz_mult_interpret = ifelse(viz_mult_interpret == 0, "no", "yes")) %>%
-  mutate(eda_theme = ifelse(eda_theme == 0, "no", "yes")) %>%
-  mutate(rel_data = ifelse(rel_data == 0, "no", "yes")) %>%
-  mutate(slr_fit = ifelse(slr_fit == 0, "no", "yes")) %>%
-  mutate(mlr_fit = ifelse(mlr_fit == 0, "no", "yes")) %>%
-  mutate(mlr_check_cond = ifelse(mlr_check_cond == 0, "no", "yes")) %>%
-  mutate(prediction = ifelse(prediction == 0, "no", "yes")) %>%
-  mutate(ht = ifelse(ht == 0, "no", "yes")) %>%
-  mutate(ht_check_cond = ifelse(ht_check_cond == 0, "no", "yes"))
+  mutate(
+    create_new_var = ifelse(create_new_var == 0, "no", "yes"),
+    change_var = ifelse(change_var == 0, "no", "yes"),
+    sub_analysis = ifelse(sub_analysis == 0, "no", "yes"),
+    sub_data = ifelse(sub_data == 0, "no", "yes"),
+    viz_mult_mak = ifelse(viz_mult_mak == 0, "no", "yes"),
+    viz_mult_interpret = ifelse(viz_mult_interpret == 0, "no", "yes"),
+    eda_theme = ifelse(eda_theme == 0, "no", "yes"),
+    rel_data = ifelse(rel_data == 0, "no", "yes"),
+    slr_fit = ifelse(slr_fit == 0, "no", "yes"),
+    mlr_fit = ifelse(mlr_fit == 0, "no", "yes"),
+    mlr_check_cond = ifelse(mlr_check_cond == 0, "no", "yes"),
+    prediction = ifelse(prediction == 0, "no", "yes"),
+    ht = ifelse(ht == 0, "no", "yes"),
+    ht_check_cond = ifelse(ht_check_cond == 0, "no", "yes")
+  )
 ```
 
 ```{r, display contents}

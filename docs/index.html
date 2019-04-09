@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My Final College Paper</title>
-  <meta name="description" content="My Final College Paper">
+  <title>INSERT TITLE HERE</title>
+  <meta name="description" content="INSERT TITLE HERE">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="My Final College Paper" />
+  <meta property="og:title" content="INSERT TITLE HERE" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="My Final College Paper" />
+  <meta name="twitter:title" content="INSERT TITLE HERE" />
   
   
   
@@ -32,7 +32,7 @@
   
   
 
-<link rel="next" href="1-introduction-1.html">
+<link rel="next" href="1-introduction.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,41 +50,67 @@
 
 
 <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 </head>
@@ -101,19 +127,39 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <ul class="summary">
 <li><a href="./"></a></li>
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
-<li class="chapter" data-level="1" data-path="1-introduction-1.html"><a href="1-introduction-1.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="2-literature-review-notes.html"><a href="2-literature-review-notes.html"><i class="fa fa-check"></i><b>2</b> Literature Review Notes:</a></li>
-<li class="chapter" data-level="3" data-path="3-data-background.html"><a href="3-data-background.html"><i class="fa fa-check"></i><b>3</b> Data Background</a></li>
-<li class="chapter" data-level="4" data-path="4-analysis.html"><a href="4-analysis.html"><i class="fa fa-check"></i><b>4</b> Analysis</a><ul>
-<li class="chapter" data-level="4.1" data-path="4-analysis.html"><a href="4-analysis.html#exploratory-data-analysis"><i class="fa fa-check"></i><b>4.1</b> Exploratory Data Analysis</a><ul>
-<li class="chapter" data-level="4.1.1" data-path="4-analysis.html"><a href="4-analysis.html#creativity"><i class="fa fa-check"></i><b>4.1.1</b> Creativity</a></li>
-<li class="chapter" data-level="4.1.2" data-path="4-analysis.html"><a href="4-analysis.html#subgroup-analysis"><i class="fa fa-check"></i><b>4.1.2</b> Subgroup Analysis</a></li>
-<li class="chapter" data-level="4.1.3" data-path="4-analysis.html"><a href="4-analysis.html#subsetting-dataset"><i class="fa fa-check"></i><b>4.1.3</b> Subsetting dataset</a></li>
-<li class="chapter" data-level="4.1.4" data-path="4-analysis.html"><a href="4-analysis.html#overall-theme"><i class="fa fa-check"></i><b>4.1.4</b> Overall theme</a></li>
-<li class="chapter" data-level="4.1.5" data-path="4-analysis.html"><a href="4-analysis.html#grades-not-important-right-now"><i class="fa fa-check"></i><b>4.1.5</b> Grades NOT IMPORTANT RIGHT NOW</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preliminary Content</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#abstract"><i class="fa fa-check"></i>Abstract</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#dedication"><i class="fa fa-check"></i>Dedication</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="1-introduction.html"><a href="1-introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="2-literature-review.html"><a href="2-literature-review.html"><i class="fa fa-check"></i><b>2</b> Literature Review</a></li>
+<li class="chapter" data-level="3" data-path="3-final-project.html"><a href="3-final-project.html"><i class="fa fa-check"></i><b>3</b> Final Project</a></li>
+<li class="chapter" data-level="4" data-path="4-student-groups.html"><a href="4-student-groups.html"><i class="fa fa-check"></i><b>4</b> Student Groups</a></li>
+<li class="chapter" data-level="5" data-path="5-dataset-background.html"><a href="5-dataset-background.html"><i class="fa fa-check"></i><b>5</b> Dataset Background</a></li>
+<li class="chapter" data-level="6" data-path="6-methods.html"><a href="6-methods.html"><i class="fa fa-check"></i><b>6</b> Methods</a><ul>
+<li class="chapter" data-level="6.1" data-path="6-methods.html"><a href="6-methods.html#exploratory-data-analysis"><i class="fa fa-check"></i><b>6.1</b> Exploratory Data Analysis</a></li>
+<li class="chapter" data-level="6.2" data-path="6-methods.html"><a href="6-methods.html#creativity"><i class="fa fa-check"></i><b>6.2</b> Creativity</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="6-methods.html"><a href="6-methods.html#creation-of-new-variables"><i class="fa fa-check"></i><b>6.2.1</b> Creation of New Variable(s)</a></li>
+<li class="chapter" data-level="6.2.2" data-path="6-methods.html"><a href="6-methods.html#transformation-of-existing-variables"><i class="fa fa-check"></i><b>6.2.2</b> Transformation of Existing Variables</a></li>
+<li class="chapter" data-level="6.2.3" data-path="6-methods.html"><a href="6-methods.html#existence-of-subgroup-analysis"><i class="fa fa-check"></i><b>6.2.3</b> Existence of Subgroup Analysis</a></li>
+<li class="chapter" data-level="6.2.4" data-path="6-methods.html"><a href="6-methods.html#use-of-a-data-subset-for-projects-entirety"><i class="fa fa-check"></i><b>6.2.4</b> Use of a Data Subset for Project’s Entirety</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="6-methods.html"><a href="6-methods.html#depth"><i class="fa fa-check"></i><b>6.3</b> Depth</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="6-methods.html"><a href="6-methods.html#consistent-theme"><i class="fa fa-check"></i><b>6.3.1</b> Consistent Theme</a></li>
+<li class="chapter" data-level="6.3.2" data-path="6-methods.html"><a href="6-methods.html#presence-of-relevant-data"><i class="fa fa-check"></i><b>6.3.2</b> Presence of Relevant Data</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="7" data-path="7-results.html"><a href="7-results.html"><i class="fa fa-check"></i><b>7</b> Results</a><ul>
+<li class="chapter" data-level="7.1" data-path="7-results.html"><a href="7-results.html#creativity-metric"><i class="fa fa-check"></i><b>7.1</b> Creativity Metric</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="7-results.html"><a href="7-results.html#creation-of-new-variables-1"><i class="fa fa-check"></i><b>7.1.1</b> Creation of New Variable(s)</a></li>
+<li class="chapter" data-level="7.1.2" data-path="7-results.html"><a href="7-results.html#subgroup-analysis"><i class="fa fa-check"></i><b>7.1.2</b> Subgroup Analysis</a></li>
+<li class="chapter" data-level="7.1.3" data-path="7-results.html"><a href="7-results.html#subsetting-dataset"><i class="fa fa-check"></i><b>7.1.3</b> Subsetting dataset</a></li>
+<li class="chapter" data-level="7.1.4" data-path="7-results.html"><a href="7-results.html#overall-theme"><i class="fa fa-check"></i><b>7.1.4</b> Overall theme</a></li>
+<li class="chapter" data-level="7.1.5" data-path="7-results.html"><a href="7-results.html#grades-not-important-right-now"><i class="fa fa-check"></i><b>7.1.5</b> Grades NOT IMPORTANT RIGHT NOW</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="8-educational-resources.html"><a href="8-educational-resources.html"><i class="fa fa-check"></i><b>8</b> Educational Resources</a></li>
 <li class="chapter" data-level="" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i>Conclusion</a></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="A-the-first-appendix.html"><a href="A-the-first-appendix.html"><i class="fa fa-check"></i><b>A</b> The First Appendix</a></li>
@@ -130,7 +176,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">My Final College Paper</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">INSERT TITLE HERE</a>
           </h1>
         </div>
 
@@ -139,20 +185,26 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">My Final College Paper</h1>
+<h1 class="title">INSERT TITLE HERE</h1>
 <p class="author"><em>Benjamin Feder</em></p>
-<p class="date"><em>May 20xx</em></p>
+<p class="date"><em>May 2019</em></p>
 </div>
-<div id="introduction" class="section level1 unnumbered">
-<h1>Introduction</h1>
-<p>Welcome to the <em>R Markdown</em> thesis template. This template is based on (and in many places copied directly from) the Reed College LaTeX template, but hopefully it will provide a nicer interface for those that have never used TeX or LaTeX before. Using <em>R Markdown</em> will also allow you to easily keep track of your analyses in <strong>R</strong> chunks of code, with the resulting plots and output included as well. The hope is this <em>R Markdown</em> template gets you in the habit of doing reproducible research, which benefits you long-term as a researcher, but also will greatly help anyone that is trying to reproduce or build onto your results down the road.</p>
-<p>Hopefully, you won’t have much of a learning period to go through and you will reap the benefits of a nicely formatted thesis. The use of LaTeX in combination with <em>Markdown</em> is more consistent than the output of a word processor, much less prone to corruption or crashing, and the resulting file is smaller than a Word file. While you may have never had problems using Word in the past, your thesis is likely going to be about twice as large and complex as anything you’ve written before, taxing Word’s capabilities. After working with <em>Markdown</em> and <strong>R</strong> together for a few weeks, we are confident this will be your reporting style of choice going forward.</p>
-<p><strong>Why use it?</strong></p>
-<p><em>R Markdown</em> creates a simple and straightforward way to interface with the beauty of LaTeX. Packages have been written in <strong>R</strong> to work directly with LaTeX to produce nicely formatting tables and paragraphs. In addition to creating a user friendly interface to LaTeX, <em>R Markdown</em> also allows you to read in your data, to analyze it and to visualize it using <strong>R</strong> functions, and also to provide the documentation and commentary on the results of your project. Further, it allows for <strong>R</strong> results to be passed inline to the commentary of your results. You’ll see more on this later.</p>
-<p>Having your code and commentary all together in one place has a plethora of benefits!</p>
-<p><strong>Who should use it?</strong></p>
-<p>Anyone who needs to use data analysis, math, tables, a lot of figures, complex cross-references, or who just cares about the final appearance of their document should use <em>R Markdown</em>. Of particular use should be anyone in the sciences, but the user-friendly nature of <em>Markdown</em> and its ability to keep track of and easily include figures, automatically generate a table of contents, index, references, table of figures, etc. should make it of great benefit to nearly anyone writing a thesis project.</p>
+<div id="preliminary-content" class="section level1 unnumbered">
+<h1>Preliminary Content</h1>
+<div id="acknowledgements" class="section level2 unnumbered">
+<h2>Acknowledgements</h2>
+<p>Thank Tori for her comments (and others if you wish) here.</p>
+</div>
+<div id="abstract" class="section level2 unnumbered">
+<h2>Abstract</h2>
+<p>Add abstract here.</p>
+<p>Keywords: List some keywords here.</p>
+</div>
+<div id="dedication" class="section level2 unnumbered">
+<h2>Dedication</h2>
+<p>You can have a dedication here if you wish.</p>
 
+</div>
 </div>
             </section>
 
@@ -160,7 +212,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
         </div>
       </div>
 
-<a href="1-introduction-1.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="1-introduction.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

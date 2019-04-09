@@ -1,5 +1,6 @@
-#Literature Review Notes:
+# Literature Review
 
+[TO DO FROM MINE:] Still need to write the lit review.
 
 2013 project assignment:
 https://www2.stat.duke.edu/courses/Fall13/sta101/projects/project2.pdf
