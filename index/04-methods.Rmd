@@ -2,21 +2,79 @@
 
 Since 98 percent of the projects were submitted either as an R script or R Markdown
 document, the student project code could be analyzed directly on their downloaded
-submission documents. Each project was fully read through and coded as either a 
-0, if the attribute was missing, or 1, if it was present, for 16 descriptive 
-variables. The remaining three separated the student projects by grade, index,
-and class for the purposes of future subgroup analysis.
+submission documents. Each project was examined and coded as either a 
+0, if the attribute was missing, or 1, if it was present, for 16 variables. The 
+remaining three covariates identified the student projects by grade, index, and 
+class.
 
-Each project was anonymized prior to its analysis. Due to privacy concerns, since
-the project submissions often contained the members of the project group, each
-student project was provided with an index, and the names of the students in each
-group were removed from their submission document. For the dataset utilized in this
-thesis, the individual projects can only be identified by their assigned index. A
-separate dataset serves as a link between the individual projects and their titles.
+Due to privacy concerns, since the project submissions often contained the 
+members of the project group, each student project was provided with an index, 
+and the names of the students in each group were removed from their submission 
+document. For the dataset utilized in this thesis, projects can 
+solely be identified by their assigned index. A separate dataset serves as a link 
+between the individual projects and their titles.
 
 The first few rows of the dataset compiled in this project are available below.
 
-```{r}
+```{r load-data, include=FALSE}
+library(scales)
+library(tidyverse)
+library(knitr)
+library(reshape2)
+library(viridis)
+project <- read_csv("Tidylearn Thesis Data.csv", na = c("", "?", "NA"))
+```
+
+
+```{r, data-manipulation, include=FALSE}
+project <- project %>%
+  mutate(tidyverse = ifelse(tidyverse == 0, "base R", "tidyverse"))
+
+
+project$sub_analysis[is.na(project$sub_analysis)] <- 0
+```
+
+## Exploratory Data Analysis
+
+```{r, renaming variables, echo=FALSE}
+project <- project %>% 
+  mutate(
+    creative = create_new_var + change_var + sub_analysis + sub_data, 
+    theme = eda_theme + rel_data
+    )
+
+project %>%
+  group_by(tidyverse) %>%
+  summarize(mean_create = mean(create_new_var, na.rm = TRUE), sd_create = sd(create_new_var, na.rm = TRUE),
+            mean_change = mean(change_var, na.rm = TRUE), sd_change = sd(change_var, na.rm = TRUE),
+            mean_analy = mean(sub_analysis, na.rm = TRUE), sd_analy = sd(sub_analysis, na.rm = TRUE),
+            mean_data = mean(sub_data, na.rm = TRUE), sd_data = sd(sub_data, na.rm = TRUE),
+            mean_theme = mean(eda_theme, na.rm = TRUE), sd_theme = sd(eda_theme, na.rm = TRUE),
+            mean_rel = mean(rel_data, na.rm = TRUE), sd_rel = sd(rel_data, na.rm = TRUE),
+            mean_creative = mean(creative, na.rm = TRUE), sd_creative = sd(creative, na.rm = TRUE),
+            mean_depth = mean(theme, na.rm = TRUE), sd_depth = sd(theme, na.rm = TRUE)
+            )
+
+#make rest of relevant variables to yes and no, can't figure out how to do it in
+#one line
+project <- project %>%
+  mutate(create_new_var = ifelse(create_new_var == 0, "no", "yes")) %>%
+  mutate(change_var = ifelse(change_var == 0, "no", "yes")) %>%
+  mutate(sub_analysis = ifelse(sub_analysis == 0, "no", "yes")) %>%
+  mutate(sub_data = ifelse(sub_data == 0, "no", "yes")) %>%
+  mutate(viz_mult_mak = ifelse(viz_mult_mak == 0, "no", "yes")) %>%
+  mutate(viz_mult_interpret = ifelse(viz_mult_interpret == 0, "no", "yes")) %>%
+  mutate(eda_theme = ifelse(eda_theme == 0, "no", "yes")) %>%
+  mutate(rel_data = ifelse(rel_data == 0, "no", "yes")) %>%
+  mutate(slr_fit = ifelse(slr_fit == 0, "no", "yes")) %>%
+  mutate(mlr_fit = ifelse(mlr_fit == 0, "no", "yes")) %>%
+  mutate(mlr_check_cond = ifelse(mlr_check_cond == 0, "no", "yes")) %>%
+  mutate(prediction = ifelse(prediction == 0, "no", "yes")) %>%
+  mutate(ht = ifelse(ht == 0, "no", "yes")) %>%
+  mutate(ht_check_cond = ifelse(ht_check_cond == 0, "no", "yes"))
+```
+
+```{r, display contents}
 head(project)
 ```
 
@@ -24,10 +82,10 @@ FOR MINE: Should I make another subsection here?
 
 The student projects were not compiled into PDF or HTML files to confirm that the code
 worked, since it was a near-impossible task to determine which version of R packages
-the students employed, as some functions they utilized are now defunct in the most
+the students utilized, as some of these commands are now defunct in the most
 recent versions of the packages. Because of this decision, this analysis operates
-under the assumption that the code is effective in each project, and did not require
-further debugging. 
+under the assumption that the code produced the desired results in each project
+and did not require further debugging. 
 
 The contents of the student project code were still analyzed for clarity, 
 as well as creativeness and depth through the 16 indicator variables.
@@ -37,7 +95,7 @@ FOR MINE: Should I list out each variable I collected information for?
 ## Creativity
 
 The creativity metric seeks to encapsulate anything students coded that was 
-not directly in the instructions but served an additional and legitimate purpose 
+not directly specified in the instructions but provided a purpose 
 in their projects. The metric's possible scores range from 0 to 4, as a project is
 scored with a single point for each of the following:
 
@@ -53,48 +111,46 @@ While rare, two (NEED TO CONFIRM) groups in labs taught in the Tidyverse created
 or transformed covariates using Base R syntax, which was likely due to alternative
 resources, such as Stack Overflow, that at the time, did not contain many Tidyverse
 solutions. Now, though, as the Tidyverse's popularity continues to grow, more online
-resources contain and/or promote Tidyverse solutions.
+resources incorporate and promote Tidyverse solutions.
 
 ### Creation of New Variable(s)
 
-The creation of new variable(s) is defined as any data manipulation throughout the
-EDA process where a previously non-existing variable is formed. As an example, 
-one project created a new variable tracking if a movie had won any of the 
-following awards: best picture, best actor, best actress, or best director, and 
-that project had this variable coded as "yes." In order to score a 1, the project
-also had to utilize the new variable within an aspect of their analysis, to filter
-out groups that created unnecessary covariates that did not amount to anything 
-in their project. However, a score of 1 would be valid if the group did not
-use the variable to any ends in the inference or regression sections, but did
-explore the covariate in their EDA.
-
+The creation of a new variable(s) is defined as any data manipulation throughout the
+EDA process where student groups compose a previously non-existing covariate. As
+an example, one project created a new variable tracking if a movie had won any of
+the following awards: best picture, best actor, best actress, or best director, and 
+that project had this variable coded as "yes." In order to score a 1, the student 
+project also had to utilize the new variable within an aspect of their analysis. 
+This condition filtered for groups that created unnecessary covariates. However, a 
+score of 1 would be valid if the group did not use the variable in the inference
+or regression sections, but did explore the covariate in their EDA.
 
 ### Transformation of Existing Variables
 
 Although related to the above covariate, the transformation of existing variables
-was scored a one for distinct cases. In this situation, a project would score a one
-if the student group mutated a variable already-existing within the dataset, generally
-to not include or highlight certain cases. For instance, a few project groups 
-decided to change the `mpaa_rating` variable as either "R" or "Other", if the 
+did not qualify as creating new variables, or vice versa. In this situation, a 
+project would score a one if the student group mutated a variable already existing
+within the dataset, generally to highlight certain cases. For instance, a few 
+project groups decided to change `mpaa_rating` to either "R" or "Other," if the 
 movie was not rated R. Similar to the requirements for scoring a one for the creation
 of new variable(s) covariate, the mutation was required to be employed to some end,
 as groups would have to provide at least a cursory analysis of the newly-mutated
 variable to score a one. 
 
-An important distinction between scoring a one for this covariate and one for 
+A distinction between scoring a one for this covariate and one for 
 subsetting the dataset or conducting a subgroup analysis is that filtering the 
 dataset for just entries that cover a portion of levels within a specific variable
 would qualify as a part of either a subgroup analysis or data subset, but not this
-covariate. Also, converting a factor variable, or one that could be potentially
-read in as one when loading the dataset, did not qualify as a mutation of an 
+covariate. Also, converting a factor variable that could be potentially
+read in as one when loading the dataset did not qualify as a mutation of an 
 existing variable for this study.
 
 
 ### Existence of Subgroup Analysis
 
-The presence of a form of a subgroup analysis was measured in regards to 
-creativity. To score a 1 for this variable, projects analyzed specific portions 
-of the data for parts of their EDA. Groups could use an assortment of commands
+The presence of a subgroup analysis was measured in regards to 
+creativity. Projects that received a one analyzed portions of the data 
+during their EDA process. Groups could use an assortment of commands
 to satisfy a score of a 1, such as a normal boxplot, five-number summary of a
 specific variable within the movies dataset, or a subsetting with a corresponding
 numerical or graphical analysis. As an example, a project receiving a one for this
@@ -104,22 +160,22 @@ to that of PG-13 movies in their bivariate analysis.
 ### Use of a Data Subset for Project's Entirety
 
 Although the use of a data subset covariate may seem similar to the one above,
-this variable is scored as a one for a different aspect of the final group 
+this variable received a one for a different aspect of the final group 
 projects. Here, student groups are not just using the provided movies dataset
-for their EDA, inference and regression, they are intentionally subsetting the 
-dataset to focus on a few characteristics of specific movies. Student projects
-did not have to employ the same subsetted data throughout the entire analysis, but
+for their EDA, inference, and regression—they are intentionally focusing on a few
+characteristics of the movie dataset. Student projects were not required to employ
+the same subsetted data throughout the entire analysis, but
 they did have to analyze related aspects of the movies dataset to qualify for a 
-one. For example, one student group did the entire project for just PG-13 rated
-movies, while another used the PG-13 rated movies subset for the EDA, PG-13 movies
-released after 2000 for the inference, and then the same PG-13 rated movies subset
-utilized in the EDA process for their regression analysis.
+one. For example, one student group scrutinized solely PG-13 rated movies for 
+their final project, while another used the PG-13 rated movies subset for the EDA,
+PG-13 movies released after 2000 for the inference, and then the same PG-13 rated
+movies subset utilized in the EDA process for their regression analysis.
 
 ## Depth
 
 The depth metric measures the level of depth of the analysis, both in terms of the
-statistical methods employed and in terms of story-telling. The metric ranges
-from 0-2, and it is scored with 1 point for each of the following: 
+statistical methods utilized and in terms of story-telling. The metric ranges
+from 0-2 and is scored with 1 point for each of the following: 
 
 INSERT LIST:
 (2) following a consistent theme throughout the project.
@@ -128,18 +184,18 @@ INSERT LIST:
 
 The depth metric was created to qualify findings from the creativity score, to 
 confirm that the syntax producing the more creative student projects also were of
-the same (or better) quality. Although creativity is imperitive in these final
-projects, they also cannot skip important parts of the entire data analysis cycle.
+the same (or better) quality. Although creativity is imperative in these final
+projects, student groups also cannot skip parts of the data analysis cycle.
 
 ### Consistent Theme
 
 In the world of data science, story-telling is such an important aspect, just
-as story-telling is designed to be for the STA 101 final group projects. An effective
-final project requires a story: a leading question, initial findings, analysis,
-and conclusion, which all come together around a specific theme. Although this 
+as story-telling is designed to be for the STA 101 final group projects. A strong 
+final project requires a story: a leading question, initial findings, subsequent 
+analyses, and conclusion, all formed around a specific theme. Although this 
 covariate's scoring was subjective, the requirements for final projects to score
-a one were similar to those defining the creativity metric. To score a one, student
-groups easily displayed the links within their total analysis, often choosing
+a one were similar to those defining the creativity metric. To receive a one, student
+groups clearly linked the steps in their analysis, often choosing
 to focus on a few aspects within the entire movie dataset. For instance,
 analyzing the impact of movie ratings on audience scores would qualify as a sufficient 
 theme, but referencing an assortment of different predictors would not register
@@ -148,7 +204,7 @@ as one.
 ### Presence of Relevant Data
 
 Another subjective variable, the presence of relevant data was formed to complement
-the consistent theme covariate. To score a one for this variable, student groups were
+the consistent theme covariate. To receive a one for this variable, student groups were
 required to sufficiently use R to create insights surrounding their chosen theme(s).
 The covariate addresses the issue that projects may have interesting themes but lack the 
 analysis and coding quality to supplement their project. As an example, an aspect
@@ -156,4 +212,4 @@ of a group project that would have scored a one for this category would have
 displayed the correlation coefficient between two numerical variables instead of 
 plotting them together and failing to acknowledge the figure in the project submission.
 If the majority of the coding could be employed to support the final project, the
-project group was given a one.
+project group received a one.
