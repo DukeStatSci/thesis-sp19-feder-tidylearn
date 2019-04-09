@@ -69,8 +69,6 @@ ggplot(data = creative_counts, aes(x = creative, y = prop, fill = tidyverse,
   geom_bar(stat = "identity", position = position_dodge(), width = .8) +
   scale_fill_viridis_d(name = "Syntax", labels = c("Base R", "Tidyverse"), begin = .37, end = .75) +
   labs(x = "Creativity Score", y = "Proportion of Projects", title = "Tidyverse Syntax Projects Score Higher on the Creativity Metric on Average")
-
-ggsave("Creativity.png")
 ```
 
 The following subsections will dissect the similarities and differences between
@@ -211,7 +209,7 @@ ggplot(data = project_counts, aes(x = theme, y = prop, fill = tidyverse, group =
   geom_bar(stat = "identity", position = "dodge", width = .8) +
   scale_fill_viridis_d(name = "Syntax", labels = c("Base R", "Tidyverse"), begin = .37, end = .75) +
   labs(x = "Depth Metric", y = "Proportion of Projects", title = "Tidyverse Syntax Projects Score Higher on the Depth Metric on Average")
-ggsave("Depth.png")
+
 ```
 
 HERE'S THE DEPTH TABLE:
