@@ -34,8 +34,6 @@ project <- project %>%
 project$sub_analysis[is.na(project$sub_analysis)] <- 0
 ```
 
-## Exploratory Data Analysis
-
 ```{r, renaming variables, echo=FALSE}
 project <- project %>% 
   mutate(
@@ -85,8 +83,6 @@ project <- project %>%
 head(project)
 ```
 
-FOR MINE: Should I make another subsection here?
-
 The student projects were not compiled into PDF or HTML files to confirm that the code
 worked, since it was a near-impossible task to determine which version of R packages
 the students utilized, as some of these commands are now defunct in the most
@@ -97,7 +93,25 @@ and did not require further debugging.
 The contents of the student project code were still analyzed for clarity, 
 as well as creativeness and depth through the 16 indicator variables.
 
-FOR MINE: Should I list out each variable I collected information for?
+1. `index`: Project ID
+1. `grade`: Score on final project
+1. `sem`: Semester course taken
+1. `r_rmd`: Was the submission an R script (with prose of the project turned in as a Word document) or was the submission an R Markdown file?
+1. `tidyverse`: Project used `"tidyverse"` or `"base R"` syntax
+1. `create_new_var`: Students created a new variable based on existing variables, `"yes"` or `"no"`,
+1. `change_var`: hello
+1. `sub_analysis`: hello
+1. `sub_data`: hello
+1. `viz_mult_mak`: hello
+1. `viz_mult_interpret`: hello
+1. `eda_theme`: hello
+1. `rel_data`: hello
+1. `slr_fit`: hello
+1. `mlr_fit`: hello
+1. `mlr_check_cond`: hello
+1. `prediction`: hello
+1. `ht`: hello
+1. `ht_check_cond`: hello
 
 ## Creativity
 
