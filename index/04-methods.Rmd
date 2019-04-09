@@ -42,7 +42,9 @@ project <- project %>%
     creative = create_new_var + change_var + sub_analysis + sub_data, 
     theme = eda_theme + rel_data
     )
+```
 
+```{r, find summary stats for results, include = FALSE}
 project %>%
   group_by(tidyverse) %>%
   summarize(mean_create = mean(create_new_var, na.rm = TRUE), sd_create = sd(create_new_var, na.rm = TRUE),
@@ -54,7 +56,9 @@ project %>%
             mean_creative = mean(creative, na.rm = TRUE), sd_creative = sd(creative, na.rm = TRUE),
             mean_depth = mean(theme, na.rm = TRUE), sd_depth = sd(theme, na.rm = TRUE)
             )
+```
 
+```{r, mutate vars, echo=FALSE}
 #make rest of relevant variables to yes and no, can't figure out how to do it in
 #one line
 project <- project %>%
@@ -99,11 +103,10 @@ not directly specified in the instructions but provided a purpose
 in their projects. The metric's possible scores range from 0 to 4, as a project is
 scored with a single point for each of the following:
 
-INSERT LIST:
-(1) Creation of new variable(s) based on existing variables 
-(2) Transformation of existing variables 
-(3) Existence of a subgroup analysis
-(4) The use of a subset of the dataset for all steps of the project
+1. Creation of new variable(s) based on existing variables 
+1. Transformation of existing variables 
+1. Existence of a subgroup analysis
+1. The use of a subset of the dataset for all steps of the project
 
 In the case of the student group projects utilizing the Tidyverse syntax, groups
 were still given scores of ones if they satisfied these conditions in Base R form.
@@ -177,9 +180,8 @@ The depth metric measures the level of depth of the analysis, both in terms of t
 statistical methods utilized and in terms of story-telling. The metric ranges
 from 0-2 and is scored with 1 point for each of the following: 
 
-INSERT LIST:
-(2) following a consistent theme throughout the project.
-(1) use of data that is relevant to answer the research question posed
+1. Presence of consistent theme throughout the project
+2. Use of relevant data
 
 
 The depth metric was created to qualify findings from the creativity score, to 
