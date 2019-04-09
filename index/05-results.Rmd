@@ -5,6 +5,8 @@ in this setting score higher on the creativity and depth metrics. Tidyverse proj
 overwhelmingly score higher in the upper levels of the two variables, and their
 mean and standard deviations are significantly different:
 
+[TO DO FROM MINE: Move to respective sections, and add a similar table for multivariate visualizations.]
+
 Creativity:
 
 Syntax    | Mean  | Standard Deviation
