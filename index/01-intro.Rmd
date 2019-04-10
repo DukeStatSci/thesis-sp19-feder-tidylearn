@@ -44,7 +44,3 @@ Does one coding technique encourage a certain level of creativity not inforced
 by the other? That is the question this study seeks to discover through the 
 analysis of these group projects, which are available using both base R and 
 Tidyverse methods.
-
-Creativity can be measured by marking certain aspects of the exploratory data 
-analysis process, such as tracking the mutation and creation of new variables, 
-subsetting the dataset, and analyzing specific groups within the data. 

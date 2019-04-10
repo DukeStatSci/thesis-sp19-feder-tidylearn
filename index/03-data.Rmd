@@ -17,8 +17,7 @@ a bivariate analysis, a multiple regression for predicting audience scores, and 
 conclusion. The regression section is relatively constant amongst groups in
 determining an optimal regression. However, in the univariate and bivariate 
 analyses, student groups can explore a variety of different options, often
-differentiating between the relative strengths of the projects. FOR MINE: Should I include
-an example in the appendix?
+differentiating between the relative strengths of the projects.
 
 The student project dataset has been nearly constant throughout this analysis, 
 and it tracks a random sample of American movies released since 1970. The student
