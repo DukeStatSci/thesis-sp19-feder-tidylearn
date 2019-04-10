@@ -1,4 +1,4 @@
-index,grade,sem,r_rmd,tidyverse,create_new_var,change_var,sub_analysis,sub_data,viz_mult_mak,viz_mult_interpret,eda_theme,rel_data,slr_fit,mlr_fit,mlr_check_cond,prediction,ht,ht_check_cond
+index,grade,sem,r_rmd,tidyverse,create_new_var,change_var,sub_analysis,sub_data,viz_mult_make,viz_mult_interpret,eda_theme,rel_data,slr_fit,mlr_fit,mlr_check_cond,prediction,ht,ht_check_cond
 1,87.1,Fall 2014,.r,0,0,0,1,0,0,0,1,0,1,1,1,1,1,1
 2,89.2,Fall 2014,.r ,0,1,0,1,1,0,0,1,1,1,1,1,1,1,1
 3,80.2,Fall 2014,.r ,0,0,0,1,0,0,0,1,0,1,1,0,1,0,0
