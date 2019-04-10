@@ -91,27 +91,28 @@ under the assumption that the code produced the desired results in each project
 and did not require further debugging. 
 
 The contents of the student project code were still analyzed for clarity, 
-as well as creativeness and depth through the 16 indicator variables.
+as well as creativeness, depth, and multivariate visualizations through the 16 
+indicator variables.
 
 1. `index`: Project ID
 1. `grade`: Score on final project
 1. `sem`: Semester course taken
 1. `r_rmd`: Was the submission an R script (with prose of the project turned in as a Word document) or was the submission an R Markdown file?
 1. `tidyverse`: Project used `"tidyverse"` or `"base R"` syntax
-1. `create_new_var`: Students created a new variable based on existing variables, `"yes"` or `"no"`,
-1. `change_var`: hello
-1. `sub_analysis`: hello
-1. `sub_data`: hello
-1. `viz_mult_mak`: hello
-1. `viz_mult_interpret`: hello
-1. `eda_theme`: hello
-1. `rel_data`: hello
-1. `slr_fit`: hello
-1. `mlr_fit`: hello
-1. `mlr_check_cond`: hello
-1. `prediction`: hello
-1. `ht`: hello
-1. `ht_check_cond`: hello
+1. `create_new_var`: Students created a new variable based on existing variables, `"yes"` or `"no"`
+1. `change_var`: Students changed existing variables, `"yes"` or `"no"`
+1. `sub_analysis`: Students performed a subgroup analysis, `"yes"` or `"no"`
+1. `sub_data`: Students used data subsets for the entire project, `"yes"` or `"no"`
+1. `viz_mult_mak`: Students employed visualizations with at least three variables, `"yes"` or `"no"`
+1. `viz_mult_interpret`: Students properly interpreted their 3+ variable visualization, `"yes"` or `"no"`
+1. `eda_theme`: Students used a consistent theme throughout their project, `"yes"` or `"no"`
+1. `rel_data`: Students supplemented their project theme with relevant data, `"yes"` or `"no"`
+1. `slr_fit`: Students fitted a simple linear regression, `"yes"` or `"no"`
+1. `mlr_fit`: Students fitted a multiple linear regression, `"yes"` or `"no"`
+1. `mlr_check_cond`: Students properly checked the conditions for their multiple linear regression, `"yes"` or `"no"`
+1. `prediction`: Students used their multiple linear regression to predict a movie's audience score, `"yes"` or `"no"`
+1. `ht`: Students performed a hypothesis test, `"yes"` or `"no"`
+1. `ht_check_cond`: Students correctly checked the conditions for their hypothesis test, `"yes"` or `"no"`
 
 ## Creativity
 
@@ -231,3 +232,39 @@ displayed the correlation coefficient between two numerical variables instead of
 plotting them together and failing to acknowledge the figure in the project submission.
 If the majority of the coding could be employed to support the final project, the
 project group received a one.
+
+## Multivariate Visualization
+
+The multivariate visualization metric accounts for both the presence and the
+insights derived from visualizations with at least three variables. Especially
+when using a movies dataset with many binary variables student groups
+often analyzed, visualizations with at least three variables and their subsequent
+interpretations can supplement important insights uncovered in the final projects.
+The metric ranges from 0-2 and is scored with 1 point for each of the following:
+
+1. Presence of a visualization with 3+ variables
+1. Interpretation of the multivariate visualization
+
+Although the two variables that constitute the multivariate visualization metric
+are related, as a project could not score a one for the interpretation if it did
+not contain a multivariate visualization, the presence of the visualization did
+not imply that there was a useful interpretation in the project write-up.
+
+### Presence of a Visualization with 3+ Variables
+
+The presence of a visualization with at least three variables is an objective
+variable simple to when dissecting final project submissions. Groups nearly always
+utilized colors to display a third variable along with two numerical ones
+on the x- and y-axes. To receive a score of a one, projects were required to produce
+a graphical output with at least three aesthetics. For instance, some student groups
+created scatterplots between the critic and audience scores for
+all the movies in the given dataset with different colors for movies that won
+best picture at the Oscar's that year.
+
+### Interpretation of Multivariate Visualization
+
+The interpretation of a multivariate visualization is not a completely objective
+variable. A project containing an incorrect or insufficient interpretation of its
+multivariate visualization would not receive a score of a one. By insufficient, the
+project does not need to address every aspect of the visualization, but
+it needs to discuss a key insight to help bolster the overall final project.
