@@ -349,10 +349,10 @@ visualization.
 
 ```{r, multiviz presence, echo=FALSE}
 project %>%
-  group_by(tidyverse, viz_mult_mak) %>%
+  group_by(tidyverse, viz_mult_make) %>%
   summarise(n = n()) %>%
   mutate(prop = percent(n / sum(n))) %>%
-  filter(viz_mult_mak == "yes") %>%
+  filter(viz_mult_make == "yes") %>%
   kable()
 ```
 

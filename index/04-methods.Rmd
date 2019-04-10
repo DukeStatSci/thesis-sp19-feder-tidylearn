@@ -39,7 +39,7 @@ project <- project %>%
   mutate(
     creative = create_new_var + change_var + sub_analysis + sub_data, 
     theme = eda_theme + rel_data,
-    multiviz = viz_mult_mak + viz_mult_interpret
+    multiviz = viz_mult_make + viz_mult_interpret
     )
 ```
 
@@ -68,7 +68,7 @@ project <- project %>%
     change_var = ifelse(change_var == 0, "no", "yes"),
     sub_analysis = ifelse(sub_analysis == 0, "no", "yes"),
     sub_data = ifelse(sub_data == 0, "no", "yes"),
-    viz_mult_mak = ifelse(viz_mult_mak == 0, "no", "yes"),
+    viz_mult_make = ifelse(viz_mult_make == 0, "no", "yes"),
     viz_mult_interpret = ifelse(viz_mult_interpret == 0, "no", "yes"),
     eda_theme = ifelse(eda_theme == 0, "no", "yes"),
     rel_data = ifelse(rel_data == 0, "no", "yes"),
@@ -106,7 +106,7 @@ display examples that scored a one for distinct covariates.
 1. `change_var`: Students changed existing variables, `"yes"` or `"no"`
 1. `sub_analysis`: Students performed a subgroup analysis, `"yes"` or `"no"`
 1. `sub_data`: Students used data subsets for the entire project, `"yes"` or `"no"`
-1. `viz_mult_mak`: Students employed visualizations with at least three variables, `"yes"` or `"no"`
+1. `viz_mult_make`: Students employed visualizations with at least three variables, `"yes"` or `"no"`
 1. `viz_mult_interpret`: Students properly interpreted their 3+ variable visualization, `"yes"` or `"no"`
 1. `eda_theme`: Students used a consistent theme throughout their project, `"yes"` or `"no"`
 1. `rel_data`: Students supplemented their project theme with relevant data, `"yes"` or `"no"`
