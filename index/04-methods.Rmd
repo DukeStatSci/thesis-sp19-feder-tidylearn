@@ -38,7 +38,8 @@ project$sub_analysis[is.na(project$sub_analysis)] <- 0
 project <- project %>% 
   mutate(
     creative = create_new_var + change_var + sub_analysis + sub_data, 
-    theme = eda_theme + rel_data
+    theme = eda_theme + rel_data,
+    multiviz = viz_mult_mak + viz_mult_interpret
     )
 ```
 
@@ -53,7 +54,8 @@ project %>%
     mean_theme = mean(eda_theme, na.rm = TRUE), sd_theme = sd(eda_theme, na.rm = TRUE),
     mean_rel = mean(rel_data, na.rm = TRUE), sd_rel = sd(rel_data, na.rm = TRUE),
     mean_creative = mean(creative, na.rm = TRUE), sd_creative = sd(creative, na.rm = TRUE),
-    mean_depth = mean(theme, na.rm = TRUE), sd_depth = sd(theme, na.rm = TRUE)
+    mean_depth = mean(theme, na.rm = TRUE), sd_depth = sd(theme, na.rm = TRUE),
+    mean_viz = mean(multiviz, na.rm = TRUE), sd_viz = sd(multiviz, na.rm = TRUE)
   )
 ```
 
