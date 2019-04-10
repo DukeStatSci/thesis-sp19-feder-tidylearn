@@ -1,8 +1,8 @@
 # Results
 
-Both numerically and graphically, the student projects using the tidyverse syntax
-in this STA 101 final project setting score higher on all three of the developed
-metrics. Tidyverse projects overwhelmingly score higher in the upper levels of 
+Both numerically and graphically, the student projects dissected in this study 
+using the tidyverse syntax scored higher on all three of the developed
+metrics. Tidyverse projects are much more prevalent in the upper levels of 
 the three variables, and their means and standard deviations are significantly 
 different as well.
 
@@ -14,14 +14,14 @@ project %>%
   kable()
 ```
 
-Despite there being only 82 base R projects recorded to the 123 Tidyverse projects,
-there still were more base R projects scoring a 0 or 1 on the creativity metric
-than those within the Tidyverse. Overall, there was a single project that scored
+Despite there being only 82 base R projects recorded to the 123 tidyverse projects,
+there more base R projects scored a 0 or 1 on the creativity metric
+than those using the tidyverse syntax. Overall, there was a single project that scored
 a perfect four out of the 205 total projects, and the majority of the 
 projects scored a one or two in the creativity metric.
 
-Yet within the Tidyverse projects, more than half (56.1 percent) registered at
-least a two on creativity, compared to just 20.7 percent of base R final projects.
+However, within the Tidyverse projects, more than half (56.1 percent) registered at
+least a two on creativity, compared to just 20.7 percent of base R projects.
 
 ```{r, creativity metrics stats, include=FALSE}
 project %>%
@@ -76,17 +76,17 @@ kable(creativity_table)
 
 FOR MINE: Which table should I use? One has SD as Standard Deviation
 
-The following subsections will dissect the similarities and differences between
-base R and tidyverse student projects for the four variables combined to form the
-creativity metric, as well as postulate reasons for the distributions.
+The following subsections will contain a comparison of base R and tidyverse student
+projects for each of the four variables combined to form the creativity metric,
+as well as potential reasons for the outcomes.
 
 
 ### Creation of New Variable(s)
 
-The largest difference in proportions for the four variables that make up the creativity
-metric is within the creation of new variable category. Nearly half of all final 
-projects using the Tidyverse syntax featured a creation of a new variable, whereas
-less than a quarter of base R projects did.
+Out of the four variables that form the creativity metric, the starkes difference
+between projects employing the two syntaxes was within the creation of new variable(s)
+covariate. Nearly half of all final projects using the Tidyverse syntax featured
+a creation of a new variable, whereas less than a quarter of base R projects did.
 
 ```{r, looking at creating new variable, echo=FALSE, warning = FALSE}
 project %>%
@@ -97,17 +97,17 @@ project %>%
   kable()
 ```
 
-This difference may be due to the easability in utilizing the Tidyverse's `mutate()`
-function, which allows users to create new variables using just one command. In
-Base R, students are instructed to use `$` notation, which may be construed as harder
+This difference may be due to the ease in utilizing the Tidyverse's `mutate()`
+function, which allows users to create new variables using a single command. In
+base R, students are instructed to use `$` notation, which may be harder
 to grasp due to issues with variable selection with `$` and its usage in other
-base R tasks than just creating new variables.
+base R tasks outside of just creating new variables.
 
 ### Transformation of Existing Variables
 
 While more than 75 project groups created new variables, far less opted to mutate
 existing ones in the movies dataset. Because the counts for both base R and tidyverse
-projects were lower, the resulting proportions were also much smaller. Still, though,
+projects were lower, the resulting proportions were also much smaller. Regardless,
 there were more projects using the tidyverse syntax that mutated existing variables.
 
 ```{r, looking at changing variable, echo=FALSE}
@@ -120,9 +120,9 @@ project %>%
 ```
 
 The difference in proportions was not nearly as significant as it was for the creation
-of new variables, and only differed marginally. This smaller difference
-can be attributed to two factors. First, with options to create their own variables,
-transforming existing ones may not seem as appealing to groups, and second, the
+of new variables and only differed marginally. This limited difference
+can be attributed to two factors. First, with the option to create their own variables,
+groups may not find transforming existing variables as appealing. Second, the
 mechanism to do so does not differ dramatically between the two syntaxes. For comparison,
 an example of changing an existing studio variable to "Warner Bros. Studios" or
 "Other" is listed in both Base R and the Tidyverse:
@@ -139,9 +139,9 @@ Pictures", "Other"))`
 ### Existence of Subgroup Analysis
 
 Out of all the covariates forming the creativity metric, the subgroup analysis
-was the most popular one satisfied for both base R and tidyverse projects. Nearly
-every tidyverse project performed a type of subgroup analysis, while more than 3/4
-of base R projects did.
+was the most popular one satisfied for both base R and tidyverse projects. 93.5 
+percent of tidyverse projects performed a type of subgroup analysis, while more 
+than 3/4 of base R projects did.
 
 ```{r, looking at subgroup analysis variable, echo=FALSE, warning = FALSE}
 project %>%
@@ -152,18 +152,18 @@ project %>%
   kable()
 ```
 
-The popularity of this aspect can be explained by the copious amount of different
-analyses student groups could use to perform a subgroup analysis. However, the 
+The popularity of this aspect within group projects may be explained by the copious
+ways student groups could perform a subgroup analysis. However,
 subgroup analyses may be easier to perform in the tidyverse due to the presence 
 of the `group_by()` command, which is usually one of the most popular functions
 for beginning R users in the tidyverse. In contrast, base R's `by()` function
-is not nearly as popular.
+is not nearly as well-known.
 
 ### Use of a Data Subset for Project's Entirety
 
 The use of a subset of the provided movies dataset for the entire final project was
-also significantly more popular within Tidyverse projects, as more than 15 percent
-of student projects in the tidyverse satisfied a score of a one for this covariate,
+also significantly more popular amongst tidyverse projects, as more than 15 percent
+of student projects using the tidyverse satisfied a score of a one for this covariate,
 compared to less than 5 percent of all base R projects.
 
 ```{r, looking at subsetting dataset, echo=FALSE, warning = FALSE}
@@ -177,23 +177,23 @@ project %>%
 
 Since there is little difference between the tidyverse's `filter()` and base R's
 `subset()` functions, this discrepancy might not be able to be explained by in
-an obvious manner. However, student groups using the tidyverse may have been more
-encouraged to utilize data subsets throughout their projects more often than those
-in base R because other aspects of EDA have been done more frequently in tidyverse
-projects, so those groups may have gained additional insights that led them to
-using a data subset that base R project groups did not discover.
+an obvious manner. Perhaps, though, student groups using the tidyverse may have 
+been more encouraged to utilize data subsets throughout their projects more often
+than those in base R because other aspects of EDA have been performed more frequently
+in tidyverse projects, so those groups may have gained additional insights that 
+led them to use a data subset that base R project groups did not discover.
 
 ## Depth Metric
 
-Although there is not as clear of a discrepancy in the depth metrics scores between
-final projects that employed base R syntax compared to those using the tidyverse,
-there is still a tangible difference in the depth metric distributions between
-projects of the two syntaxes.
+Although the depth metrics scores between final projects that employed base R 
+syntax compared to those using the tidyverse do not provide a similar discrepancy
+as the creativity score, there is still a considerable difference in the depth metric
+distributions between projects of the two syntaxes.
 
 48.8 percent of the projects using the tidyverse syntax scored a perfect two in the 
 depth metric compared to 34.1 percent of base R projects, while the extreme majority
-of base R projects scored a 0 or 1 in the depth metric. Projects of both syntaxes
-mostly scored at least a one.
+of base R projects scored a 0 or 1 in the depth metric. Overall, most projects scored
+a one.
 
 ```{r, depth stats, include=FALSE}
 project %>%
@@ -241,9 +241,9 @@ FOR MINE: Which table should I use? One has SD as Standard Deviation
 ### Consistent Theme
 
 Within the theme metric, the variable tracking the presence of a consistent theme
-has a larger difference in proportions between base R and tidyverse student projects.
-Compared to base R projects, where 57.3 percent boast a consistent theme, 71.5 percent
-of all tidyverse projects maintain consistency theme-wise.
+showcased a larger difference in proportions between base R and tidyverse student
+projects. Compared to base R projects, where 57.3 percent boast a consistent theme,
+71.5 percent of all tidyverse projects maintain consistency theme-wise.
 
 ```{r, evaulating theme during eda, echo=FALSE, warning = FALSE}
 project %>%
@@ -256,9 +256,9 @@ project %>%
 
 The difference in proportions may potentially be attributed to the prevalence of
 `select()` and `filter()` within the tidyverse syntax, which allows users to 
-choose specific columns within a data that satisfy a certain criteria, where in 
-base R, student groups commonly utilized square brackets to provide those same 
-criteria.
+choose specific columns within a data that satisfy a certain criteria, compared 
+to base R, when student groups commonly utilized square brackets to provide those
+same criteria.
 
 ### Presence of Relevant Data
 
@@ -281,13 +281,13 @@ difference in proportions for this variable.
 
 ## Multivariate Visualization Metric
 
-Between projects using the two different syntaxes, the largest difference in
-any of the three metrics occured within the multivariate visualization metric, where
+Between projects using the two different syntaxes, the most significant difference in
+any of the three metrics occurred within the multivariate visualization metric, where
 just one final project in base R even displayed a plot containing at least three
 different variables. The majority of all projects did not include multivariate
-visualizations, but projects using the tidyverse syntax fared far better in the 
-metric in general, with 13 percent scoring a perfect two, while no projects in 
-base R reached the same score.
+visualizations, but projects using the tidyverse syntax were more popular within
+higher scores of the metric in general, with 13 percent scoring a perfect two, 
+while no projects in base R reached the same score.
 
 ```{r, multi viz stats, include=FALSE, warning = FALSE}
 project %>%
@@ -318,13 +318,13 @@ ggplot(data = viz_counts, aes(x = multiviz, y = prop, fill = tidyverse,
                                    group = tidyverse)) +
   geom_bar(stat = "identity", position = position_dodge(), width = .8) +
   scale_fill_viridis_d(name = "Syntax", labels = c("Base R", "Tidyverse"), begin = .37, end = .75) +
-  labs(x = "Creativity Score", y = "Proportion of Projects", title = "Tidyverse Syntax Projects Score Higher on the Multivariate Visualization Metric on Average")
+  labs(x = "Multivariate Visualization Metric", y = "Proportion of Projects", title = "Tidyverse Syntax Projects Score Higher on the Multivariate Visualization Metric on Average")
 ```
 
 The average multivariate visualization scores and corresponding standard 
 deviations for projects utilizing the two syntaxes are available below as well. 
 Although the statistics do not represent the difference in the metric between projects
-of the two syntaxes, there is still a clear divide.
+of the two syntaxes, there is still a distinct divide.
 
 ```{r, multiviz table, echo = FALSE}
 multiviz_table <- data.frame(Syntax = "Base R", Mean = 0.0, SD = .1)
@@ -342,10 +342,10 @@ FOR MINE: Which table should I use? One has SD as Standard Deviation
 
 ### Presence of a Visualization with 3+ Variables
 
-Just one project coded in solely base R even displayed a visualization with at least
-three variables, compared to the 30 tidyverse projects. Percentage-wise, too,
-the tidyverse projects more significantly more likely to contain a multivariate
-visualization,
+Only one project coded in solely base R displayed a visualization with at least
+three variables, compared to 30 tidyverse projects. Percentage-wise, too,
+the tidyverse projects were more likely to contain a multivariate
+visualization.
 
 ```{r, multiviz presence, echo=FALSE}
 project %>%
@@ -356,12 +356,12 @@ project %>%
   kable()
 ```
 
-These results can be attributed to the differences in base R's `plot()` function
-relative to the tidyverse's `ggplot()`. Whereas it is arduous to specify plotting
-aesthetics besides x- and y-variables in `plot()`, the `aes()` command embedded within
-`ggplot()` provides an easy platform for tidyverse users to employ other aesthetics
-besides just the x- and y-variables. For example, here is what the code would look
-like to satisfy a score of a one for this covariate in the two syntaxes.
+These results may be due to the differences in base R's `plot()` function
+relative to the tidyverse's `ggplot()`. Whereas `plot()` requires extra commands
+to add graphical aesthetics besides x- and y-variables, the `aes()` command embedded
+within `ggplot()` provides an easy platform for tidyverse users to employ other 
+aesthetics besides just the x- and y-variables. For example, code is listed below
+that would satisfy a score of one when using the two syntaxes.
 
 Base R:
 
@@ -381,9 +381,9 @@ FOR MINE: This code is correct, right?
 
 No student project using solely base R interpreted a multivariate plot, whereas
 13 percent of projects utilizing the tidyverse did. Although the proportion satisfying
-a one is not very high, more than half of tidyverse projects that formed a visualization
-with at least three variables (16 out of 30) were able to sufficently interpret
-the outputs.
+a score of a one is not very high, more than half of tidyverse projects that formed
+a visualization with at least three variables (16 out of 30) contained sufficient
+intepretations of the outputs.
 
 ```{r, multiviz interpret, echo=FALSE, warning = FALSE}
 project %>%
@@ -395,8 +395,8 @@ project %>%
 ```
 
 Theoretically, the difference in proportions between projects primarily using base R 
-compared to the tidyverse should not differ drastically. However, since there were
-many more tidyverse projects that formed multivariate plots, there was bound to
-be a difference in this study. In general, though, the plots should not deviate,
-though some users may find comfort in viewing visualizations in the output provided
-to their most commonly-used syntax.
+compared to the tidyverse should not drastically differ. However, since there were
+more tidyverse projects that contained multivariate plots, there was bound to
+be a difference in this covariate. In general, though, the plots should not deviate
+for interpretation, though some users may find comfort in viewing graphs provided
+by their most commonly-used syntax.
