@@ -129,13 +129,13 @@ scored with a single point for each of the following:
 1. Existence of a subgroup analysis
 1. The use of a subset of the dataset for all steps of the project
 
-In the case of the student group projects utilizing the Tidyverse syntax, groups
+In the case of the student group projects utilizing the tidyverse syntax, groups
 were still given scores of ones if they satisfied these conditions in Base R form.
-While rare, two (NEED TO CONFIRM) groups in labs taught in the Tidyverse created
+While rare, two (NEED TO CONFIRM) groups in labs taught in the tidyverse created
 or transformed covariates using Base R syntax, which was likely due to alternative
-resources, such as Stack Overflow, that at the time, did not contain many Tidyverse
-solutions. Now, though, as the Tidyverse's popularity continues to grow, more online
-resources incorporate and promote Tidyverse solutions.
+resources, such as Stack Overflow, that at the time, did not contain many tidyverse
+solutions. Now, though, as the tidyverse's popularity continues to grow, more online
+resources incorporate and promote tidyverse solutions.
 
 ### Creation of New Variable(s)
 
