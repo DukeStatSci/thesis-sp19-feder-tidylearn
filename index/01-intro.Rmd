@@ -33,8 +33,8 @@ future work, an effective tool is using a programming tool. The most popular
 one in the scope of statistics in R, which has become widely used in the field.
 When using R as a supplement to the course, there are two prevailing, and 
 competing, techniques. Either students can be instructed to work with a 
-relatively new suite of packages called the Tidyverse, or to use Base R commands
-that have been in use for far longer. The Tidyverse was created to make
+relatively new suite of packages called the tidyverse, or to use Base R commands
+that have been in use for far longer. The tidyverse was created to make
 coding in R simpler, but with that comes less of an internet community due to 
 its relatively young age. At the University, STA 101 classes have been taught 
 distinctly using one or the other, which creates an optimal platform for 
@@ -43,4 +43,4 @@ analyzing the differences in using these syntaxes.
 Does one coding technique encourage a certain level of creativity not inforced 
 by the other? That is the question this study seeks to discover through the 
 analysis of these group projects, which are available using both base R and 
-Tidyverse methods.
+tidyverse methods.
