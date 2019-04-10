@@ -94,7 +94,8 @@ and did not require further debugging.
 
 The contents of the student project code were still analyzed for clarity, 
 as well as creativeness, depth, and multivariate visualizations through the 16 
-indicator variables.
+indicator variables. Code snippets will be provided in the following chapter to
+display examples that scored a one for distinct covariates.
 
 1. `index`: Project ID
 1. `grade`: Score on final project
