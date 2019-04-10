@@ -47,17 +47,18 @@ FOR MINE: INSERT REASON FOR HAVING STUDENT GROUPS
 ## Dataset Background
 
 The dataset has been manually compiled from 205 STA 101 final group projects 
-spanning the 2013-2016 academic years. The projects' contents are located on Duke's
-Sakai sites of seven different classes, six of which were taught by Dr. 
-Cetinkaya-Rundel. However, the professor themself does not affect much of the R
-learning over the course of the semester, since it occurs within student's labs,
-which are led by teaching assistants. Although there may be some slight instructor
-effects on coding abilities, the teaching assistants are the primary educators of 
-R, and they generally change each semester. Therefore, some sections may have stronger
-grasps of coding for the final project, but it is likely to be minimal since
-teaching assistants are apprised of the upcoming week's content via weekly meetings
-with the professor. In the case of the final project, the submitted file(s) were
-in either R Markdown or an R script.
+spanning the 2013-2016 academic years. 13 data entries were discarded since the
+complete project submissions could not be recovered. The projects' contents are 
+located on Duke's Sakai sites of seven different classes, six of which were taught
+by Dr.  Cetinkaya-Rundel. However, the professor themself does not affect much 
+of the R learning over the course of the semester, since it occurs within student's
+labs, which are led by teaching assistants. Although there may be some slight 
+instructor effects on coding abilities, the teaching assistants are the primary 
+educators of R, and they generally change each semester. Therefore, some sections
+may have stronger grasps of coding for the final project, but it is likely to be
+minimal since teaching assistants are apprised of the upcoming week's content 
+via weekly meetings with the professor. In the case of the final project, the 
+submitted file(s) were in either R Markdown or an R script.
 
 The dataset utilized in this paper primarily focuses on actions taken by groups 
 within the univariate and bivariate portions of the projects. In doing so, the

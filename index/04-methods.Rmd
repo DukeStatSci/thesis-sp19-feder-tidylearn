@@ -30,8 +30,8 @@ project <- read_csv("data/tidylearn.csv", na = c("", "?", "NA"))
 project <- project %>%
   mutate(tidyverse = ifelse(tidyverse == 0, "base R", "tidyverse"))
 
-
-project$sub_analysis[is.na(project$sub_analysis)] <- 0
+#get rid of projects with insufficient entries
+project <- project %>% filter(!str_detect(project$index, "have"))
 ```
 
 ```{r, renaming variables, echo=FALSE}
