@@ -2,7 +2,7 @@
 
 Both numerically and graphically, the student projects dissected in this study 
 using the tidyverse syntax scored higher on all three of the developed
-metrics. Tidyverse projects are much more prevalent in the upper levels of 
+metrics. tidyverse projects are much more prevalent in the upper levels of 
 the three variables, and their means and standard deviations are significantly 
 different as well.
 
@@ -20,7 +20,7 @@ than those using the tidyverse syntax. Overall, there was a single project that 
 a perfect four out of the 205 total projects, and the majority of the 
 projects scored a one or two in the creativity metric.
 
-However, within the Tidyverse projects, more than half (56.1 percent) registered at
+However, within the tidyverse projects, more than half (56.1 percent) registered at
 least a two on creativity, compared to just 20.7 percent of base R projects.
 
 ```{r, creativity metrics stats, include=FALSE}
@@ -85,7 +85,7 @@ as well as potential reasons for the outcomes.
 
 Out of the four variables that form the creativity metric, the starkes difference
 between projects employing the two syntaxes was within the creation of new variable(s)
-covariate. Nearly half of all final projects using the Tidyverse syntax featured
+covariate. Nearly half of all final projects using the tidyverse syntax featured
 a creation of a new variable, whereas less than a quarter of base R projects did.
 
 ```{r, looking at creating new variable, echo=FALSE, warning = FALSE}
@@ -97,7 +97,7 @@ project %>%
   kable()
 ```
 
-This difference may be due to the ease in utilizing the Tidyverse's `mutate()`
+This difference may be due to the ease in utilizing the tidyverse's `mutate()`
 function, which allows users to create new variables using a single command. In
 base R, students are instructed to use `$` notation, which may be harder
 to grasp due to issues with variable selection with `$` and its usage in other
@@ -125,7 +125,7 @@ can be attributed to two factors. First, with the option to create their own var
 groups may not find transforming existing variables as appealing. Second, the
 mechanism to do so does not differ dramatically between the two syntaxes. For comparison,
 an example of changing an existing studio variable to "Warner Bros. Studios" or
-"Other" is listed in both Base R and the Tidyverse:
+"Other" is listed in both Base R and the tidyverse:
 
 Base R:
 `movies$studio <- if_else(movies$studio == "Warner Bros. Pictures", "Warner 
@@ -263,7 +263,7 @@ same criteria.
 ### Presence of Relevant Data
 
 Proportions for the presence of relevant data covariate were very similar, with 
-just a 4.4 percent difference in proportions (64.2 for Tidyverse compared to 59.8
+just a 4.4 percent difference in proportions (64.2 for tidyverse compared to 59.8
 for base R projects) between projects using the two syntaxes.
 
 ```{r, relevant data, echo=FALSE}
