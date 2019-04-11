@@ -1,5 +1,27 @@
 # Introduction
 
+NOTES ON GAISE:
+
+Teach statistical thinking. —students should be statistically literate after the class from a practical standpoint
+a. Teach statistics as an investigative process of problem-solving and decision-making.
+b. Give students experience with multivariable thinking.
+	- “When students leave an introductory course, they will likely encounter situations within their own fields of study in which multiple variables relate to one another in intricate ways. We should prepare our students for challenging questions that require investigating and exploring relationships among more than two variables.”
+Focus on conceptual understanding.
+-	“Procedural steps too often claim students’ attention that an effective teacher could otherwise direct toward concepts.”
+-	Focus on students’ understanding of key concepts, illustrated by a few techniques, rather than covering a multitude of techniques with minimal focus on underlying ideas.
+-	
+Integrate real data with a context and purpose.
+- Make sure questions used with data sets are of interest to students so they can be easily motivated.
+
+ Foster active learning.
+Use technology to explore concepts and analyze data.
+- By adopting the best available tools (subject to institutional constraints), we allow students to do analysis more easily and therefore open up time to focus on interpretation of results and testing of conditions, rather than on computational mechanics.
+- Regardless of the tools used, it is important to view the use of technology not just as a way to generate statistical output but as a way to explore conceptual ideas and enhance student learning
+
+Use assessments to improve and evaluate student learning.
+
+
+
 At Duke University, STA 101 is the primary introductory statistics course, 
 where students are assumed to have entered the class without any statistical 
 knowledge. The majority of the students enrolled in the course do not plan to 
