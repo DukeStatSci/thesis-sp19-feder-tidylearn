@@ -51,12 +51,12 @@ Wickham describes the benefits of tidy data outside of its requirement for many 
 Source: https://www.amstat.org/asa/files/pdfs/GAISE/GaiseCollege_Full.pdf (GAISE)
 
 The Guidelines for Assessment and Instruction in Statistics Education (GAISE) were first endorsed by the American Statistical Association in 2005 and then updated in 2016 to reflect changes in datasets, technology, and professional demand for statistical literacy. The GAISE is recommended for introductory statistics education, but also applies to more advanced statistics courses, as it provides six general recommendations, which already were stated in the 2005 version:
-1.    Teach statistical thinking
-2.    Focus on conceptual understanding
-3.    Integrate real data with a context and a purpose
-4.    Foster active learning
-5.    Use technology to explore concepts and analyze data
-6.    Use assessments to improve and evaluate student learning
+1. Teach statistical thinking
+2. Focus on conceptual understanding
+3. Integrate real data with a context and a purpose
+4. Foster active learning
+5. Use technology to explore concepts and analyze data
+6. Use assessments to improve and evaluate student learning
 
 The GAISE also states specific goals for students in introductory statistics courses:
 1. Students should become critical consumers of statistically-based results reported in popular media, recognizing whether reported results reasonably follow from the study and analysis conducted.
