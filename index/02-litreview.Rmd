@@ -2,7 +2,7 @@
 
 Source: https://arxiv.org/pdf/1903.01829.pdf
 
-This was an experiment testing to see if visualizations made by beginners are easier to decipher when created in base R or `ggplot2`. It did so by randomizing Coursera users to complete the same plotting task using either base R or `ggplot2` and then had the learners evaluate different results crafted by their peers on a variety of visual characteristics. The users were not completely new to R, but they were still beginners, as they had just completed a course covering basic R usage in both base R and the tidyverse.
+The study tested to see if visualizations made by beginners are easier to decipher when created in base R or `ggplot2`. It did so by randomizing Coursera users to complete the same plotting task using either base R or `ggplot2` and then had the learners evaluate different results crafted by their peers on a variety of visual characteristics. The users were not completely new to R, but they were still beginners, as they had just completed a course covering basic R usage in both base R and the tidyverse.
 
 The study concluded that the visualizations generated using `ggplot2` were often easier to understand when creating a complex multivariate visualization. Students were more likely to uncover insights involving more complex relationships when using `ggplot2`, where students could use `facet_grid()` instead of needed two `for()` loops in the base R method. Concurrently, more `ggplot2` assignees completed the complex visualization task.
 
@@ -20,7 +20,7 @@ Leek also believes that to make production-ready plots, users will need to write
 
 Source: http://varianceexplained.org/r/teach_ggplot2_to_beginners/
 
-Since this post was released prior to the official release of the tidyverse, Dr. David Robinson focuses solely on one of its packages, `ggplot2`. Robinson argues that `ggplot2` should be taught before base R for two reasons:
+Since this post was released prior to the official release of the tidyverse, Dr. David Robinson, a well-known data scientist and instructor, focuses solely on one of its packages, `ggplot2`. Robinson argues that `ggplot2` should be taught before base R for two reasons:
 
 1. To create equivalent plots in base R and  `ggplot()`, students need an understanding loops and alternative commands. Compared to ggplot(), where students are required to use the  `aes()` function to specify for plot aesthetics, oftentimes, base R plotting requires additional commands. Thus, with limited `ggplot2` teaching, students can create interesting visualizations with seemingly advanced attributes that they would not be able to reproduce in base R.
 
@@ -40,7 +40,7 @@ Robinson also argues against the teaching style that prioritizes learning condit
 
 Source: Tidy Data by Hadley Wickham
 
-Dr. Hadley Wickham, the publication's author, is considered to be the father of the tidyverse. Here, Wickham discusses how to work with and create tidy datasets. Many popular base R functions require tidy data inputs, as well as many tidyverse commands, which were created to work symmetrically with tidy datasets.
+Dr. Hadley Wickham, who is considered to be the father of the tidyverse, discusses how to work with and create tidy datasets. Many popular base R functions require tidy data inputs, as well as many tidyverse commands, which were created to work symmetrically with tidy datasets.
 
 A tidy dataset lists each variable as a separate column and each observation as its own row. The rows are ordered by the first variable, measured variables are listed after fixed ones, and related ones are located in adjacent columns to ease comparison.
 
@@ -73,11 +73,11 @@ The GAISE also states specific goals for students in introductory statistics cou
 
 Source: Infrastructure and tools for teaching statistical computing
 
-The text is written by two instructors who seek to provide guidelines for how to use statistical programming tools in introductory statistics settings. As the statistical field continues to grow alongside programming tools, programming has morphed into a requirement, especially when handling with the practical and relevant datasets of today. Thus, the question has been shifted from a “should” to a “when” in discussing programming's role in building a statistical education.
+Two prominent instructors, Dr. Mine Çetinkaya-Rundel and Dr. Colin Rundel, provided guidelines here for how to use statistical programming tools in introductory statistics settings. As the statistical field continues to grow alongside programming tools, programming has morphed into a requirement, especially when handling with the practical and relevant datasets of today. Thus, the question has been shifted from a “should” to a “when” in discussing programming's role in building a statistical education.
 
 The authors argue that students need to be exposed to programming—specifically R—early in their statistical education, but not on its own. They believe programming should be introduced in a supplemental fashion to give students the opportunity to grasp the topics covered in the traditional learning environment. R helps students bolster their understanding of the concepts discussed in lectures and also allows for an introduction to programming in a lower-level setting, so students who choose to progress through future statistics courses will not have to spend time learning basic coding concepts.
 
-In the author’s computation classes, the author has a goal to computationally visualize something within the first 10 minutes of the first day to draw students to the importance of programming. In terms of software, the authors believe RStudio may help ease the students’ learning curve as an IDE relative to R and due to its auxiliary tools located outside of the main console.
+In the instructors' computation classes, they have a goal to computationally visualize something within the first 10 minutes of the first day to draw students to the importance of programming. In terms of software, the authors believe RStudio may help ease the students’ learning curve as an IDE relative to R and due to its auxiliary tools located outside of the main console.
 
 ---------------------------------
 
