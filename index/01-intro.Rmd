@@ -1,3 +1,5 @@
+# Introduction
+
 At Duke University, STA 101 is the primary introductory statistics course, 
 where students are assumed to have entered the class without any statistical knowledge. The majority of students enrolled in the course do not plan on enrolling in future statistics curricula, focusing the course on applications of statistics, as students learn how to relate STA 101's concepts to their future works.
 
