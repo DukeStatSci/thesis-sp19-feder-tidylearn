@@ -1,16 +1,51 @@
 # Introduction
 
 At Duke University, STA 101 is the primary introductory statistics course, 
-where students are assumed to have entered the class without any statistical knowledge. The majority of students enrolled in the course do not plan on enrolling in future statistics curricula, focusing the course on applications of statistics, as students learn how to relate STA 101's concepts to their future works.
+where students are assumed to have entered the class without any statistical 
+knowledge. The majority of students enrolled in the course do not plan on 
+enrolling in future statistics curricula, focusing the course on applications of
+statistics, as students learn how to relate STA 101's concepts to their future 
+works.
 
-At the beginning of the course, the students are divided into groups where they complete assignments throughout the course together. The class is split into seven units, and every section has at least one lab, taught in R, to bolster the learning segment. 
+At the beginning of the course, the students are divided into groups where they 
+complete assignments throughout the course together. The class is split into seven
+units, and every section has at least one lab, taught in R, to bolster the 
+learning segment. 
 
-For introductory statistics courses, the Guidelines for Assessment and Instruction in Statistics Education (GAISE) sets the standard, as it provides a set of general recommendations, as well as specific goals to be accomplished by the course's completion. With its updated version released in 2016, the GAISE, which is endorsed by the American Statistical Association, recommends that students use programming, if accessible, to explore real-world examples of concepts covered in the classroom.
+For introductory statistics courses, the Guidelines for Assessment and Instruction
+in Statistics Education (GAISE) sets the standard, as it provides a set of general
+recommendations, as well as specific goals to be accomplished by the course's 
+completion. With its updated version released in 2016, the GAISE, which is 
+endorsed by the American Statistical Association, recommends that students use 
+programming, if accessible, to explore real-world examples of concepts covered 
+in the classroom.
 
-To conclude the semester, students display their grasp of the course through a group project conducted in R. A sufficient project submission adheres to seven of the nine stated goals of the GAISE, which are listed in the literature review section. The project, while constrained to a specific dataset, is relatively open-ended, as groups can analyze various features of the data.
+To conclude the semester, students display their grasp of the course through a 
+group project conducted in R. A sufficient project submission adheres to seven 
+of the nine stated goals of the GAISE, which are listed in the literature review
+section. The project, while constrained to a specific dataset, is relatively 
+open-ended, as groups can analyze various features of the data.
 
-Due to the flexibility promoted within the project, students are encouraged to display aspects of creativity in their analyses, whether it is focusing on Warner Bros. Entertainment Inc. movies, or assembling an indicator variable for if the film received a nomination for best actor or actress. Creativity often stems from the exploratory data analysis process, where groups can uncover interesting aspects to further scrutinize before beginning the analysis portion of the project. 
+Due to the flexibility promoted within the project, students are encouraged to 
+display aspects of creativity in their analyses, whether it is focusing on Warner
+Bros. Entertainment Inc. movies, or assembling an indicator variable for if the 
+film received a nomination for best actor or actress. Creativity often stems 
+from the exploratory data analysis process, where groups can uncover interesting
+aspects to further scrutinize before beginning the analysis portion of the project.
 
-Since the majority of students will *apply* these concepts in their future work, statistical programming can be a useful skill to acquire. The most popular one in the scope of statistics is R, which has become widely used in the field. When using R to supplement the course, there are two prevailing, and competing, techniques for beginners. Students are instructed to work with either a relatively new suite of packages called the tidyverse, or base R commands that have been in use for far longer. The tidyverse was created to make coding in R more consistent, but it has less of an internet community due to its relatively young age. At the University, STA 101 classes have been taught distinctly using one or the other, creating an optimal platform to analyze the differences when using these syntaxes.
+Since the majority of students will *apply* these concepts in their future work,
+statistical programming can be a useful skill to acquire, as it also provides students
+with a platform to individually explore datasets in the future. The most popular one 
+in the scope of statistics is R, which has become widely used in the field. When
+using R to supplement the course, there are two prevailing, and competing, 
+techniques for beginners. Students are instructed to work with either a relatively
+new suite of packages called the tidyverse, or base R commands that have been in
+use for far longer. The tidyverse was created to make coding in R more consistent,
+but it has less of an internet community due to its relatively young age. At the
+University, STA 101 classes have been taught distinctly using one or the other, 
+creating an optimal platform to analyze the differences when using these syntaxes.
 
-Does one coding syntax encourage a certain level of creativity and quality while simultaneously adhering to the GAISE recommendations and guidelines? That is the question this study seeks to discover through the analysis of these group projects, which are available using both base R and tidyverse methods.
+Does one coding syntax encourage a certain level of creativity while simultaneously
+adhering to the GAISE recommendations and guidelines? That is the question this 
+study seeks to discover through the analysis of these group projects, which are 
+available using both base R and tidyverse methods.
