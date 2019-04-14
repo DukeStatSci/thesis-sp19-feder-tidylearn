@@ -94,8 +94,9 @@ and did not require further debugging.
 
 The contents of the student project code were still analyzed for clarity, 
 as well as creativeness, depth, and multivariate visualizations through the 16 
-indicator variables. Code snippets will be provided in the following chapter to
-display examples that scored a one for distinct covariates.
+indicator variables. They were analyzed for these aspects specifically since they
+are prominently emphasized throughout the GAISE. Code snippets will be provided 
+in the following chapter to display examples that scored a one for distinct covariates.
 
 1. `index`: Project ID
 1. `grade`: Score on final project
@@ -197,9 +198,14 @@ movies subset utilized in the EDA process for their regression analysis.
 
 ## Depth
 
+Focus on students’ understanding of key concepts, illustrated by a few techniques, rather than covering a multitude of techniques with minimal focus on underlying ideas.
+
 The depth metric measures the level of depth of the analysis, both in terms of the
-statistical methods utilized and in terms of story-telling. The metric ranges
-from 0-2 and is scored with 1 point for each of the following: 
+statistical methods utilized and in terms of story-telling. Since the GAISE advises
+instructors to focus on students' comprehension of important basic concepts rather
+than covering a multitude of topics with little breadth, the depth metric qualifies
+the student groups' understanding of the subjects covered in the project. The metric
+ranges from 0-2 and is scored with 1 point for each of the following: 
 
 1. Presence of consistent theme throughout the project
 2. Use of relevant data
@@ -243,7 +249,13 @@ insights derived from visualizations with at least three variables. Especially
 when using a movies dataset with many binary variables student groups
 often analyzed, visualizations with at least three variables and their subsequent
 interpretations can supplement important insights uncovered in the final projects.
-The metric ranges from 0-2 and is scored with 1 point for each of the following:
+Also, the GAISE highlights the significance of teaching students how to interpret 
+multivariate visualizaitons. “When students leave an introductory course, they 
+will likely encounter situations within their own fields of study in which multiple
+variables relate to one another in intricate ways. We should prepare our students
+for challenging questions that require investigating and exploring relationships
+among more than two variables (GAISE).” The metric ranges from 0-2 and is scored
+with 1 point for each of the following:
 
 1. Presence of a visualization with 3+ variables
 1. Interpretation of the multivariate visualization
