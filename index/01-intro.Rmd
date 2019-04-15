@@ -1,6 +1,6 @@
 # Introduction
 
-At Duke University, STA 101 is the primary introductory statistics course, 
+STA 101 is the primary introductory statistics course at Duke University, 
 where students are assumed to have entered the class without any statistical 
 knowledge. The majority of students enrolled in the course do not plan on 
 enrolling in future statistics curricula, focusing the course on applications of
@@ -12,40 +12,48 @@ complete assignments throughout the course together. The class is split into sev
 units, and every section has at least one lab, taught in R, to bolster the 
 learning segment. 
 
-For introductory statistics courses, the Guidelines for Assessment and Instruction
-in Statistics Education (GAISE) sets the standard, as it provides a set of general
-recommendations, as well as specific goals to be accomplished by the course's 
-completion. With its updated version released in 2016, the GAISE, which is 
-endorsed by the American Statistical Association, recommends that students use 
-programming, if accessible, to explore real-world examples of concepts covered 
-in the classroom.
+For introductory statistics education, the Guidelines for Assessment and Instruction
+in Statistics Education (GAISE) sets quality and scope standards, as it provides
+a set of general recommendations, as well as specific goals to be accomplished by 
+the course's completion. With its updated version released in 2016, the GAISE, 
+which is endorsed by the American Statistical Association, recommends that 
+students use programming, if accessible, to explore real-world examples of concepts
+covered in the classroom [@carver2016guidelines].
 
-To conclude the semester, students display their grasp of the course through a 
-group project conducted in R. A sufficient project submission adheres to seven 
-of the nine stated goals of the GAISE, which are listed in the literature review
-section. The project, while constrained to a specific dataset, is relatively 
+To conclude the STA 101 semester, students display their grasp of the concepts by
+completing a group project conducted in R. A sufficient project submission adheres
+to seven of the nine stated goals of the GAISE, which are listed in the literature
+review section. The project, while constrained to a specific dataset, is relatively 
 open-ended, as groups can analyze various features of the data.
 
-Due to the flexibility promoted within the project, students are encouraged to 
+Due to the flexibility promoted by the project assignment, students are encouraged to 
 display aspects of creativity in their analyses, whether it is focusing on Warner
-Bros. Entertainment Inc. movies, or assembling an indicator variable for if the 
-film received a nomination for best actor or actress. Creativity often stems 
+Bros. Entertainment Inc. movies, or assembling an indicator variable tracking if a member
+of the film received a nomination for best actor or actress. Creativity often stems 
 from the exploratory data analysis process, where groups can uncover interesting
 aspects to further scrutinize before beginning the analysis portion of the project.
 
 Since the majority of students will *apply* these concepts in their future work,
-statistical programming can be a useful skill to acquire, as it also provides students
-with a platform to individually explore datasets in the future. The most popular one 
-in the scope of statistics is R, which has become widely used in the field. When
-using R to supplement the course, there are two prevailing, and competing, 
-techniques for beginners. Students are instructed to work with either a relatively
-new suite of packages called the tidyverse, or base R commands that have been in
-use for far longer. The tidyverse was created to make coding in R more consistent,
-but it has less of an internet community due to its relatively young age. At the
-University, STA 101 classes have been taught distinctly using one or the other, 
-creating an optimal platform to analyze the differences when using these syntaxes.
+statistical programming provides students with a platform to individually explore
+datasets in the future. When using R as a course supplement, there are two 
+prevailing and competing techniques for beginners [@robinsonteach, @leek2016don].
+Students are instructed to work with either a relatively new suite of packages 
+called the tidyverse or base R commands that have been in use for far longer. 
+The tidyverse was created to make coding in R more consistent, but it does not 
+contain as many internet resources, such as debugging responses on Stack Overflow,
+as base R. 
 
-Does one coding syntax encourage a certain level of creativity while simultaneously
-adhering to the GAISE recommendations and guidelines? That is the question this 
-study seeks to discover through the analysis of these group projects, which are 
-available using both base R and tidyverse methods.
+At Duke University, the programming aspect of STA 101 classes have been taught in
+either base R or the tidyverse syntax, creating an optimal platform to diagnose
+the direct affects of the syntax. Through the analysis of R code from STA 101 
+final group projects, we hope to uncover if one programming syntax encourages 
+a more advanced level of creativity while simultaneously adhering to the GAISE
+recommendations and guidelines.
+
+A study released March 3, 2019 attempted to uncover the answer to a similar question,
+as it studied the difference in visualization quality between base R plots and 
+`ggplot2`, a package within the tidyverse, for beginning R programmers [@myint2019comparison].
+Although the evaluation favored visualizations crafted using `ggplot2`, it focused
+on the output of the code, rather than the code quality. This study concerns the code
+itself, and whether beginning coders were encouraged to be more creativity and
+produce higher-quality final projects based on the syntax.
