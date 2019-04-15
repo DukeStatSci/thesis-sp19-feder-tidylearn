@@ -7,10 +7,52 @@ If you feel it necessary to include an appendix, it goes here.
 -->
 
 
-# 2016 Movies Dataset Codebook
+# 2016 Spring Semester STA 101 Final Project Assignment Document
 
-Listed below is the codebook for the movies dataset used in the 2016 final 
-projects for STA 101.
+Listed below is the final project assignment document, which includes a codebook
+for the movies dataset, given to students who enrolled in the course in the Spring
+2016 iteration:
+
+You and your teammates work for Paramount Pictures.
+
+Your boss has just acquired data about how much audiences and critics 
+like movies as well as numerous other variables about the movies.
+
+She is interested in learning what attributes make a movie popular. 
+She is also interested in learning something new about movies. She wants 
+your team to figure it all out. 
+
+As part of this project you will complete exploratory data analysis (EDA), 
+inference, modeling, and prediction. You have been introduced to some of 
+these concepts already, and you will learn about the others later in the course.
+
+The data can be loaded directly in RStudio using the following command:
+
+```{r, eval=FALSE}
+load(url("https://stat.duke.edu/~mc301/data/movies.Rdata"))
+```
+
+* * *
+
+## Data
+
+The data set is comprised of 651 randomly sampled movies produced and 
+released before 2016.
+
+Some of these variables are only there for informational purposes and do
+not make any sense to include in a statistical analysis. It is up to you
+to decide which variables are meaningful and which should be omitted. For
+example information in the the `actor1` through `actor5` variables was used 
+to determine whether the movie casts an actor or actress who won a best 
+actor or actress Oscar.
+
+You might also choose to omit certain observations or restructure some of
+the variables to make them suitable for answering your research questions.
+
+When you are fitting a model you should also be careful about collinearity, 
+as some of these variables may be dependent on each other.
+
+### Codebook
 
 1. `title`: Title of movie
 1. `title_type`: Type of movie (Documentary, Feature Film, TV Movie)
@@ -45,4 +87,229 @@ projects for STA 101.
 1. `imdb_url`: Link to IMDB page for the movie
 1. `rt_url`: Link to Rotten Tomatoes page for the movie
 
-# The Second Appendix, for Fun
+* * *
+
+## Stages of the project
+
+You will complete this project in two stages:
+
+1. Stage 1: Proposal (25 points)
+2. Stage 2: Poster and presentation (75 points)
+
+The remainder of this document outlines the requirements and expectations for
+both stages of the project. You should read the entire document before getting
+started. The requirements and expectations for Stage 1 will only make sense in 
+context of those for Stage 2.
+
+### Stage 1: Proposal (25 points)
+
+#### Content
+
+Your proposal should contain the following:
+
+1. **Data**: (2 points) Describe how the observations in the sample are 
+collected, and the implications of this data collection method on the scope 
+of inference (generalizability / causality).
+
+2. **Research questions**: (6 points) Come up with at least three research 
+questions that you want to answer using these data. You should phrase your 
+research questions in a way that matches up with the scope of inference your 
+dataset allows for. Make sure that at least two of these questions involve at 
+least three variables. You are welcomed to create new variables based on 
+existing ones. Note that you will have the option to update / revise / change 
+these questions for your poster at the end of the semester.
+
+3. **EDA**: (9 points) Perform exploratory data analysis that adresses each 
+of the three research questions you outlined above. Your EDA should contain 
+numerical summaries and visualizations. Each R output and plot should be 
+accompanied by a brief interpretation.
+
+4. **Timeline**: (4 points) Sketch out a timeline for the work you will do to 
+complete this project. Be as detailed and precise as possible. And be 
+realistic -- discuss course schedules, travel plans, etc.
+
+5. **Teamwork**: (4 points) Describe in detail how you will divvy up the work 
+between team members and what aspects of the project you will complete 
+together as a team. Note that during the poster session each member needs to 
+be able to answer questions about all aspects of the work, regardless of 
+whether they took the lead on that section or not.
+
+#### Format & length
+
+Your proposal should be written using the R Markdown template, so that all 
+R code, output, and plots will be automatically included in your write up. 
+
+Download the template for the proposal:
+
+```{r tidy=FALSE, eval=FALSE}
+download.file("http://stat.duke.edu/courses/Spring16/sta101.001/rmd/sta101_proposal.Rmd", destfile = "sta101_proposal.Rmd")
+```
+
+Your proposal should not exceed 5 pages (view a print preview to determined 
+length).
+
+#### Grading
+
+Your proposal will be graded out of 25 points (as outlined above), and will 
+make up 25% of your overall project score.
+
+The following will result in deductions:
+
+- Late: -1 points for each day late
+- Reproducibility issues, requiring to make changes to the R Markdown file 
+to knit the document: -3 points
+- Each page over limit: -2 points per page (view print preview to confirm 
+length)
+
+* * *
+
+### Stage 2: Poster and presentation (75 points)
+
+#### Content
+
+1. **Introduction:** Outline your main research question(s).
+
+2. **EDA:** Do some exploratory data analysis to tell an "interesting" 
+   story about movies. Instead of limiting yourself to relationships 
+   between just two variables, broaden the scope of your analysis and 
+   employ creative approaches that evaluate relationships between two 
+   variables while controlling for another.
+   
+3. **Inference:** Use one of your research questions (or come up with a new
+   one depending on feedback from the proposal) that can be answered 
+   with a hypothesis test or a confidence interval, e.g. "Is there a 
+   difference in mean audience scores between genres?" or "What is the 
+   average difference in audience scores between movies that do and do 
+   not feature without oscar winner actors?" This question could be 
+   used to shed some light on your choice of the "best" linear model.  
+   Carry out the appropriate inference task to answer your question.
+
+4. **Modeling:** Develop a multiple linear regression model to predict
+   a numerical variable in the dataset.
+
+5. **Prediction:** Pick a movie from 2015 (a new movie that is not in 
+   the sample) and do a prediction for this movie using your the model
+   you developed (and the `predict` function in R). Also quantify the 
+   uncertainty around this prediction using an appropriate interval.
+   
+6. **Conclusion:** A brief summary of your findings from the previous 
+   sections **without** repeating your statements from earlier as well
+   as a discussion of what you have learned about the data and your research 
+   question(s). You should also discuss any shortcomings of your current 
+   study (either due to data collection or methodology) and include ideas 
+   for possible future research.
+
+#### Poster format & length
+
+**Poster:** We suggest using a tri-fold poster. You can organize it however 
+you like. You do not need to get your poster professionally printed. You 
+can see sample posters from previous years at your professor's office.
+
+**R Markdown:** All code used to generate the statistics and plots on your 
+poster should be organized and submitted in an R Markdown document.
+
+Download the template for the project:
+
+```{r tidy=FALSE, eval=FALSE}
+download.file("http://stat.duke.edu/courses/Spring16/sta101.001/rmd/sta101_project.Rmd", destfile = "sta101_project.Rmd")
+```
+
+There is no length limit for this document.
+
+#### Presentation format & length
+
+You will give a four minute presentation of your work. Each team member 
+must speak during this presentation. The time limit is firm, you will be 
+asked to stop at the end of four minutes. This is not a lot of time, therefore
+you must decide carefully what you will highlight during your presentation 
+and practice to make sure you can fit everything you want to say in the time 
+limit.
+
+#### Grading
+
+Your poster (and accompanying code) and presentation will be graded out of 
+75 points, and will make up 75% of your overall project score.
+
+Grading of the project will take into account:
+
+- Correctness: Are the procedures and explanations correct?
+- Presentation: What was the quality of the presentation and poster?
+- Content/Critical thought: Did your think carefully about the problem?
+- Tidyness: Is your code organized well?
+
+Your team scores will be based on the following components:
+
+- 25 points - poster
+- 20 points - presentation
+- 20 points - code
+- 10 points - classmates' evaluation
+
+* * *
+
+## Submission
+
+Online on Sakai under Assignments. These will be time stamped, and late 
+penalty will be applied based on the time stamp. Only one submission per 
+team required.
+
+1. R Markdown file (.Rmd)
+2. HTML output (.html)
+
+We will download your R Markdown file and run your code to confirm 
+reproducibility of your work. Grading will be based on the document we 
+compile, so make sure that your R Markdown file contains everything 
+necessary to compile your entire work.
+
+* * *
+
+## Teamwork and grading
+
+Team scores for both the proposal and the poster will be adjusted based 
+on team peer evaluation data to determine each student's indivudual grade. 
+You will be asked to fill out a survey where you rate the contribution of 
+each team member. Filling out the survey is a prerequisite for receiving a 
+project score. 
+
+All team members must be present at the poster session. Failure to do so will
+result in a 0 on the project for the absent team member.
+
+Note that each student must complete the project and score at least 30% of 
+total possible points on the project in order to pass this class.
+
+* * *
+
+## Honor code
+
+You may not discuss this project in any way with anyone outside your
+team, besides the professor and TAs. Failure to abide by this policy
+will result in a 0 for all teams involved.
+
+* * *
+
+## Tips
+
+This project is an opportunity to apply what you have learned about 
+descriptive statistics, graphical methods, correlation and regression, 
+and hypothesis testing and confidence intervals.
+
+The goal is not to do an exhaustive data analysis i.e., do not calculate 
+every statistic and procedure you have learned for every variable, but 
+rather to show that you are proficient at using R at a basic level and 
+that you are proficient at interpreting and presenting the results.
+
+You might consider critiquing your own method, such as issues pertaining 
+to the reliability of the data and the appropriateness of the statistical 
+analysis you used within the context of this specific data set.
+
+
+# Updated OpenIntro Labs
+
+Here is a link to the Github repository containing the updated STA 101 labs:
+INSERT LINK
+
+
+# Infer Vignettes
+
+Here is a link to the two vignettes that will be released with the next update
+to `infer`:
+INSERT LINK
