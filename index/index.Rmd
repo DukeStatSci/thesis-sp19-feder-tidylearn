@@ -62,7 +62,22 @@ and 00-abstract.Rmd since they are handled in the YAML above differently for the
 on chapters.
 -->
 
-# Preliminary Content {-}
+# Abstract {-}
+
+Programming has become an essential component of introductory statistics, as 
+students use R to explore general concepts. Currently, there are two methods of 
+teaching R for beginning statisticians, but not much literature on how they affect
+student comprehension and analysis. We analyzed 205 final projects written using
+the two syntaxes for an introductory statistics course at Duke University from 
+the 2013-2016 academic years, creating a variety of indicator variables to 
+measure their creativity, depth and the complexity of multivariate visualizations.
+Student projects using the tidyverse syntax were found to score significantly 
+higher on all three metrics, suggesting instructors should employ the tidyverse 
+when teaching beginning statistics. Based on these results from the retrospective
+study, we created resources designed for future use in statistical instruction.
+
+*Keywords*: Introductory statistics, Education, Tidyverse, Creativity, Depth,
+Multivariate visualizations, Retrospective study
 
 ## Acknowledgements {-}
 
@@ -73,13 +88,7 @@ Dr. Victoria Ellison for her essential advice, and the Department of Statistical
 Science for providing me with the tools to complete this project. Most of all, 
 I thank my family and friends for their love and belief in me for the past 21 years.
 
-## Abstract {-}
-
-Add abstract here.
-
-Keywords: List some keywords here.
-
 ## Dedication {-}
 
 I dedicate my thesis to my past students for whom I have been a teaching assistant
-for their enthusiasm that gave me the strength to complete this thesis.
+for their enthusiasm that gave me the motivation to complete this thesis.
