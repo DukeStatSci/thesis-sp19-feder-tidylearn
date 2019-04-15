@@ -4,14 +4,12 @@ date: 'May 2019'
 institution: 'Duke University'
 division: 'Trinity College of Arts and Sciences'
 advisor: 'Mine Çetinkaya-Rundel'
-#altadvisor: 'Your Other Advisor'
-# Delete line 7 if you only have one advisor
 committeememberone: 'Colin Rundel'
 committeemembertwo: 'Maria Tackett'
-dus: 'Amu Herring'
+dus: 'Amy Herring'
 department: 'Department of Statistical Science'
 degree: 'Bachelor of Science in Statistical Science'
-title: 'INSERT TITLE HERE'
+title: 'Evaluating Student Creativity, Depth and Multivariate Visualizations of Data Analysis projects based on R Syntax and Packages'
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: 
@@ -23,25 +21,26 @@ output:
 # use code similar to line 20 for the files.  If you are producing in a different
 # format than PDF, you can delete or ignore lines 20-31 in this YAML header.
 acknowledgements: |
-  Thank Tori.
+# dedication: |
+#   You can have a dedication here if you wish.
+# preface: |
+#   This is an example of a thesis setup to use the reed thesis document class
+#   (for LaTeX) and the R bookdown package, in general.
 bibliography: bib/thesis.bib
 # Refer to your specific bibliography file in the line above.
 csl: csl/apa.csl
 # Download your specific csl file and refer to it in the line above.
-lot: true
-lof: true
-#space_between_paragraphs: true
+# lot: true #TABLES
+# lof: true #FIGURES
+space_between_paragraphs: true
 # Delete the # at the beginning of the previous line if you'd like
 # to have a blank new line between each paragraph
 #header-includes:
 #- \usepackage{tikz}
 ---
-
 <!--
 Above is the YAML (YAML Ain't Markup Language) header that includes a lot of metadata used to produce the document.  Be careful with spacing in this header!
-
 If you'd prefer to not include a Dedication, for example, simply delete lines 17 and 18 above or add a # before them to comment them out.  If you have other LaTeX packages you would like to include, delete the # before header-includes and list the packages after hyphens on new lines.
-
 If you'd like to include a comment that won't be produced in your resulting file enclose it in a block like this.
 -->
 
@@ -67,7 +66,12 @@ on chapters.
 
 ## Acknowledgements {-}
 
-Thank Tori for her comments (and others if you wish) here.
+I thank my advisor, Dr. Mine Çetinkaya-Rundel for her immense dedication and 
+support in supervising this project. I could not have done this without her, let
+alone obtain a legitimate dataset to perform a comparative analysis. I also thank
+Dr. Victoria Ellison for her essential advice, and the Department of Statistical
+Science for providing me with the tools to complete this project. Most of all, 
+I thank my family and friends for their love and belief in me for the past 21 years.
 
 ## Abstract {-}
 
@@ -77,4 +81,5 @@ Keywords: List some keywords here.
 
 ## Dedication {-}
 
-You can have a dedication here if you wish. 
+I dedicate my thesis to my past students for whom I have been a teaching assistant
+for their enthusiasm that gave me the strength to complete this thesis.
