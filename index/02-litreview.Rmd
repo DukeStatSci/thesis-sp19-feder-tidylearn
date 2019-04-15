@@ -17,7 +17,10 @@ using `ggplot2`, where students could use `facet_grid()` instead of needed two
 `for()` loops in the base R method. Concurrently, more `ggplot2` assignees 
 completed the complex visualization task.
 
--------------------------------
+This was the only study conducted that analyzed the differences between
+the tidyverse and base R for introductory courses. Other arguments have been made
+on data science blogs favoring base R or the tidyverse when teaching beginning 
+statistics. The following source was written by a proponent of base R.
 
 Source: https://simplystatistics.org/2016/02/11/why-i-dont-use-ggplot2/
 
@@ -41,12 +44,13 @@ students will already be accustomed to writing larger code chunks, and thus will
 not be phased when needing to write a few extra lines to make the visualization 
 suitable for release.
 
----------------------------------
-
+Leek's blog post referenced the work of some pro-tidyverse instructors, such as
+Dr. David Robinson, who is an active supporter of using the tidyverse to help 
+teach introductory statistics.
 Source: http://varianceexplained.org/r/teach_ggplot2_to_beginners/
 
-Since this post was released prior to the official release of the tidyverse, Dr. 
-David Robinson, a well-known data scientist and instructor, focuses solely on one
+Since this post was released prior to the official release of the tidyverse,
+Robinson, a well-known data scientist and instructor, focuses solely on one
 of its packages, `ggplot2`. Robinson argues that `ggplot2` should be taught 
 before base R for two reasons:
 
@@ -64,11 +68,12 @@ statistics, Robinson argues that getting students in the habit of forming tidy
 datasets is good practice for future important functions that also require tidy
 datasets, such as `lm()`.
 
--------------------------------
+After the official release of the tidyverse, Robinson wrote a follow-up blog
+advocating for teaching the entire tidyverse, not just `ggplot2`, to beginners.
 
 Source: http://varianceexplained.org/r/teach-tidyverse/
 
-As a follow up to his first post, Dr. Robinson argues for teaching the coding 
+Robinson argues for teaching the coding 
 aspect of introductory statistics using the tidyverse syntax, which stems from 
 his past teaching roles. Robinson claims to have been able to teach students with
 no prior coding knowledge on how to use the tidyverse’s `facet_wrap()` in 2-3 
@@ -91,14 +96,12 @@ Robinson also argues against the teaching style that prioritizes learning
 conditionals and loops in these classes, since he believes that students require
 advanced techniques to make them effective. 
 
----------------------------------
+Robinson's blog posts reference tidy dataframes. But what exactly constitutes
+a tidy dataframe? Dr. Hadley Wickham, long considered to be the tidyverse's
+primary creator, explains below.
 
-Source: Tidy Data by Hadley Wickham
-
-Dr. Hadley Wickham, who is considered to be the father of the tidyverse, discusses
-how to work with and create tidy datasets. Many popular base R functions require
-tidy data inputs, as well as many tidyverse commands, which were created to work
-symmetrically with tidy datasets.
+Many popular base R functions require tidy data inputs, as well as many tidyverse
+commands, which were created to work symmetrically with tidy datasets.
 
 A tidy dataset lists each variable as a separate column and each observation as 
 its own row. The rows are ordered by the first variable, measured variables are 
@@ -117,12 +120,15 @@ it should only take minutes to get directly into the analysis. In Wickham’s wo
 “Tidy tools are useful because the output of one tool can be used as the input 
 to another.”
 
----------------------------------
+Although the above arguments debate reasons for and against using different
+syntaxes, introductory statistics courses have been generalized by the release
+and subsequent update of The Guidelines for Assessment and Intruction in Statistics
+Education (GAISE). The GAISE provides direction for the programming portion of 
+the course with strict recommendations for how to teach statistical coding.
 
 Source: https://www.amstat.org/asa/files/pdfs/GAISE/GaiseCollege_Full.pdf (GAISE)
 
-The Guidelines for Assessment and Instruction in Statistics Education (GAISE) 
-were first endorsed by the American Statistical Association in 2005 and then 
+The GAISE was first endorsed by the American Statistical Association in 2005 and then 
 updated in 2016 to reflect changes in datasets, technology, and professional
 demand for statistical literacy. The GAISE is recommended for introductory 
 statistics education, but also applies to more advanced statistics courses, as 
@@ -160,7 +166,10 @@ from statistical software packages.
 9. Students should demonstrate an awareness of ethical issues associated with 
 sound statistical practice.
 
----------------------------------
+While the GAISE recommends the use of a programming tool as a supplement to the
+class, it does not state exactly which program students should use. In the next
+article, prominent professors describe how and why they utilize R for beginning
+statistics courses.
 
 Source: Infrastructure and tools for teaching statistical computing
 
@@ -187,7 +196,12 @@ to the importance of programming. In terms of software, the authors believe
 RStudio may help ease the students’ learning curve as an IDE relative to R and 
 due to its auxiliary tools located outside of the main console.
 
----------------------------------
+The tidyverse is not the only set of tools crafted to make R easier for beginners.
+A group of professors created a package crafted for introductory programmers,
+as they will be equipped with a set of functions that will help them create complex
+situations with just a few lines of code. The package also provides a connection
+between base R and tidyverse plots, as it contains functions to switch between base
+R and `ggplot2` visualization settings.
 
 Source: The mosiac package: Helping Students to ‘Think with Data’ Using R
 
@@ -210,7 +224,10 @@ As a package designed for beginning R users, mosaic is also equipped with specif
 functions such as `rflip()`, which helps explain binomial situations without the
 use of loops.
 
----------------------------------
+The final two sources pertain to the analysis conducted in this study. First is
+a resource describing the benefits of team-based learning, which has been used
+in STA 101 courses to help students absorb the material outside of the traditional
+classroom setting.
 
 Source: https://cft.vanderbilt.edu/guides-sub-pages/team-based-learning/ 
 
@@ -222,7 +239,8 @@ beneficial for students because it forces the individual team members to debate
 amongst each other, thus bolstering or modifying their current knowledge to better
 comprehend the topic.
 
----------------------------------
+As a check for potential biases, we analyzed the final project assignment documents
+for each STA 101 section examined in this study.
 
 Source: Final Project Assignment Documents for Each Class
 
