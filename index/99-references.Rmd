@@ -34,5 +34,6 @@ This is just for testing with more citations for the bibliography at the end.  A
 
 ---
 nocite: | 
-  @angel2000, @angel2001, @angel2002a
+  @myint2019comparison, @leek2016don, @robinson_2014, @robinsonteach, @wickham2014tidy,
+  @carver2016guidelines, @ccetinkaya2018infrastructure, @pruim2017mosaic, @brame2016team
 ...
