@@ -1,36 +1,29 @@
 # Conclusion {-}
 
-If we don't want Conclusion to have a chapter number next to it, we can add the `{-}` attribute.
+Due to the discrepancies in creativity, depth, and multivariate visualization 
+scores between students projects using base R and others employing the tidyverse
+syntax, we recommend that the tidyverse syntax should be the primary syntax when
+using R as a supplement for introductory statistics courses. Although the sample
+is limited by solely analyzing Duke's STA 101 final projects, the standardization
+of STA 101 classes provides an optimal baseline for comparison. Another potential
+source of bias, the project assignment document, can be nullified by the lack of
+wording differences since the Fall 2013 document (a base R class). As such, since
+there was shown to be higher scores in the three metrics for projects using the 
+tidyverse syntax, the project language is not considered to be a confounding 
+variable.
 
-**More info**
+Since we could not find a significant confounding factor, we can attribute the 
+distinctions in creativity, depth, and multivariate visualization scores to the 
+R syntax. Additionally, since the final projects were randomly scored by course,
+and then later checked, we are confident that there was no bias in the coding of
+the indicator variables. We confirmed tough scoring situations through 
+collaboration between Mr. Feder and Dr. Çetinkaya-Rundel, and based on the 
+guidelines outlined in Methods, the differences between scoring a one and zero 
+for the various indicator variables should be distinct.
 
-And here's some other random info: the first paragraph after a chapter title or section head _shouldn't be_ indented, because indents are to tell the reader that you're starting a new paragraph. Since that's obvious after a chapter or section title, proper typesetting doesn't add an indent there.
-
-
-**This is for lab part**
-
-Previous Dataset  |  Reason for Change |  New Dataset
-------------------| -------------------|-------------
-Body Dimensions | Focuses on weight comparison across binary genders  | Fast Food Nutritional Facts 
-Atheism and Religion | Unverified Dataset | Youth Risk Behavior Surveillance System
-Baseball | Required further dataset explanation | Human Freedom Index
-North Carolina Births | Dated + Not relevant for most undergrads | Youth Risk Behavior Surveillance System
-
-
-reprex::reprex(input = c("inference(y = weight, x = habit, data = nc, statistic = 'mean', type = 'ht', null = 0, 
-          alternative = 'twosided', method = 'theoretical')"), venue = "rtf")
-          
-          
-obs_diff <- yrbss %>%
-  specify(weight ~ physical_3plus) %>%
-  calculate(stat = "diff in means", order = c("yes", "no"))
-  
-  
-null <- yrbss %>%
-  specify(weight ~ physical_3plus) %>%
-  hypothesize(null = "independence") %>%
-  generate(reps = 1000, type = "permute") %>%
-  calculate(stat = "diff in means", order = c("yes", "no"))
-  
-null %>%
-  get_p_value(obs_stat = obs_diff, direction = "two_sided")
+We encourage instructors to teach introductory R using the tidyverse syntax, as
+well as the inclusion of `infer` for inference tasks. We believe that the 
+tidyverse's consistency encourages students to produce more creative and higher
+quality work while tightly adhering to the GAISE. We hope the educational 
+resources created as a result of this study will have far-reaching impacts within
+the statistical community and will become staples for R users in the future.
