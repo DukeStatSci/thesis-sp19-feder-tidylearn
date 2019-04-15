@@ -76,10 +76,19 @@ kable(creativity_table)
 
 FOR MINE: Which table should I use? One has SD as Standard Deviation
 
+When dissected by semester, the creativity score distributions did not notably 
+vary for sections taught in base R. However, the two sections—both employed the
+tidyverse syntax- from the Spring 2016 semester fared significantly better by 
+their score breakdown than the other tidyverse courses. Without those two semesters
+of tidyverse projects, the rest of the tidyverse projects still boasted a higher 
+score distribution than those of base R. Still, this discrepancy may be due to 
+advanced instruction from the teaching assistants, or more discussion about the 
+final project in lecture that encouraged groups to satisfy the requirements for 
+higher creativty scores.
+
 The following subsections will contain a comparison of base R and tidyverse student
 projects for each of the four variables combined to form the creativity metric,
 as well as potential reasons for the outcomes.
-
 
 ### Creation of New Variable(s)
 
@@ -238,6 +247,14 @@ FOR MINE: Which table should I use? One has SD as Standard Deviation
 | Base R    | 1.2  | 0.7                |
 | Tidyverse | 1.4  | 0.7                |
 
+Upon inspection by class section, the depth score distributions were largely similar,
+sans one of the Spring 2016 sections. Similar to how projects from this section 
+performed on the creativity metric, they scored much higher on average in the 
+depth category than projects from the other classes.
+
+The following subsections will contain a comparison of base R and tidyverse student
+projects for the two variables combined to form the depth metric.
+
 ### Consistent Theme
 
 Within the theme metric, the variable tracking the presence of a consistent theme
@@ -339,6 +356,17 @@ FOR MINE: Which table should I use? One has SD as Standard Deviation
 |-----------|------|--------------------|
 | Base R    | 0.0  | 0.1                |
 | Tidyverse | 0.4  | 0.7                |
+
+Although we have observed a higher rate and score distribution of tidyverse projects,
+the trend is not consistent by semester. One of the Fall 2015 sections included
+10 projects with a multivariate visualization score of at least a one, while the
+other did not contain a single project showcasing a multivariate plot. Similar
+to the reasoning stated in the Creativity metric section, this may be due to the
+emphasis and quality of instruction from the teaching assistants (which differ
+by class section) in regards to creating plots with at least three variables.
+
+The following subsections will contain a comparison of base R and tidyverse student
+projects for the two variables combined to form the multivariate visualization metric.
 
 ### Presence of a Visualization with 3+ Variables
 
