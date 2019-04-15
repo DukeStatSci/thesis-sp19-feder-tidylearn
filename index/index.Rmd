@@ -92,3 +92,5 @@ I thank my family and friends for their love and belief in me for the past 21 ye
 
 I dedicate my thesis to my past students for whom I have been a teaching assistant
 for their enthusiasm that gave me the motivation to complete this thesis.
+
+This project was approved by the Duke University Institutional Review Board, 2019-0130
