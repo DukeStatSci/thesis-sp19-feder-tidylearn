@@ -1,4 +1,4 @@
-# Conclusion {-}
+# Conclusion
 
 Due to the discrepancies in creativity, depth, and multivariate visualization 
 scores between students projects using base R and others employing the tidyverse
