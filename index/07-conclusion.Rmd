@@ -1,12 +1,5 @@
 # Conclusion {-}
 
-FUTURE WORK
-
-hadley comments:
--he imagines that if you first learn with tidy verse, students aren’t becoming real R programmers, might want to look at that look for “function(){“
--if we took code for base R and tidy verse and gave them to students who have never seen code, might be able to read tidy verse code easier to read first 
-*in the future, might be able to look at this
-
 Due to the discrepancies in creativity, depth, and multivariate visualization 
 scores between students projects using base R and others employing the tidyverse
 syntax, we recommend that the tidyverse syntax should be the primary syntax when
