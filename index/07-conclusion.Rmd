@@ -1,5 +1,12 @@
 # Conclusion {-}
 
+FUTURE WORK
+
+hadley comments:
+-he imagines that if you first learn with tidy verse, students aren’t becoming real R programmers, might want to look at that look for “function(){“
+-if we took code for base R and tidy verse and gave them to students who have never seen code, might be able to read tidy verse code easier to read first 
+*in the future, might be able to look at this
+
 Due to the discrepancies in creativity, depth, and multivariate visualization 
 scores between students projects using base R and others employing the tidyverse
 syntax, we recommend that the tidyverse syntax should be the primary syntax when
@@ -7,23 +14,46 @@ using R as a supplement for introductory statistics courses. Although the sample
 is limited by solely analyzing Duke's STA 101 final projects, the standardization
 of STA 101 classes provides an optimal baseline for comparison. Another potential
 source of bias, the project assignment document, can be nullified by the lack of
-wording differences since the Fall 2013 document (a base R class). As such, since
+wording differences since the Fall 2013 document (a base R class) supplemented
+by a similar creativity metric distribution for the Fall 2013 class as other
+base R section. As such, since
 there was shown to be higher scores in the three metrics for projects using the 
 tidyverse syntax, the project language is not considered to be a confounding 
 variable.
+
+For our scoring mechanism, initially, we inputted the grades received for the 
+assignment prior to coding the indicator variables. However, after the first two
+classes were coded, we recognized that the grades might provide a potential source
+of error, so the grades were subsequently inputted for all future projects after
+the entire submission was scored. In an attempt to fully expell any bias, we 
+confirmed the variable coding a second time while ignoring the grades received,
+and tough scoring situations were confirmed via collaboration between Mr. Feder
+and Dr. Çetinkaya-Rundel.
 
 Since we could not find a significant confounding factor, we can attribute the 
 distinctions in creativity, depth, and multivariate visualization scores to the 
 R syntax. Additionally, since the final projects were randomly scored by course,
 and then later checked, we are confident that there was no bias in the coding of
-the indicator variables. We confirmed tough scoring situations through 
-collaboration between Mr. Feder and Dr. Çetinkaya-Rundel, and based on the 
-guidelines outlined in Methods, the differences between scoring a one and zero 
-for the various indicator variables should be distinct.
+the indicator variables
 
-We encourage instructors to teach introductory R using the tidyverse syntax, as
-well as the inclusion of `infer` for inference tasks. We believe that the 
+We strongly encourage instructors to teach introductory R using the tidyverse syntax,
+as well as `infer` for inference tasks, as we believe that the 
 tidyverse's consistency encourages students to produce more creative and higher
-quality work while tightly adhering to the GAISE. We hope the educational 
-resources created as a result of this study will have far-reaching impacts within
-the statistical community and will become staples for R users in the future.
+quality work while tightly adhering to the GAISE. We decided to create educational
+materials instead of attempting a form of modeling due to our desire to contribute
+to the current introductory statistics curriculum.
+
+## Future Work
+
+We encourage others to build upon this analysis in an experimental form, since
+this study is solely retrospective. Although we have attempted to eliminate all
+potential sources of bias, a causal analysis can be much more unambiguous in a
+randomized trial. Perhaps similar to the study performed by [@myint2019comparison],
+a randomized experiment conducted through an online educational company, instead
+focusing on distinct code differences, could be very effective.
+
+In the future, it may be interesting to show tidyverse and base R code snippets
+accomplishing the same tasks to students with no programming background to determine
+whether one syntax is easier to initially read and understand. Also, as the `infer`
+package grows in popularity, the effectiveness of the `infer` package in completing
+inference tasks should be confirmed.
