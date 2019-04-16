@@ -1,14 +1,13 @@
 # Methods
 
 Since 98 percent of the projects were submitted either as an R script or R Markdown
-document, the student project code could be analyzed directly on their downloaded
-submission documents. Each project was examined and coded as either a 
+document, the student project code was analyzed directly on the downloaded
+submission documents for each group. Each project was examined and scored as either a 
 0, if the attribute was missing, or 1, if it was present, for 16 variables. The 
 remaining three covariates identified the student projects by grade, index, and 
 class.
 
-Due to privacy concerns, since the project submissions often contained the 
-members of the project group, each student project was provided with an index, 
+Due to privacy concerns, each student project was provided with an index, 
 and the names of the students in each group were removed from their submission 
 document. For the dataset utilized in this thesis, projects can 
 solely be identified by their assigned index. A separate dataset serves as a link 
@@ -94,7 +93,7 @@ and did not require further debugging.
 
 The contents of the student project code were still analyzed for clarity, 
 as well as creativeness, depth, and multivariate visualizations through the 16 
-indicator variables. They were analyzed for these aspects specifically since they
+indicator variables. These specific metrics were created since they
 are prominently emphasized throughout the GAISE. Code snippets will be provided 
 in the following chapter to display examples that scored a one for distinct covariates.
 
@@ -122,7 +121,7 @@ in the following chapter to display examples that scored a one for distinct cova
 
 The creativity metric seeks to encapsulate anything students coded that was 
 not directly specified in the instructions but provided a purpose 
-in their projects. The metric's possible scores range from 0 to 4, as a project is
+in their projects. The metric's possible scores range from 0 to 4, as a project was
 scored with a single point for each of the following:
 
 1. Creation of new variable(s) based on existing variables 
@@ -131,10 +130,10 @@ scored with a single point for each of the following:
 1. The use of a subset of the dataset for all steps of the project
 
 In the case of the student group projects utilizing the tidyverse syntax, groups
-were still given scores of ones if they satisfied these conditions in Base R form.
-While rare, two (NEED TO CONFIRM) groups in labs taught in the tidyverse created
+were still given scores of 1s if they satisfied these conditions in base R form.
+While rare, two groups in labs taught in the tidyverse created
 or transformed covariates using Base R syntax, which was likely due to alternative
-resources, such as Stack Overflow, that at the time, did not contain many tidyverse
+resources, such as Stack Overflow, that prioritized base R
 solutions. Now, though, as the tidyverse's popularity continues to grow, more online
 resources incorporate and promote tidyverse solutions.
 
@@ -142,7 +141,7 @@ resources incorporate and promote tidyverse solutions.
 
 The creation of a new variable(s) is defined as any data manipulation throughout the
 EDA process where student groups compose a previously non-existing covariate. As
-an example, one project created a new variable tracking if a movie had won any of
+an example, one group created a new variable tracking if a movie had won any of
 the following awards: best picture, best actor, best actress, or best director, and 
 that project had this variable coded as "yes." In order to score a 1, the student 
 project also had to utilize the new variable within an aspect of their analysis. 
@@ -154,15 +153,15 @@ or regression sections, but did explore the covariate in their EDA.
 
 Although related to the above covariate, the transformation of existing variables
 did not qualify as creating new variables, or vice versa. In this situation, a 
-project would score a one if the student group mutated a variable already existing
+project would score a 1 if the student group mutated a variable already existing
 within the dataset, generally to highlight certain cases. For instance, a few 
 project groups decided to change `mpaa_rating` to either "R" or "Other," if the 
-movie was not rated R. Similar to the requirements for scoring a one for the creation
+movie was not rated R. Similar to the requirements for scoring a 1 for the creation
 of new variable(s) covariate, the mutation was required to be employed to some end,
 as groups would have to provide at least a cursory analysis of the newly-mutated
-variable to score a one. 
+variable to score a 1. 
 
-A distinction between scoring a one for this covariate and one for 
+A distinction between scoring a 1 for this covariate and 1 for 
 subsetting the dataset or conducting a subgroup analysis is that filtering the 
 dataset for just entries that cover a portion of levels within a specific variable
 would qualify as a part of either a subgroup analysis or data subset, but not this
@@ -178,32 +177,30 @@ creativity. Projects that received a one analyzed portions of the data
 during their EDA process. Groups could use an assortment of commands
 to satisfy a score of a 1, such as a normal boxplot, five-number summary of a
 specific variable within the movies dataset, or a subsetting with a corresponding
-numerical or graphical analysis. As an example, a project receiving a one for this
+numerical or graphical analysis. As an example, a project receiving a 1 for this
 category may have analyzed how the audience ratings for R rated movies compared 
 to that of PG-13 movies in their bivariate analysis.
 
 ### Use of a Data Subset for Project's Entirety
 
 Although the use of a data subset covariate may seem similar to the one above,
-this variable received a one for a different aspect of the final group 
+this variable received a 1 for a different aspect of the final group 
 projects. Here, student groups are not just using the provided movies dataset
 for their EDA, inference, and regression—they are intentionally focusing on a few
 characteristics of the movie dataset. Student projects were not required to employ
 the same subsetted data throughout the entire analysis, but
 they did have to analyze related aspects of the movies dataset to qualify for a 
-one. For example, one student group scrutinized solely PG-13 rated movies for 
+1. For example, one student group scrutinized solely PG-13 rated movies for 
 their final project, while another used the PG-13 rated movies subset for the EDA,
 PG-13 movies released after 2000 for the inference, and then the same PG-13 rated
 movies subset utilized in the EDA process for their regression analysis.
 
 ## Depth
 
-Focus on students’ understanding of key concepts, illustrated by a few techniques, rather than covering a multitude of techniques with minimal focus on underlying ideas.
-
 The depth metric measures the level of depth of the analysis, both in terms of the
 statistical methods utilized and in terms of story-telling. Since the GAISE advises
 instructors to focus on students' comprehension of important basic concepts rather
-than covering a multitude of topics with little breadth, the depth metric qualifies
+than covering a multitude of topics with little focus, the depth metric qualifies
 the student groups' understanding of the subjects covered in the project. The metric
 ranges from 0-2 and is scored with 1 point for each of the following: 
 
@@ -211,8 +208,8 @@ ranges from 0-2 and is scored with 1 point for each of the following:
 2. Use of relevant data
 
 The depth metric was created to qualify findings from the creativity score, to 
-confirm that the syntax producing the more creative student projects also were of
-the same (or better) quality. Although creativity is imperative in these final
+confirm that the syntax producing the more creative student projects also were at 
+least of the same quality. Although creativity is imperative in these final
 projects, student groups also cannot skip parts of the data analysis cycle.
 
 ### Consistent Theme
@@ -222,25 +219,25 @@ as story-telling is designed to be for the STA 101 final group projects. A stron
 final project requires a story: a leading question, initial findings, subsequent 
 analyses, and conclusion, all formed around a specific theme. Although this 
 covariate's scoring was subjective, the requirements for final projects to score
-a one were similar to those defining the creativity metric. To receive a one, student
+a 1 were similar to those defining the creativity metric. To receive a 1, student
 groups clearly linked the steps in their analysis, often choosing
 to focus on a few aspects within the entire movie dataset. For instance,
 analyzing the impact of movie ratings on audience scores would qualify as a sufficient 
-theme, but referencing an assortment of different predictors would not register
-as one. 
+theme, but merely inspecting an assortment of different predictors with minimal
+reasoning would not register as 1. 
 
 ### Presence of Relevant Data
 
 Another subjective variable, the presence of relevant data was formed to complement
-the consistent theme covariate. To receive a one for this variable, student groups were
+the consistent theme covariate. To receive a 1 for this variable, student groups were
 required to sufficiently use R to create insights surrounding their chosen theme(s).
 The covariate addresses the issue that projects may have interesting themes but lack the 
 analysis and coding quality to supplement their project. As an example, an aspect
-of a group project that would have scored a one for this category would have 
+of a group project that would have scored a 1 for this category could have 
 displayed the correlation coefficient between two numerical variables instead of 
-plotting them together and failing to acknowledge the figure in the project submission.
+plotting them together and failing to acknowledge the correlation in the project submission.
 If the majority of the coding could be employed to support the final project, the
-project group received a one.
+project group received a 1.
 
 ## Multivariate Visualization
 
@@ -254,14 +251,14 @@ multivariate visualizaitons. “When students leave an introductory course, they
 will likely encounter situations within their own fields of study in which multiple
 variables relate to one another in intricate ways. We should prepare our students
 for challenging questions that require investigating and exploring relationships
-among more than two variables (GAISE).” The metric ranges from 0-2 and is scored
-with 1 point for each of the following:
+among more than two variables [@carver2016guidelines].” The metric ranges from 0-2
+and is scored with 1 point for each of the following:
 
 1. Presence of a visualization with 3+ variables
 1. Interpretation of the multivariate visualization
 
 Although the two variables that constitute the multivariate visualization metric
-are related, as a project could not score a one for the interpretation if it did
+are related, as a project could not score a 1 for the interpretation if it did
 not contain a multivariate visualization, the presence of the visualization did
 not imply that there was a useful interpretation in the project write-up.
 
@@ -270,7 +267,7 @@ not imply that there was a useful interpretation in the project write-up.
 The presence of a visualization with at least three variables is an objective
 variable simple to when dissecting final project submissions. Groups nearly always
 utilized colors to display a third variable along with two numerical ones
-on the x- and y-axes. To receive a score of a one, projects were required to produce
+on the x- and y-axes. To receive a score of a 1, projects were required to produce
 a graphical output with at least three aesthetics. For instance, some student groups
 created scatterplots between the critic and audience scores for
 all the movies in the given dataset with different colors for movies that won
@@ -280,6 +277,7 @@ best picture at the Oscar's that year.
 
 The interpretation of a multivariate visualization is not a completely objective
 variable. A project containing an incorrect or insufficient interpretation of its
-multivariate visualization would not receive a score of a one. By insufficient, the
+multivariate visualization would not receive a score of a 1. By insufficient, the
 project does not need to address every aspect of the visualization, but
-it needs to discuss a key insight to help bolster the overall final project.
+it needs to discuss a key insight to help bolster the overall final project. Otherwise,
+a useful explanation would deserve a score of a 1.
