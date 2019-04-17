@@ -124,7 +124,7 @@ to another.”
 
 Although the above arguments debate reasons for and against using different
 syntaxes, introductory statistics courses have been generalized by the release
-and subsequent update of The Guidelines for Assessment and Intruction in Statistics
+and subsequent update of The Guidelines for Assessment and Instruction in Statistics
 Education (GAISE). The GAISE also provides direction for the programming portion of 
 the course with strict recommendations for how to teach statistical coding.
 
