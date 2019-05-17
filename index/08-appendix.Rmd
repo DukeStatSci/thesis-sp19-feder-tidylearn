@@ -300,12 +300,12 @@ analysis you used within the context of this specific data set.
 
 # Updated OpenIntro Labs
 
-Here is a link to the Github repository containing the updated STA 101 labs:
-INSERT LINK
+Here is a link to the Github repository containing the updated OpenIntro labs:
+https://github.com/openIntrostat/oilabs-tidy
 
 
 # Infer Vignettes
 
 Here is a link to the two vignettes that will be released with the next update
 to `infer`:
-INSERT LINK
+http://infer.netlify.com
