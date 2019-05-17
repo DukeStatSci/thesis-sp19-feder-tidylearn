@@ -2,10 +2,6 @@
 
 `r if(!knitr:::is_latex_output()) '# (APPENDIX) Appendix {-}'` 
 
-<!--
-If you feel it necessary to include an appendix, it goes here.
--->
-
 
 # 2016 Spring Semester STA 101 Final Project Assignment Document
 
