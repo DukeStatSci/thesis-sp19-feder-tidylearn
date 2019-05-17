@@ -38,15 +38,32 @@ to the current introductory statistics curriculum.
 
 ## Future Work
 
-We encourage others to build upon this analysis in an experimental form, since
-this study is solely retrospective. Although we have attempted to eliminate all
-potential sources of bias, a causal analysis can be much more unambiguous in a
-randomized trial. Perhaps similar to the study performed by [@myint2019comparison],
-a randomized experiment conducted through an online educational company, instead
-focusing on distinct code differences, could be very effective.
+We encourage others to build upon this analysis in a randomized controlled 
+experimental setting since this study is solely retrospective. Although we have
+attempted to eliminate all potential sources of bias, a randomized trial would 
+remove ambiguity in a causal analysis. However, we acknowledge that there are 
+limitations in performing a randomized experiment in a classroom setting due to 
+the nature of student collaboration across sections and logistical issues. Perhaps
+similar to the study performed by [@myint2019comparison], a randomized experiment
+could be conducted through an online educational company.
 
-In the future, it may be interesting to show tidyverse and base R code snippets
-accomplishing the same tasks to students with no programming background to determine
-whether one syntax is easier to initially read and understand. Also, as the `infer`
-package grows in popularity, the effectiveness of the `infer` package in completing
-inference tasks should be confirmed.
+There are additional aspects of the two syntaxes that we did not focus upon in 
+the retrospective study. For beginning programmers, the readability differences
+between the two methods are essential to learning. Therefore, we welcome 
+experiments dissecting the readability of the two syntaxes for individuals with 
+varying coding backgrounds.
+
+We believe it may be important to conduct follow up studies on the same 
+individuals in regards to three goals mentioned in the GAISE: tracking these 
+students' motivation to learn R while in the introductory statistics class, 
+subsequent performance in more advanced R or other programming topics, and 
+tracking the discrepancies in retention rates within the statistics and data 
+science fields. Another study could work in supplement by having the students from
+this one to interpret their code after a certain amount of elapsed time to 
+determine if it can still be understood.
+
+Finally, our work assumes that `infer` will be more effective than using the
+`inference()` function in teaching students inference tasks in R. However, there
+have not been any studies to suggest this notion, and thus, we encourage others
+to determine the differences in student learning when taught inference through 
+`inference()` compared to `infer`.
