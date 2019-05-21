@@ -2,49 +2,45 @@
 
 ## Background
 
-Students enrolled in tidyverse sections learn R through the use of the tidyverse's
-tidy tools, which tidy and dissect data frames. But what is a tidy dataset?
-It is one that lists each variable as a separate column and every observation as
-its own row. The rows are ordered by the first variable, measured variables are 
-listed after fixed ones, and related ones are located in adjacent columns to ease
-comparison.
+Duke's STA 101 students enrolled in tidyverse sections learn R through the use of
+the tidyverse's tidy tools, which can tidy and subsequently dissect tidy data 
+frames. But what constitutes a tidy dataset? It is one that lists each variable 
+as a separate column and every observation as its own row. The rows are ordered 
+by the first variable, measured variables are listed after fixed ones, and related
+ones are located in adjacent columns to ease comparison.
 
-Many popular base R functions require tidy data inputs, such as `lm()`, the base
+Many popular base R functions also require tidy data inputs, such as `lm()`, the base
 R command for generating linear regressions. The tidyverse's primary author, 
-Hadley Wickham, popularized the tidy framework based on his experience
-tackling real-world problems and then his subsequent role as a teacher, creating
-the suite of packages to provide a set of functions for analyzing and manipulating
+Hadley Wickham, popularized tidy methods based on his experience tackling real-world
+problems and as a teacher, creating the suite of packages to analyze and manipulate
 datasets within this tidy framework. Wickham argues that most data transformation
-operations are easiest to perform when each variable is listed as its column. The
-consistent data structure allows users to start their analysis with the provided
+operations are easiest to perform when each variable is listed as its column and that
+the consistent data structure allows users to start their analysis with the provided
 dataset instead of spending time working out the logistics of the data. 
-Additionally, there are only a few commands needed to tidy messy data frames, 
-called tidy tools, so once those commands are mastered,
-it should only take minutes to get directly into the analysis. In Wickham’s words,
-“Tidy tools are useful because the output of one tool can be used as the input 
-to another [@wickham2014tidy].”
+Additionally, there are only a few commands needed to tidy messy data frames, so
+once those commands are mastered, it should only take minutes to get directly 
+into the analysis [@wickham2014tidy].”
 
-As the tidyverse became more integrated into the general data science community, 
+As the tidyverse has become more integrated into the data science community, 
 the mosaic package was created to help beginning coders develop advanced insights,
-as explained by the package's authors. The authors believe that mosaic helps 
-students to use programming in R as an asset from the start of their statistical
-learning. Mosaic depends on a group of packages within the tidyverse suite and 
-contains commands such as `mplot()`, which allows students to create interactive
-plots in ggplot2. Mosaic is designed to be implemented alongside the tidyverse.
+as explained by the package's authors. Mosaic depends on a group of packages 
+within the tidyverse suite and contains commands such as `mplot()`, which allows
+students to create interactive plots in `ggplot2`. Mosaic is designed to be 
+implemented alongside the tidyverse.
 
 Similar to how the tidyverse allows for students to start creating in R from the
 start, mosaic’s authors believe "One of the keys to successfully empowering 
 students to think with data is providing them both a conceptual framework that 
 allows them to know what to look for and how to interpret what they find, and a
 computational toolbox that allows them to do the looking.” By working through 
-examples immediately, students will begin understand R's error messages on so 
+examples immediately, students should begin understanding R's error messages so 
 they can diagnose their own code issues and lower expectations for perfect code.
-As a package designed for beginning R users, mosaic is also equipped with specific
+Mosaic is also equipped with specific
 functions such as `rflip()`, which helps explain binomial situations without the
 use of loops [@pruim2017mosaic].
 
 Despite the rising popularity of the tidyverse and subsequent additions in 
-teaching beginning statistical programming, there has only been one study that 
+teaching beginning statistical programming, there has been just one study that 
 has attempted to determine the differences in effectiveness between the tidyverse
 and base R for introductory R users.
 
@@ -53,10 +49,11 @@ when created in base R or `ggplot2`, a package within the tidyverse. It did so
 by randomizing Coursera users to complete a study-wide plotting task using either
 base R or `ggplot2`, and then had the learners evaluate visualizations crafted by
 their peers on a few visual characteristics. The users were not completely new to
-R, but they were still beginners, as they had just completed a course covering 
-basic R usage in both base R and the tidyverse.
+R, but they were still beginners, as they had only completed a course covering 
+simplistic R usage in both base R and the tidyverse.
 
-The study concluded that the visualizations generated using `ggplot2` were often
+The study concluded that the visualizations generated using `ggplot2` compared to 
+base R's `plot()` were often
 easier to understand when creating a complex multivariate visualization. Students
 were more likely to uncover insights involving more complex relationships when 
 using `ggplot2`, where students could use `facet_grid()` instead of needing the two 
@@ -65,10 +62,10 @@ completed the complex visualization task [@myint2019comparison].
 
 ## Clashing Theories
 
-Outside of the study conducted by Myint, Hadavand, Jager, & Leeke, additional 
-arguments favoring base R or the tidyverse when teaching beginning statistics have
-been made primarily on data science blogs. Dr. Jeff Leek and Dr. David Robinson
-are two of the leaders on teaching in base R or the tidyverse, respectively, and
+Besides the one experiment comparing the two programming syntaxes, additional 
+arguments favoring base R or the tidyverse in teaching beginning statistics have
+been made primarily on data science blogs. Drs. Jeff Leek and David Robinson
+are two of the subject's thought leaders, and
 have responded to each other's claims on their respective websites.
 
 The two have focused primarily on the differences between `ggplot2` and base R
@@ -89,10 +86,8 @@ argues that getting students in the habit of forming tidy datasets is good
 practice for future important functions that also require tidy datasets, as also
 mentioned by Wickham [@wickham2014tidy, @robinson_2014].
 
-In response, Leek, who is a data scientist, biostatistician, and professor at
-Johns Hopkins Bloomberg School of Public Health, argues  argues for using base R
-in plotting, and crafts his argument around his three uses for visualizations: 
-exploratory graphs, expository graphs, and grading student work.
+In response, Leek believes in using using base R to teach plotting, and crafts 
+his argument around his personal usage of visualizations.
  
 Leek believes he has mastered visualizations in base R and can do 
 everything in base R that can be done in `ggplot2`. For him, `ggplot2` does 
@@ -106,12 +101,12 @@ the default `ggplot()` settings may lead students to believe that the
 visualizations are suitable for production, when in reality, they would need to 
 add more aspects. By teaching students to create visualizations in base R, 
 students will already be accustomed to writing larger code chunks, and thus will
-not be phased when needing to write a few extra lines to make the visualization 
+not be phased when needing to write extra lines to make the visualization 
 suitable for release [@leek2016don].
 
-By this time, the tidyverse had branched out from `ggplot2`, also incorporating
+By this time, the tidyverse had grown from `ggplot2`, also incorporating
 other packages such as `dplyr`. Given this development and his past teaching roles,
-Robinson advocated for teaching the entire tidyverse to beginners. Robinson claims
+Robinson advocates for teaching the entire tidyverse to beginners. Robinson claims
 to have been able to teach students with
 no prior coding knowledge on how to use the tidyverse’s `facet_wrap()` in 2-3 
 hours, which is considered a relatively advanced graphical tool.
@@ -187,7 +182,7 @@ The authors argue that students need to be exposed to programming, preferably R,
 early in their statistical education, but not on its own. They believe 
 programming should be introduced in a supplemental fashion to give students the 
 opportunity to grasp the topics covered in the traditional learning environment.
-R helps students bolster their understanding of lectures
+R helps students further their understanding of lectures
 and also allows for an introduction to programming, as
 students who choose to progress through future statistics courses will not have
 to spend time learning basic coding concepts.
