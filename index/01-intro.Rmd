@@ -7,23 +7,23 @@ enrolling in future statistics curricula, focusing the course on applications of
 statistics, as students learn how to relate STA 101's concepts to their future 
 works.
 
-At the beginning of the course, the students are divided into groups where they 
-complete assignments throughout the course together. The class is split into seven
-units, and every section has at least one lab, taught in R, to bolster the 
-learning segment. 
+At the beginning of the course, the students are divided into permanent groups 
+where they complete assignments together. The class is split into seven
+units, and every module is supplemented by at least one lab, taught in R, to 
+bolster the learning segment. 
 
 For introductory statistics education, the Guidelines for Assessment and Instruction
 in Statistics Education (GAISE) sets quality and scope standards, as it provides
 a set of general recommendations, as well as specific goals to be accomplished by 
-the course's completion. With its updated version released in 2016, the GAISE, 
+the course's completion. In its 2016 updated version, the GAISE, 
 which is endorsed by the American Statistical Association, recommends that 
-students use programming, if accessible, to explore real-world examples of concepts
+students use programming, if accessible, to explore real-world examples of the subjects
 covered in the classroom [@carver2016guidelines].
 
 To conclude the STA 101 semester, students display their grasp of the concepts by
 completing a group project conducted in R. A sufficient project submission adheres
-to seven of the nine stated goals of the GAISE, which are listed in the literature
-review section. The project, while constrained to a specific dataset, is relatively 
+to seven of the nine stated goals of the GAISE [@carver2016guidelines]. The 
+project, while constrained to a specific dataset, is relatively 
 open-ended, as groups can analyze various features of the data.
 
 Due to the flexibility promoted by the project assignment, students are encouraged to 
@@ -34,8 +34,8 @@ from the exploratory data analysis process, where groups can uncover interesting
 aspects to further scrutinize before beginning the analysis portion of the project.
 
 Since the majority of students will *apply* these concepts in their future work,
-statistical programming provides students with a platform to individually explore
-datasets in the future. When using R as a course supplement, there are two 
+statistical programming provides students with a legitimate platform to individually
+explore datasets. When using R as a course supplement, there are two 
 prevailing and competing techniques for beginners [@robinsonteach, @leek2016don].
 Students are instructed to work with either a relatively new suite of packages 
 called the tidyverse or base R commands that have been in use for far longer. 
@@ -51,7 +51,7 @@ a more advanced level of creativity while simultaneously adhering to the GAISE
 recommendations and guidelines.
 
 A study released March 3, 2019 attempted to uncover the answer to a similar question,
-as it studied the difference in visualization quality between base R plots and 
+as it analyzed the difference in visualization quality between base R plots and 
 `ggplot2`, a package within the tidyverse, for beginning R programmers [@myint2019comparison].
 Although the evaluation favored visualizations crafted using `ggplot2`, it focused
 on the output of the code, rather than the code quality. This study concerns the code
