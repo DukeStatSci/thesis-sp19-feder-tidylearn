@@ -55,5 +55,5 @@ as it analyzed the difference in visualization quality between base R plots and
 `ggplot2`, a package within the tidyverse, for beginning R programmers [@myint2019comparison].
 Although the evaluation favored visualizations crafted using `ggplot2`, it focused
 on the output of the code, rather than the code quality. This study concerns the code
-itself, and whether beginning coders were encouraged to be more creativity and
+itself, and whether beginning coders were encouraged to be more creative and
 produce higher-quality final projects based on the syntax.
